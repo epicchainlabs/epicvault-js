@@ -1,0 +1,248 @@
+version: 2.1
+
+executors:
+  env_node:
+    parameters:
+      version: &parameter-version
+        description: "Node version"
+        type: enum
+        enum: ["18.19", "lts", "current"]
+        default: "lts"
+    working_directory: ~/repo
+    docker:
+      - image: cimg/node:<< parameters.version >>
+
+  env_node_integration:
+    parameters:
+      version:
+        description: "Node version"
+        type: enum
+        enum: ["18.19", "lts", "current"]
+        default: "lts"
+    working_directory: ~/repo
+    docker:
+      - image: cimg/node:<< parameters.version >>
+      - image: snowypowers/n3-csharp-solonet:3.6.2
+
+commands:
+  run-unittest:
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: mkdir reports
+      - run:
+          name: Unit Tests
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: reports/unit
+            JEST_JUNIT_OUTPUT_NAME: results.xml
+          command: npm run test:unit -- --ci --maxWorkers=4 --detectOpenHandles --reporters="jest-junit" --reporters="default"
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+
+  run-integrationtest:
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Test privatenet
+          command: |
+            curl -d '{"jsonrpc": "2.0","method": "getversion", "params": [],"id": 3}' -H 'Content-Type: application/json' http://localhost:20332
+            curl -d '{"jsonrpc": "2.0","method": "getnep17transfers", "params": ["NMPAXGtMfZ8s8rcfP9JhrYrNeZHG4xSVmd"],"id": 3}' -H 'Content-Type: application/json' http://localhost:20332
+      - run: mkdir reports
+      - run:
+          name: Integration Tests
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: reports/integration
+            JEST_JUNIT_OUTPUT_NAME: results.xml
+          command: npm run test:integration -- --ci --maxWorkers=4 --detectOpenHandles --reporters="jest-junit" --reporters="default"
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+
+jobs:
+  setup:
+    executor: env_node
+    steps:
+      - run:
+          name: "Versions"
+          command: |
+            node --version
+            npm --version
+            git --version
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - neon-npm-{{ checksum "package-lock.json" }}
+      - run:
+          name: node hid compilation requirements
+          command: sudo apt-get update && sudo apt-get -y install libusb-1.0-0-dev libusb-1.0-0 libudev-dev
+      - run: npm ci
+      - save_cache:
+          key: neon-npm-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Bootstrap
+          command: npm run bootstrap
+      - run:
+          name: Build
+          command: npm run build && npm run dist
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+            - packages
+
+  lint:
+    executor: env_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: mkdir reports && mkdir reports/lint
+      - run:
+          name: Lint
+          command: |
+            CURRENT_BRANCH=$(git symbolic-ref -q --short HEAD)
+            BASE_BRANCH=$(curl -s https://api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/pulls/${CIRCLE_PR_NUMBER} | jq -r '.base.ref')
+            git checkout --track origin/$BASE_BRANCH
+            git checkout $CURRENT_BRANCH
+            echo "Finding files to lint"
+            FILES=$(git diff --name-only --diff-filter=bd $(git merge-base HEAD $BASE_BRANCH) | grep '^packages/.*\.[tj]s$') || true
+            [ -z "$FILES" ] && echo "No files found" && exit 0
+            echo "Found:"
+            echo $FILES
+            npx eslint --max-warnings 0 --format junit -o reports/lint/lint.xml $FILES
+      - run:
+          name: Format docs
+          command: npm run lint:docs
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: reports
+
+  unittest:
+    parameters:
+      version: *parameter-version
+    executor:
+      name: env_node
+      version: << parameters.version >>
+    steps:
+      - run-unittest
+
+  integrationtest:
+    parameters:
+      version: *parameter-version
+    executor:
+      name: env_node_integration
+      version: << parameters.version >>
+    steps:
+      - run-integrationtest
+
+  publish-latest:
+    executor: env_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Login to npm
+          command: npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+      - run:
+          name: Publish to npm
+          command: npm run release:latest -- --yes
+
+  publish-next:
+    executor: env_node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Login to npm
+          command: npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+      - run:
+          name: Publish to npm
+          command: npm run release:next -- --yes
+
+  publish-docs:
+    executor: env_node
+    steps:
+      - checkout
+      - run:
+          name: install aws cli
+          command: |
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install
+      - run:
+          name: Build and release docs
+          command: |
+            cd website
+            npm i
+            npm run release
+
+# Branch based workflows
+workflows:
+  version: 2
+
+  # Workflow that runs on all pull requests.
+  pull_request:
+    jobs:
+      - setup:
+          filters: &filters-pull-request
+            branches:
+              only: /pull\/.*/
+      - lint:
+          requires:
+            - setup
+      - unittest:
+          name: unittest-<< matrix.version >>
+          matrix:
+            parameters:
+              version: ["18.19", "lts", "current"]
+          requires:
+            - setup
+      - integrationtest:
+          name: integrationtest-<< matrix.version >>
+          matrix:
+            parameters:
+              version: ["18.19", "lts", "current"]
+          requires:
+            - lint
+            - unittest-<< matrix.version >>
+
+  # Workflow that runs on the master branch
+  master_flow:
+    jobs:
+      - setup:
+          filters:
+            branches:
+              only:
+                - master
+      - publish-latest:
+          requires:
+            - setup
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
+
+  update-docs:
+    jobs:
+      - approve-update:
+          type: approval
+          filters:
+            branches:
+              only: master
+      - publish-docs:
+          context: aws
+          requires:
+            - approve-update

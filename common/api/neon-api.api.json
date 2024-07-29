@@ -1,0 +1,3545 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@cityofzion/neon-api!",
+  "docComment": "",
+  "name": "@cityofzion/neon-api",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@cityofzion/neon-api!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Function",
+          "canonicalReference": "@cityofzion/neon-api!calculateNetworkFee:function(1)",
+          "docComment": "/**\n * Calculates the network fee required to process the transaction. The fields signers, attributes and script needs to be fully populated for this to work.\n *\n * @deprecated\n *\n * use the smartCalculateNetworkFee helper instead.\n *\n * @param txn - A partially filled out transaction.\n *\n * @param feePerByte - The current feePerByte in Policy contract.\n *\n * @param signingAccts - The accounts that will be signing this.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function calculateNetworkFee(txn: "
+            },
+            {
+              "kind": "Reference",
+              "text": "tx.Transaction",
+              "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+            },
+            {
+              "kind": "Content",
+              "text": ", feePerByte: "
+            },
+            {
+              "kind": "Content",
+              "text": "number | "
+            },
+            {
+              "kind": "Reference",
+              "text": "u.BigInteger",
+              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+            },
+            {
+              "kind": "Content",
+              "text": ", executionFeeFactor: "
+            },
+            {
+              "kind": "Content",
+              "text": "number | "
+            },
+            {
+              "kind": "Reference",
+              "text": "u.BigInteger",
+              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "u.BigInteger",
+              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/api/calculateNetworkFee.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 9,
+            "endIndex": 10
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "txn",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "feePerByte",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "executionFeeFactor",
+              "parameterTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 8
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "calculateNetworkFee"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@cityofzion/neon-api!getFeeInformation:function(1)",
+          "docComment": "/**\n * Helper method for retrieving fee-related information from PolicyContract.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getFeeInformation(client: "
+            },
+            {
+              "kind": "Reference",
+              "text": "rpc.NeoServerRpcClient",
+              "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<{\n    feePerByte: "
+            },
+            {
+              "kind": "Reference",
+              "text": "u.BigInteger",
+              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    executionFeeFactor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "u.BigInteger",
+              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/api/getFeeInformation.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "client",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getFeeInformation"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@cityofzion/neon-api!getTokenBalances:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getTokenBalances(address: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", contracts: "
+            },
+            {
+              "kind": "Content",
+              "text": "(string | "
+            },
+            {
+              "kind": "Reference",
+              "text": "sc.Nep17Contract",
+              "canonicalReference": "@cityofzion/neon-core!Nep17Contract:class"
+            },
+            {
+              "kind": "Content",
+              "text": ")[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", client: "
+            },
+            {
+              "kind": "Reference",
+              "text": "rpc.NeoServerRpcClient",
+              "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<string[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/api/getTokenBalances.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 9,
+            "endIndex": 11
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "address",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "contracts",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 6
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "client",
+              "parameterTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getTokenBalances"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@cityofzion/neon-api!getTokenInfos:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getTokenInfos(contracts: "
+            },
+            {
+              "kind": "Content",
+              "text": "(string | "
+            },
+            {
+              "kind": "Reference",
+              "text": "sc.Nep17Contract",
+              "canonicalReference": "@cityofzion/neon-core!Nep17Contract:class"
+            },
+            {
+              "kind": "Content",
+              "text": ")[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", client: "
+            },
+            {
+              "kind": "Reference",
+              "text": "rpc.NeoServerRpcClient",
+              "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "TokenInfo",
+              "canonicalReference": "@cityofzion/neon-api!TokenInfo:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/api/getTokenInfos.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 11
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "contracts",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "client",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getTokenInfos"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Nep17TransferIntent "
+            }
+          ],
+          "fileUrlPath": "src/NetworkFacade.ts",
+          "releaseTag": "Public",
+          "name": "Nep17TransferIntent",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#contractHash:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "contractHash: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "contractHash",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#decimalAmt:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "decimalAmt?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number | string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "decimalAmt",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#from:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "from: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "from",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#integerAmt:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "integerAmt?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "integerAmt",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#to:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "to: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "to",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@cityofzion/neon-api!NetworkFacade:class",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class NetworkFacade "
+            }
+          ],
+          "fileUrlPath": "src/NetworkFacade.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "NetworkFacade",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#claimGas:member(1)",
+              "docComment": "/**\n * Claims all the gas available for the specified account. Do note that GAS is automatically claimed when you perform a transaction involving NEO.\n *\n * @param acct - The account to claim gas on\n *\n * @param config - Configuration\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "claimGas(acct: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "signingConfig",
+                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "acct",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "claimGas"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#client:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "client: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "rpc.NeoServerRpcClient",
+                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "client",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade.fromConfig:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static fromConfig(config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NetworkFacadeConfig",
+                  "canonicalReference": "@cityofzion/neon-api!NetworkFacadeConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NetworkFacade",
+                  "canonicalReference": "@cityofzion/neon-api!NetworkFacade:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "fromConfig"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#getCandidates:member(1)",
+              "docComment": "/**\n * Convenience method for getting list of candidates.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getCandidates(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Candidate",
+                  "canonicalReference": "@cityofzion/neon-api!~Candidate:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getCandidates"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#getRpcNode:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getRpcNode(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "rpc.NeoServerRpcClient",
+                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getRpcNode"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#initialize:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "initialize(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "initialize"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#invoke:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "invoke(contractCall: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "sc.ContractCall",
+                  "canonicalReference": "@cityofzion/neon-core!ContractCall:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "rpc.InvokeResult",
+                  "canonicalReference": "@cityofzion/neon-core!InvokeResult:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "contractCall",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "invoke"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#magicNumber:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "magicNumber: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "magicNumber",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#sign:member(1)",
+              "docComment": "/**\n * Signs a transaction according to the signing configuration. The input transaction is modified with the signatures and returned.\n *\n * @param txn - Transaction to sign\n *\n * @param config - Configuration\n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "sign(txn: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "signingConfig",
+                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "txn",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "sign"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#transferToken:member(1)",
+              "docComment": "/**\n * Constructs and executes a transaction of multiple token transfers\n *\n * @param intents - Token transfers\n *\n * @param config - Configuration\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "transferToken(intents: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Nep17TransferIntent",
+                  "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "signingConfig",
+                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "intents",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 4,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "transferToken"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#validate:member(1)",
+              "docComment": "/**\n * Performs validation of all attributes on the given transaction.\n *\n * @param txn - Transaction to validate\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validate(txn: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationResult",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationResult:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "txn",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "validate"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#vote:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "vote(acct: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", candidatePublicKey: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", config: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "signingConfig",
+                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "acct",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "candidatePublicKey",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "config",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "vote"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@cityofzion/neon-api!NetworkFacadeConfig:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NetworkFacadeConfig "
+            }
+          ],
+          "fileUrlPath": "src/NetworkFacade.ts",
+          "releaseTag": "Public",
+          "name": "NetworkFacadeConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!NetworkFacadeConfig#node:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "node: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "rpc.NeoServerRpcClient",
+                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "node",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@cityofzion/neon-api!signingConfig:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface signingConfig "
+            }
+          ],
+          "fileUrlPath": "src/NetworkFacade.ts",
+          "releaseTag": "Public",
+          "name": "signingConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!signingConfig#signingCallback:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "signingCallback: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SigningFunction",
+                  "canonicalReference": "@cityofzion/neon-api!SigningFunction:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "signingCallback",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@cityofzion/neon-api!SigningFunction:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type SigningFunction = "
+            },
+            {
+              "kind": "Content",
+              "text": "(tx: "
+            },
+            {
+              "kind": "Reference",
+              "text": "tx.Transaction",
+              "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+            },
+            {
+              "kind": "Content",
+              "text": ", details: {\n    network: number;\n    witnessIndex: number;\n}) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<string>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/transaction/signing.ts",
+          "releaseTag": "Public",
+          "name": "SigningFunction",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@cityofzion/neon-api!signWithAccount:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function signWithAccount(acct: "
+            },
+            {
+              "kind": "Reference",
+              "text": "wallet.Account",
+              "canonicalReference": "@cityofzion/neon-core!Account:class"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "SigningFunction",
+              "canonicalReference": "@cityofzion/neon-api!SigningFunction:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/transaction/signing.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "acct",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "signWithAccount"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@cityofzion/neon-api!smartCalculateNetworkFee:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function smartCalculateNetworkFee(txn: "
+            },
+            {
+              "kind": "Reference",
+              "text": "tx.Transaction",
+              "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+            },
+            {
+              "kind": "Content",
+              "text": ", client: "
+            },
+            {
+              "kind": "Reference",
+              "text": "RPCClient",
+              "canonicalReference": "@cityofzion/neon-core!RPCClient:class"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "u.BigInteger",
+              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/api/calculateNetworkFee.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "txn",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "client",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "smartCalculateNetworkFee"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@cityofzion/neon-api!TokenInfo:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface TokenInfo "
+            }
+          ],
+          "fileUrlPath": "src/api/getTokenInfos.ts",
+          "releaseTag": "Public",
+          "name": "TokenInfo",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!TokenInfo#decimals:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "decimals: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "decimals",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!TokenInfo#symbol:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "symbol: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "symbol",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!TokenInfo#totalSupply:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "totalSupply: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "totalSupply",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class TransactionBuilder "
+            }
+          ],
+          "fileUrlPath": "src/transaction/TransactionBuilder.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "TransactionBuilder",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addBasicSignatureField:member(1)",
+              "docComment": "/**\n * Adds a signature field representing the request for a signature from this account. Under the hood, this adds a Signer and empty Witness to the transaction. The Signer defaults to the basic scope. For more advanced usage, plase manually add your own Signers and Witnesses.\n *\n * @param account - account that has to sign the transaction.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addBasicSignatureField(account: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "account",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addBasicSignatureField"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addContractCall:member(1)",
+              "docComment": "/**\n * You can add multiple intents to the transaction\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addContractCall(...contractCalls: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "sc.ContractCall",
+                  "canonicalReference": "@cityofzion/neon-core!ContractCall:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "contractCalls",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addContractCall"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addEmptyWitness:member(1)",
+              "docComment": "/**\n * Adds an unsigned witness to the transaction. Will deduplicate witnesses based on verificationScript. Required to calculate the network fee correctly.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addEmptyWitness(account: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "account",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addEmptyWitness"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addEmptyWitnesses:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addEmptyWitnesses(...accounts: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "accounts",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addEmptyWitnesses"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addGasClaim:member(1)",
+              "docComment": "/**\n * Adds the logic for claiming gas. Alternatively, you may just trigger the gas claim by performing an actual transaction involving NEO.\n *\n * @param account - Account to claim gas on.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addGasClaim(account: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TransactionBuilder",
+                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "account",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addGasClaim"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addNep17Transfer:member(1)",
+              "docComment": "/**\n * Adds the logic to send tokens around.\n *\n * @param account - originating account\n *\n * @param destination - account where the tokens will be sent\n *\n * @param tokenScriptHash - scripthash of the token contract\n *\n * @param amt - Amount of tokens in integer format.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addNep17Transfer(account: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", destination: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", tokenScriptHash: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", amt: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TransactionBuilder",
+                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "account",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "destination",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "tokenScriptHash",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "amt",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 9
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addNep17Transfer"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addScript:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addScript(hexString: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "hexString",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addScript"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addSigners:member(1)",
+              "docComment": "/**\n * Add signers. Will deduplicate signers and merge scopes. This does not add any Witnesses.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addSigners(...signers: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.SignerLike",
+                  "canonicalReference": "@cityofzion/neon-core!SignerLike:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "signers",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addSigners"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addVote:member(1)",
+              "docComment": "/**\n * Adds the logic to vote for a candidate.\n *\n * @param account - Account containing the NEO.\n *\n * @param candidatePublicKey - The candidate's publickey in hex big endian.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addVote(account: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", candidatePublicKey: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TransactionBuilder",
+                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "account",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "candidatePublicKey",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "addVote"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#build:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "build(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "build"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder.newBuilder:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static newBuilder(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TransactionBuilder",
+                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "newBuilder"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#setFeeAccount:member(1)",
+              "docComment": "/**\n * Sets an account to pay fees for this transaction. The first Signer defaults to the payer.\n *\n * @param account - Account to pay fees from.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setFeeAccount(account: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "account",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "setFeeAccount"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#setNetworkFee:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setNetworkFee(fee: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "fee",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "setNetworkFee"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#setSystemFee:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setSystemFee(fee: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "fee",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "setSystemFee"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@cityofzion/neon-api!TransactionSigner:class",
+          "docComment": "/**\n * A class with functions to sign transaction\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class TransactionSigner "
+            }
+          ],
+          "fileUrlPath": "src/transaction/signer.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "TransactionSigner",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@cityofzion/neon-api!TransactionSigner:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `TransactionSigner` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(transaction: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "transaction",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#signWithAccount:member(1)",
+              "docComment": "/**\n * Sign a transaction with Accounts or Private Keys. This is used when you have full access to signer accounts\n *\n * @param accounts - accounts that will sign this transaction\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "signWithAccount(...accounts: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "("
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string)[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "accounts",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "signWithAccount"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#signWithMultiSigAccount:member(1)",
+              "docComment": "/**\n * Sign a transaction with multi-signatures for multi-sig account\n *\n * @param multisigAccount - multisig account\n *\n * @param witnesses - signatures from accounts within the multisig-account\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "signWithMultiSigAccount(multisigAccount: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "wallet.Account",
+                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", ...witnesses: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Witness",
+                  "canonicalReference": "@cityofzion/neon-core!Witness:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "multisigAccount",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "witnesses",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "signWithMultiSigAccount"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#signWithWitness:member(1)",
+              "docComment": "/**\n * Sign a transaction with Witnesses. This can be used when you accept a signature from someone else\n *\n * @param witnesses - witnesses that will be added to the transaction\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "signWithWitness(...witnesses: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Witness",
+                  "canonicalReference": "@cityofzion/neon-core!Witness:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "witnesses",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "signWithWitness"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#transaction:member",
+              "docComment": "/**\n * transaction to be signed\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "transaction: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "transaction",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@cityofzion/neon-api!TransactionValidator:class",
+          "docComment": "/**\n * A class with functions to validate transaction\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class TransactionValidator "
+            }
+          ],
+          "fileUrlPath": "src/transaction/validator.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "TransactionValidator",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `TransactionValidator` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(rpc: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "rpc.NeoServerRpcClient",
+                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", transaction: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "rpc",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "transaction",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#rpcClient:member",
+              "docComment": "/**\n * Transaction will be validated on this rpc node\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "rpcClient: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "rpc.NeoServerRpcClient",
+                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "rpcClient",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#transaction:member",
+              "docComment": "/**\n * Transaction that will be validated\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "transaction: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "tx.Transaction",
+                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "transaction",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator.TX_LIFESPAN_SUGGESTION:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static TX_LIFESPAN_SUGGESTION: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "TX_LIFESPAN_SUGGESTION",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": true,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validate:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validate(attrs: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationAttributes",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationAttributes:enum"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", autoFix?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationAttributes",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationAttributes:enum"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationResult",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationResult:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "attrs",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "autoFix",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "validate"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateNetworkFee:member(1)",
+              "docComment": "/**\n * Validate NetworkFee\n *\n * @param autoFix - autofix when fee is too low.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validateNetworkFee(autoFix?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "autoFix",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "validateNetworkFee"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateScript:member(1)",
+              "docComment": "/**\n * Validate intents\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validateScript(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<void>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "validateScript"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateSystemFee:member(1)",
+              "docComment": "/**\n * validate systemFee\n *\n * @param autoFix - autofix when fee is too low.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validateSystemFee(autoFix?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "autoFix",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "validateSystemFee"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateValidUntilBlock:member(1)",
+              "docComment": "/**\n * validate validUntilBlock.\n *\n * @param autoFix - autofix when number is below current height.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validateValidUntilBlock(autoFix?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<number>>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "autoFix",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "validateValidUntilBlock"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Enum",
+          "canonicalReference": "@cityofzion/neon-api!ValidationAttributes:enum",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare enum ValidationAttributes "
+            }
+          ],
+          "fileUrlPath": "src/transaction/validator.ts",
+          "releaseTag": "Public",
+          "name": "ValidationAttributes",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.All:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "All = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "15"
+                }
+              ],
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "name": "All"
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.NetworkFee:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "NetworkFee = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "4"
+                }
+              ],
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "name": "NetworkFee"
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.None:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "None = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "0"
+                }
+              ],
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "name": "None"
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.Script:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "Script = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "8"
+                }
+              ],
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "name": "Script"
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.SystemFee:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "SystemFee = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "2"
+                }
+              ],
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "name": "SystemFee"
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.ValidUntilBlock:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ValidUntilBlock = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "1"
+                }
+              ],
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "name": "ValidUntilBlock"
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@cityofzion/neon-api!ValidationResult:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ValidationResult "
+            }
+          ],
+          "fileUrlPath": "src/transaction/validator.ts",
+          "releaseTag": "Public",
+          "name": "ValidationResult",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!ValidationResult#result:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "result: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        validUntilBlock?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<number>;\n        script?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<void>;\n        systemFee?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">;\n        networkFee?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ValidationSuggestion",
+                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "u.BigInteger",
+                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "result",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 14
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@cityofzion/neon-api!ValidationResult#valid:member",
+              "docComment": "/**\n * Whether the transaction is valid after validation\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "valid: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "valid",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type ValidationSuggestion<T> = "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    valid: boolean;\n    fixed: boolean;\n    prev?: T;\n    suggestion?: T;\n    message?: string;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/transaction/validator.ts",
+          "releaseTag": "Public",
+          "name": "ValidationSuggestion",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}

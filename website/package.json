@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "yarn build:guides &&docusaurus start",
+    "build": "yarn build:guides && docusaurus build",
+    "build:guides": "yarn --cwd ../examples run generate",
+    "publish": "aws s3 sync ./build  s3://docs-coz/neo3/neon-js --acl public-read",
+    "release": "yarn build && yarn run publish",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "docusaurus": "docusaurus",
+    "build:api": "api-documenter markdown --input-folder ../common/api --output-folder ../docs/api"
+  },
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-beta.17",
+    "@docusaurus/plugin-client-redirects": "2.0.0-beta.17",
+    "@docusaurus/preset-classic": "2.0.0-beta.17",
+    "@microsoft/api-documenter": "^7.22.30",
+    "clsx": "^1.1.1",
+    "ljs2": "^2.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

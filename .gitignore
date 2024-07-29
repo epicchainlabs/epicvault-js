@@ -1,0 +1,29 @@
+# Globally ignored folder names
+node_modules
+coverage
+.nyc_output
+build
+/lib/
+
+# Logs
+*.log
+
+# IDE specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+.idea
+
+# Package stuff
+packages/**/lib
+packages/**/dist
+packages/**/temp
+
+# Typescript
+*.tsbuildinfo
+
+# Eslint cache
+.eslintcache
+
+# Website
+website/.docusaurus

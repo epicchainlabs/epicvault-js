@@ -1,0 +1,59 @@
+{
+  "scripts": {
+    "ae": "lerna run ae",
+    "clean": "lerna run clean",
+    "bootstrap": "lerna bootstrap",
+    "build": "tsc -b",
+    "dist": "lerna run dist",
+    "dist:prod": "lerna run dist:prod",
+    "lint": "eslint packages/**/src/**/*.ts packages/**/__tests__/**/*.ts packages/**/__integration__/**/*.ts --cache",
+    "lint:all": "eslint . --ignore-pattern '/**/dist/*' --cache",
+    "lint:misc": "eslint .  --cache --ignore-pattern '/**/dist/*' --ignore-pattern '/packages/' --ignore-pattern '/docs/'",
+    "lint:docs": "prettier docs/**/*.md --write",
+    "precommit": "npm run lint && npm run pretty",
+    "prestart": "npm run build && npm run dist",
+    "prepublishOnly": "lerna run prepublishOnly",
+    "pretty": "prettier --write --loglevel=warn \"**/{src,__{tests,integration}__}/**/*.ts\"",
+    "release:latest": "lerna publish from-package",
+    "start": "jest --watch",
+    "test": "jest",
+    "test:integration": "jest /packages/.*/__integration__/.*",
+    "test:unit": "jest /packages/.*/__tests__/.*",
+    "version:latest": "lerna version --conventional-commits --no-changelog"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.34.4",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.3",
+    "@types/tapable": "2.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "clean-webpack-plugin": "4.0.0",
+    "cross-env": "7.0.3",
+    "eslint": "8.36.0",
+    "eslint-config-prettier": "8.7.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "jest": "29.5.0",
+    "jest-junit": "15.0.0",
+    "jest-watch-typeahead": "2.2.2",
+    "lerna": "6.5.1",
+    "prettier": "2.8.4",
+    "rimraf": "4.4.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-jest": "29.0.5",
+    "ts-loader": "9.4.2",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "5.0.2",
+    "webpack": "5.76.2",
+    "webpack-cli": "5.0.1"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "prettier": {
+    "endOfLine": "auto",
+    "proseWrap": "always"
+  }
+}
