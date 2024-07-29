@@ -55,7 +55,7 @@ import {
 } from "@epicchainlabs/epicvault-js";
 
 // Create a new account
-const account = EpicVault.create.account("XyZ12345ABCDEF");
+const account = EpicVault.create.account("XgsJXcjSB4sLRMQgW6CGc9887Lc87MmsUu");
 
 // Example usage of the account
 console.log(account);
