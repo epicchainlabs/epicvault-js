@@ -71,7 +71,7 @@ For browser-based projects, after including the SDK via the CDN, it will be avai
 console.log(EpicVault);
 
 // Create a new account
-var account = EpicVault.create.account("XyZ12345ABCDEF");
+var account = EpicVault.create.account("XgsJXcjSB4sLRMQgW6CGc9887Lc87MmsUu");
 
 // Example usage of the account
 console.log(account);
