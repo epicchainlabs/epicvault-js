@@ -5,8 +5,8 @@
     "outDir": "lib"
   },
   "references": [
-    { "path": "../neon-core" },
-    { "path": "../neon-api" }
+    { "path": "../epicvault-core" },
+    { "path": "../epicvault-api" }
   ],
   "include": ["src/**/*"]
 }
