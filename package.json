@@ -55,6 +55,5 @@
   "prettier": {
     "endOfLine": "auto",
     "proseWrap": "always"
-  },
-  "version": "1.0.1"
+  }
 }

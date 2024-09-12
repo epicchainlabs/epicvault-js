@@ -1,0 +1,44 @@
+{
+  "name": "@cityofzion/neon-uri",
+  "description": "Neon-uri Module",
+  "version": "5.4.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CityOfZion/neon-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "neo",
+    "antshares",
+    "javascript",
+    "libraries"
+  ],
+  "author": "Yak Jun Xiang <snowypowers@gmail.com> (https://github.com/snowypowers)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "ae": "api-extractor run --local",
+    "build": "tsc -b",
+    "dist": "tsc -m commonjs --outDir dist",
+    "dist:prod": "tsc -m commonjs --outDir dist",
+    "clean": "rimraf ./lib ./dist ./temp tsconfig.tsbuildinfo",
+    "prepublishOnly": "npm run clean && npm run build && npm run dist:prod",
+    "lint": "eslint src/**/*.ts __tests__/**/*.ts __integration__/**/*.ts",
+    "pretty": "prettier --write --loglevel=warn \"./{src,__{tests,integration}__}/**/*.ts\"",
+    "start": "jest --watch",
+    "test": "jest",
+    "test:unit": "jest /packages/.*/__tests__/.*"
+  },
+  "peerDependencies": {
+    "@cityofzion/neon-core": "^5.0.0"
+  },
+  "files": [
+    "dist/",
+    "lib/"
+  ],
+  "gitHead": "d21633d03deca1f4bc6c3a4f4e1d32a61aec2fe3"
+}

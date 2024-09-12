@@ -27,7 +27,7 @@ in a semantic manner following the convention of Verb-Noun. If a method goes
 beyond 2 levels, the rest of the name is camelCased at the noun level.
 
 ```js
-import Neon from "@epicchain/epicvault-js";
+import Neon from "@cityofzion/neon-js";
 Neon.create.privateKey();
 Neon.deserialize.tx(serializedTransaction);
 Neon.verify.message(message, signature, publicKey)
@@ -49,7 +49,7 @@ Named imports are the conventional JS imports. The modules in Neon are:
 - `wallet`
 
 ```js
-import { api } from "@epicchain/epicvault-js";
+import { api } from "@cityofzion/neon-js";
 ```
 
 This style offers more control and flexibility. Do refer to the source code for

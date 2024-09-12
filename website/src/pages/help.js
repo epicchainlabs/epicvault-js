@@ -49,7 +49,7 @@ export default () => {
               <div class="card__footer">
                 <a
                   class="button button--secondary button--block"
-                  href="https://github.com/epicchain/epicvault-js"
+                  href="https://github.com/cityofzion/neon-js"
                 >
                   Github
                 </a>

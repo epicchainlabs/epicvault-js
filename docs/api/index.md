@@ -14,7 +14,7 @@ in a semantic manner following the convention of Verb-Noun. If a method goes
 beyond 2 levels, the rest of the name is camelCased at the noun level.
 
 ```js
-import Neon from "@epicchain/epicvault-js";
+import Neon from "@cityofzion/neon-js";
 Neon.create.privateKey();
 Neon.serialize.tx(transactionObj);
 Neon.get.publicKeyFromPrivateKey(privateKey);

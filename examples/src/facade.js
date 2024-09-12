@@ -25,7 +25,7 @@ method call returns a promise. During initialization, the class will make an API
 call to the endpoint to grab some basic details that we will use later.
  */
 
-import Neon from "@epicchain/epicvault-js";
+import Neon from "@cityofzion/neon-js";
 
 const url = "http://localhost:20332";
 const privateKey = "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g";

@@ -161,20 +161,20 @@
     }
   },
   "kind": "Package",
-  "canonicalReference": "@epicchain/epicvault-ledger!",
+  "canonicalReference": "@cityofzion/neon-ledger!",
   "docComment": "",
-  "name": "@epicchain/epicvault-ledger",
+  "name": "@cityofzion/neon-ledger",
   "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
-      "canonicalReference": "@epicchain/epicvault-ledger!",
+      "canonicalReference": "@cityofzion/neon-ledger!",
       "name": "",
       "preserveMemberOrder": false,
       "members": [
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!BIP44:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!BIP44:function(1)",
           "docComment": "/**\n * Returns a BIP44 string specific to NEO.\n */\n",
           "excerptTokens": [
             {
@@ -251,7 +251,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!evalTransportError:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!evalTransportError:function(1)",
           "docComment": "/**\n * Evaluates Transport Error thrown and rewrite the error message to be more user friendly.\n *\n * @returns error with modified message if found.\n */\n",
           "excerptTokens": [
             {
@@ -298,7 +298,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!getAppName:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!getAppName:function(1)",
           "docComment": "/**\n * Requests the open application name from the Ledger.\n *\n * @param ledger - Ledger instance\n *\n * @returns the ledger application name. Expected \"NEO3\"\n */\n",
           "excerptTokens": [
             {
@@ -349,7 +349,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!getAppVersion:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!getAppVersion:function(1)",
           "docComment": "/**\n * Requests the application version from the Ledger.\n *\n * @param ledger - Ledger instance\n *\n * @returns the application version in Major.Minor.Patch format i.e. \"0.1.0\"\n */\n",
           "excerptTokens": [
             {
@@ -400,7 +400,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!getDevicePaths:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!getDevicePaths:function(1)",
           "docComment": "/**\n * Returns the list of connected Ledger devices. Throw if Ledger is not supported by the computer.\n *\n * @param ledgerLibrary - Ledger library\n */\n",
           "excerptTokens": [
             {
@@ -464,7 +464,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!getPublicKey:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!getPublicKey:function(1)",
           "docComment": "/**\n * Requests the public key of a requested address from the Ledger.\n *\n * @param ledger - Ledger instance\n *\n * @param bip44String - BIP44 string (40 bytes)\n *\n * @param showAddressOnDevice - whether to show the public key as NEO3 address on the Ledger\n *\n * @returns An unencoded public key (65 bytes)\n */\n",
           "excerptTokens": [
             {
@@ -547,7 +547,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-ledger!getSignature:function(1)",
+          "canonicalReference": "@cityofzion/neon-ledger!getSignature:function(1)",
           "docComment": "/**\n * Requests the device to sign a message using the NEO application.\n *\n * @param ledger - Ledger instance\n *\n * @param payload - message to sign as a hexstring.\n *\n * @param bip44String - BIP44 string (40 bytes)\n *\n * @param network - MainNet, TestNet or custom network number\n *\n * @returns Signature as a hexstring (64 bytes)\n */\n",
           "excerptTokens": [
             {

@@ -17,7 +17,7 @@ We will be performing a couple of invokes to show you how to retrieve contract d
 NOTE: This tutorial is written in Typescript. There
  */
 
-import { rpc, sc, u } from "@epicchain/epicvault-core";
+import { rpc, sc, u } from "@cityofzion/neon-core";
 
 const url = "http://localhost:20332";
 

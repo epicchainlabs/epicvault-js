@@ -1,4 +1,4 @@
-const sc = require("@epicchain/epicvault-core").sc;
+const sc = require("@cityofzion/neon-core").sc;
 
 const nativeContractNames = [
   "NeoToken",

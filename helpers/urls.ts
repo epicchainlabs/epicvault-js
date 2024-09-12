@@ -1,4 +1,4 @@
-import { rpc } from "@epicchain/epicvault-core";
+import { rpc } from "@cityofzion/neon-core";
 
 const TESTNET_URLS = [
   "http://seed1.ngd.network:20332",

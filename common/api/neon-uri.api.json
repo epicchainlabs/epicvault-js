@@ -161,21 +161,21 @@
     }
   },
   "kind": "Package",
-  "canonicalReference": "@epicchain/epicvault-uri!",
+  "canonicalReference": "@cityofzion/neon-uri!",
   "docComment": "",
-  "name": "@epicchain/epicvault-uri",
+  "name": "@cityofzion/neon-uri",
   "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
-      "canonicalReference": "@epicchain/epicvault-uri!",
+      "canonicalReference": "@cityofzion/neon-uri!",
       "name": "",
       "preserveMemberOrder": false,
       "members": [
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-uri!createPayUri:function(1)",
-          "docComment": "/**\n * Creates a uri to request token transfer.\n *\n * @param toAddress - Receipent address of the tokens.\n *\n * @param asset - 'neo', 'gas' or a contract scripthash.\n *\n * @param amount - Amount of tokens to transfer in integer amounts.\n *\n * @example\n *\n * To request 1.23456789 GAS to `NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk`:\n * ```ts\n * import {createPayUri} from \"@epicchain/epicvault-uri\";\n * const uri = createPayUri(\"NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk\", \"gas\", 123456789);\n * ```\n *\n */\n",
+          "canonicalReference": "@cityofzion/neon-uri!createPayUri:function(1)",
+          "docComment": "/**\n * Creates a uri to request token transfer.\n *\n * @param toAddress - Receipent address of the tokens.\n *\n * @param asset - 'neo', 'gas' or a contract scripthash.\n *\n * @param amount - Amount of tokens to transfer in integer amounts.\n *\n * @example\n *\n * To request 1.23456789 GAS to `NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk`:\n * ```ts\n * import {createPayUri} from \"@cityofzion/neon-uri\";\n * const uri = createPayUri(\"NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk\", \"gas\", 123456789);\n * ```\n *\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -251,7 +251,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-uri!createVoteUri:function(1)",
+          "canonicalReference": "@cityofzion/neon-uri!createVoteUri:function(1)",
           "docComment": "/**\n * Creates a uri with voting intent.\n *\n * @param publicKey - The candidate to vote for.\n */\n",
           "excerptTokens": [
             {
@@ -296,7 +296,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@epicchain/epicvault-uri!parse:function(1)",
+          "canonicalReference": "@cityofzion/neon-uri!parse:function(1)",
           "docComment": "/**\n * Parses an NEP9 URI string into a consumable intent object. This function does not check for runtime validity conditions (eg address or contract validity).\n *\n * @param uri - case sensitive URI string.\n */\n",
           "excerptTokens": [
             {
@@ -314,7 +314,7 @@
             {
               "kind": "Reference",
               "text": "UriIntent",
-              "canonicalReference": "@epicchain/epicvault-uri!UriIntent:interface"
+              "canonicalReference": "@cityofzion/neon-uri!UriIntent:interface"
             },
             {
               "kind": "Content",
@@ -342,7 +342,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@epicchain/epicvault-uri!UriIntent:interface",
+          "canonicalReference": "@cityofzion/neon-uri!UriIntent:interface",
           "docComment": "/**\n * Results of parsing a NEO uri. Contains a displayable string describing the intent and a partial ContractCall object that requires more information to be used in a Transaction.\n */\n",
           "excerptTokens": [
             {
@@ -357,7 +357,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-uri!UriIntent#contractCall:member",
+              "canonicalReference": "@cityofzion/neon-uri!UriIntent#contractCall:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -367,7 +367,7 @@
                 {
                   "kind": "Reference",
                   "text": "sc.ContractCallJson",
-                  "canonicalReference": "@epicchain/epicvault-core!ContractCallJson:interface"
+                  "canonicalReference": "@cityofzion/neon-core!ContractCallJson:interface"
                 },
                 {
                   "kind": "Content",
@@ -385,7 +385,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-uri!UriIntent#description:member",
+              "canonicalReference": "@cityofzion/neon-uri!UriIntent#description:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -412,7 +412,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-uri!UriIntent#intent:member",
+              "canonicalReference": "@cityofzion/neon-uri!UriIntent#intent:member",
               "docComment": "",
               "excerptTokens": [
                 {

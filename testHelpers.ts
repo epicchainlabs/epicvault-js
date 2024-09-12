@@ -1,15 +1,15 @@
 import { rpc } from "./packages/neon-core/src";
 
 export const TESTNET_URLS = [
-  "http://testnet1-seed.epic-chain.org:20111",
-  "http://testnet2-seed.epic-chain.org:20111",
-  "http://testnet3-seed.epic-chain.org:20111",
-  "http://testnet4-seed.epic-chain.org:20111",
-  "http://testnet5-seed.epic-chain.org:20111",
+  "http://seed1t4.neo.org:20332",
+  "http://seed2t4.neo.org:20332",
+  "http://seed3t4.neo.org:20332",
+  "http://seed4t4.neo.org:20332",
+  "http://seed5t4.neo.org:20332",
 ];
 
 //Node17+ defaults to resolving IPv6 by default so localhost does not work anymore.
-export const LOCALNET_URLS = ["http://127.0.0.1:50111"];
+export const LOCALNET_URLS = ["http://127.0.0.1:20332"];
 
 export async function getIntegrationEnvUrl(): Promise<string> {
   const urls = isTestNet() ? TESTNET_URLS : LOCALNET_URLS;

@@ -6,7 +6,7 @@ title: Wallet
 The `wallet` module is exposed as:
 
 ```js
-import Neon, { wallet, CONST } from "@epicchain/epicvault-js";
+import Neon, { wallet, CONST } from "@cityofzion/neon-js";
 const account = Neon.create.account(privateKey);
 const alternative = new wallet.Account(privateKey);
 
@@ -115,7 +115,7 @@ The `Wallet` class is essentially a collection of encrypted keys as well as the
 parameters used to encrypt them.
 
 ```js
-import Neon, { wallet } from "epicchain/epicvault-js";
+import Neon, { wallet } from "cityofzion/neon-js";
 
 const a = new wallet.Account(
   "6PYLHmDf6AjF4AsVtosmxHuPYeuyJL3SLuw7J1U8i7HxKAnYNsp61HYRfF"
