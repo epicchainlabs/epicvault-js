@@ -1,6 +1,6 @@
 // import { getIntegrationEnvUrl } from "../../../../../testHelpers";
 import { experimental } from "../../src";
-import { CONST, rpc, sc, u, wallet } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, u, wallet } from "@epicchain/epicvault-core";
 import { promises as fs } from "fs";
 import * as TestHelpers from "../../../../testHelpers";
 import path from "path";

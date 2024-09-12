@@ -1,5 +1,5 @@
 {
-  "name": "@cityofzion/neon-core",
+  "name": "@epicchain/epicvault-core",
   "description": "Neon-JS Core functionality",
   "version": "5.6.0",
   "engines": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neon-js.git"
+    "url": "git+https://github.com/epicchain/epicvault-js.git"
   },
   "publishConfig": {
     "access": "public"

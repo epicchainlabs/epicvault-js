@@ -61,11 +61,11 @@ neo:vote-02028a99826edc0c97d18e22b6932373d908d323aa7f92656a77ec26e8861699ef
 ## Installation
 
 ```sh
-npm i @cityofzion/neon-uri @cityofzion/neon-core
+npm i @epicchain/epicvault-uri @epicchain/epicvault-core
 ```
 
 ```js
-const uri = require("@cityofzion/neon-uri");
+const uri = require("@epicchain/epicvault-uri");
 ```
 
 ## API
@@ -110,7 +110,7 @@ The intent will look like:
 `createPayUri` and `createVoteUri` are simple methods to help quickly create compliant uris:
 
 ```js
-const neonUri = require("@cityofzion/neon-uri");
+const neonUri = require("@epicchain/epicvault-uri");
 
 //neo:vote-02028a99826edc0c97d18e22b6932373d908d323aa7f92656a77ec26e8861699ef
 const voteUri = neonUri.createVoteUri("02028a99826edc0c97d18e22b6932373d908d323aa7f92656a77ec26e8861699ef")

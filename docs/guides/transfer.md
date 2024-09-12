@@ -16,7 +16,7 @@ First, some setup:
  
 
 ```js
-import { CONST, rpc, sc, wallet, tx, u } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, wallet, tx, u } from "@epicchain/epicvault-core";
 
 const inputs = {
   fromAccount: new wallet.Account(

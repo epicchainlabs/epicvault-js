@@ -1,4 +1,4 @@
-import { rpc, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { rpc, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 import { getTokenInfos } from "./api";
 import { Candidate, getCandidates } from "./api/getCandidates";
 import {

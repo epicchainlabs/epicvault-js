@@ -1,4 +1,4 @@
-import { tx, sc, u, wallet } from "@cityofzion/neon-core";
+import { tx, sc, u, wallet } from "@epicchain/epicvault-core";
 
 export class TransactionBuilder {
   private vmScripts: (sc.ContractCall | string)[] = [];

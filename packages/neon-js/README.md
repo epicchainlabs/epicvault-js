@@ -8,7 +8,7 @@ Constructed package using:
 In addition, this package exposes a high level semantic API binding for beginner usage. The semantic API can be found in the default export of the package.
 
 ```js
-const Neon = require("cityofzion/neon-js");
+const Neon = require("epicchain/epicvault-js");
 
 console.log(Neon); // {wallet, tx, api, nep5, etc...}
 

@@ -23,18 +23,18 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@cityofzion/neon-api@^5.0.0-next.10":
+"@epicchain/epicvault-api@^5.0.0-next.10":
   version "5.0.0-next.10"
-  resolved "https://registry.yarnpkg.com/@cityofzion/neon-api/-/neon-api-5.0.0-next.10.tgz#2524d7c9653426f1d43f85f96c06f7da1d4abad7"
+  resolved "https://registry.yarnpkg.com/@epicchain/epicvault-api/-/neon-api-5.0.0-next.10.tgz#2524d7c9653426f1d43f85f96c06f7da1d4abad7"
   integrity sha512-3hzQT81PwBGOw1cOjb+/PBjN6Yant6VoTuUxbf5opzdYh2VzwRAPnWV6Bt2kIGcob9w97HmuQmH9IQfIerJo+w==
   dependencies:
     axios "0.21.1"
     isomorphic-ws "4.0.1"
     ws "7.4.4"
 
-"@cityofzion/neon-core@5.0.0-next.10", "@cityofzion/neon-core@^5.0.0-next.10":
+"@epicchain/epicvault-core@5.0.0-next.10", "@epicchain/epicvault-core@^5.0.0-next.10":
   version "5.0.0-next.10"
-  resolved "https://registry.yarnpkg.com/@cityofzion/neon-core/-/neon-core-5.0.0-next.10.tgz#5ec3b5e0eca50ae31d30eb80e0fd812bd9dee761"
+  resolved "https://registry.yarnpkg.com/@epicchain/epicvault-core/-/neon-core-5.0.0-next.10.tgz#5ec3b5e0eca50ae31d30eb80e0fd812bd9dee761"
   integrity sha512-NQ/T5EqIOOviJ8tasJPB1vW4MkQPEW10YCI20oep2Gwlqdr5lU4ZtPobeYr9R4e7pTGile0oQjHHt8IVgeF+Yg==
   dependencies:
     abort-controller "3.0.0"
@@ -50,13 +50,13 @@
     scrypt-js "3.0.1"
     secure-random "1.1.2"
 
-"@cityofzion/neon-js@5.0.0-next.10":
+"@epicchain/epicvault-js@5.0.0-next.10":
   version "5.0.0-next.10"
-  resolved "https://registry.yarnpkg.com/@cityofzion/neon-js/-/neon-js-5.0.0-next.10.tgz#8fba2301a4a1bbb699b1d39cc7a70688448d90c7"
+  resolved "https://registry.yarnpkg.com/@epicchain/epicvault-js/-/neon-js-5.0.0-next.10.tgz#8fba2301a4a1bbb699b1d39cc7a70688448d90c7"
   integrity sha512-YQgJh8PoKY6To8AO5mM906/do4wyFYvRGNbx4O+IHpwwvsweMQ46+t2Gq8mVkL04w+jNubgxHAK4IJC4DmuJuQ==
   dependencies:
-    "@cityofzion/neon-api" "^5.0.0-next.10"
-    "@cityofzion/neon-core" "^5.0.0-next.10"
+    "@epicchain/epicvault-api" "^5.0.0-next.10"
+    "@epicchain/epicvault-core" "^5.0.0-next.10"
 
 "@eslint/eslintrc@^0.4.1":
   version "0.4.1"

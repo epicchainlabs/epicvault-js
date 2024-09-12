@@ -1,4 +1,4 @@
-import { CONST, rpc, wallet, sc, tx, u } from "@cityofzion/neon-core";
+import { CONST, rpc, wallet, sc, tx, u } from "@epicchain/epicvault-core";
 import { CommonConfig } from "../types";
 import { setBlockExpiry, addFees } from "../helpers";
 

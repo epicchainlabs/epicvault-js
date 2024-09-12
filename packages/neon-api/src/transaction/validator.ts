@@ -1,4 +1,4 @@
-import { tx, rpc, u } from "@cityofzion/neon-core";
+import { tx, rpc, u } from "@epicchain/epicvault-core";
 
 export enum ValidationAttributes {
   None = 0,

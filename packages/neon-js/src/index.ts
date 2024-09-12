@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as api from "@cityofzion/neon-api";
-import * as neonCore from "@cityofzion/neon-core";
+import * as api from "@epicchain/epicvault-api";
+import * as neonCore from "@epicchain/epicvault-core";
 import * as experimental from "./experimental";
 
 const { sc, rpc, wallet, CONST, u, tx, logging } = neonCore;

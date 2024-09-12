@@ -6,7 +6,7 @@ const pullRequestNumber = /https:\/\/github.com\/.*\/.*\/pull\/(\d+)/.exec(
 )[1];
 axios
   .get(
-    `https://api.github.com/repos/cityofzion/neon-js/pulls/${pullRequestNumber}`
+    `https://api.github.com/repos/epicchain/epicvault-js/pulls/${pullRequestNumber}`
   )
   .then((res) => {
     console.log(res.data.base.ref);

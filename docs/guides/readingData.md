@@ -17,7 +17,7 @@ NOTE: This tutorial is written in Typescript. There
  
 
 ```js
-import { rpc, sc, u } from "@cityofzion/neon-core";
+import { rpc, sc, u } from "@epicchain/epicvault-core";
 
 const url = "http://localhost:20332";
 

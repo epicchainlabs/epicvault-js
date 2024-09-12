@@ -7,7 +7,7 @@ Wrapper for interacting with Ledger.
 ## Installation
 
 ```sh
-npm i @cityofzion/neon-node-ledger @cityofzion-neon-core
+npm i @epicchain/epicvault-node-ledger @cityofzion-neon-core
 ```
 
 This package only provides an easy wrapper for communicating with the Ledger. You will need one of the ledger libraries depending on your use-case:

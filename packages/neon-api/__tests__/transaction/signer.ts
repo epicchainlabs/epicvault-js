@@ -1,5 +1,5 @@
 import { TransactionSigner, TransactionBuilder } from "../../src/transaction";
-import { wallet, tx, u } from "@cityofzion/neon-core";
+import { wallet, tx, u } from "@epicchain/epicvault-core";
 
 const PRIVATE_KEYS = [
   "9ab7e154840daca3a2efadaf0df93cd3a5b51768c632f5433f86909d9b994a69",

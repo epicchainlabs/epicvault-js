@@ -1,4 +1,4 @@
-import { rpc, CONST } from "@cityofzion/neon-core";
+import { rpc, CONST } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 
 import { getTokenInfos, TokenInfo } from "../../src/api/getTokenInfos";

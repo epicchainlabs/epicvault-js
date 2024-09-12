@@ -1,10 +1,10 @@
 {
-  "name": "@cityofzion/neon-api",
+  "name": "@epicchain/epicvault-api",
   "description": "Neon-API module: High level API for neon-js",
   "version": "5.4.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neon-js.git"
+    "url": "git+https://github.com/epicchain/epicvault-js.git"
   },
   "publishConfig": {
     "access": "public"
@@ -35,7 +35,7 @@
     "test:unit": "jest /packages/.*/__tests__/.*"
   },
   "peerDependencies": {
-    "@cityofzion/neon-core": "^5.0.0"
+    "@epicchain/epicvault-core": "^5.0.0"
   },
   "files": [
     "dist/",

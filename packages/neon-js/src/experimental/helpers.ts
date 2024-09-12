@@ -1,7 +1,7 @@
-import { CONST, rpc, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 import { CommonConfig } from "./types";
 import { GASContract } from "./nep17";
-import { smartCalculateNetworkFee } from "@cityofzion/neon-api";
+import { smartCalculateNetworkFee } from "@epicchain/epicvault-api";
 
 /**
  * Calculate the GAS costs for validation and inclusion of the transaction in a block

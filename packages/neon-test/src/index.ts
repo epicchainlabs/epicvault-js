@@ -1,4 +1,4 @@
-import { api, rpc } from "@cityofzion/neon-js";
+import { api, rpc } from "@epicchain/epicvault-js";
 
 const RPC_URL = "https://testnet1.neo.coz.io:443";
 

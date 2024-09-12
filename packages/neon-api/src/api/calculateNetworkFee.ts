@@ -1,5 +1,5 @@
-import { tx, sc, u, wallet } from "@cityofzion/neon-core";
-import RPCClient from "@cityofzion/neon-core/lib/rpc/RPCClient";
+import { tx, sc, u, wallet } from "@epicchain/epicvault-core";
+import RPCClient from "@epicchain/epicvault-core/lib/rpc/RPCClient";
 
 /**
  * Calculates the network fee required to process the transaction.

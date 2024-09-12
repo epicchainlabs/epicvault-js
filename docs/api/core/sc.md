@@ -6,7 +6,7 @@ title: Smart Contract
 The `sc` module is exposed as:
 
 ```js
-import Neon, { sc } from "@cityofzion/neon-js";
+import Neon, { sc } from "@epicchain/epicvault-js";
 const sb = Neon.create.scriptBuilder();
 const alternative = new sc.scriptBuilder();
 ```

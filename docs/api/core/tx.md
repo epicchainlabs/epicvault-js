@@ -6,7 +6,7 @@ title: Transactions
 The `tx` module is exposed as:
 
 ```ts
-import { tx, wallet } from "@cityofzion/neon-js";
+import { tx, wallet } from "@epicchain/epicvault-js";
 const acct = new wallet.Account();
 const transaction = new tx.Transaction();
 transaction.addSigner(new tx.Signer({ account: acct.scriptHash }));

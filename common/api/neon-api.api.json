@@ -161,20 +161,20 @@
     }
   },
   "kind": "Package",
-  "canonicalReference": "@cityofzion/neon-api!",
+  "canonicalReference": "@epicchain/epicvault-api!",
   "docComment": "",
-  "name": "@cityofzion/neon-api",
+  "name": "@epicchain/epicvault-api",
   "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
-      "canonicalReference": "@cityofzion/neon-api!",
+      "canonicalReference": "@epicchain/epicvault-api!",
       "name": "",
       "preserveMemberOrder": false,
       "members": [
         {
           "kind": "Function",
-          "canonicalReference": "@cityofzion/neon-api!calculateNetworkFee:function(1)",
+          "canonicalReference": "@epicchain/epicvault-api!calculateNetworkFee:function(1)",
           "docComment": "/**\n * Calculates the network fee required to process the transaction. The fields signers, attributes and script needs to be fully populated for this to work.\n *\n * @deprecated\n *\n * use the smartCalculateNetworkFee helper instead.\n *\n * @param txn - A partially filled out transaction.\n *\n * @param feePerByte - The current feePerByte in Policy contract.\n *\n * @param signingAccts - The accounts that will be signing this.\n */\n",
           "excerptTokens": [
             {
@@ -184,7 +184,7 @@
             {
               "kind": "Reference",
               "text": "tx.Transaction",
-              "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+              "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
             },
             {
               "kind": "Content",
@@ -197,7 +197,7 @@
             {
               "kind": "Reference",
               "text": "u.BigInteger",
-              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+              "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
             },
             {
               "kind": "Content",
@@ -210,7 +210,7 @@
             {
               "kind": "Reference",
               "text": "u.BigInteger",
-              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+              "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
             },
             {
               "kind": "Content",
@@ -219,7 +219,7 @@
             {
               "kind": "Reference",
               "text": "u.BigInteger",
-              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+              "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
             },
             {
               "kind": "Content",
@@ -263,7 +263,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@cityofzion/neon-api!getFeeInformation:function(1)",
+          "canonicalReference": "@epicchain/epicvault-api!getFeeInformation:function(1)",
           "docComment": "/**\n * Helper method for retrieving fee-related information from PolicyContract.\n */\n",
           "excerptTokens": [
             {
@@ -273,7 +273,7 @@
             {
               "kind": "Reference",
               "text": "rpc.NeoServerRpcClient",
-              "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+              "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
             },
             {
               "kind": "Content",
@@ -291,7 +291,7 @@
             {
               "kind": "Reference",
               "text": "u.BigInteger",
-              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+              "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
             },
             {
               "kind": "Content",
@@ -300,7 +300,7 @@
             {
               "kind": "Reference",
               "text": "u.BigInteger",
-              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+              "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
             },
             {
               "kind": "Content",
@@ -332,7 +332,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@cityofzion/neon-api!getTokenBalances:function(1)",
+          "canonicalReference": "@epicchain/epicvault-api!getTokenBalances:function(1)",
           "docComment": "",
           "excerptTokens": [
             {
@@ -354,7 +354,7 @@
             {
               "kind": "Reference",
               "text": "sc.Nep17Contract",
-              "canonicalReference": "@cityofzion/neon-core!Nep17Contract:class"
+              "canonicalReference": "@epicchain/epicvault-core!Nep17Contract:class"
             },
             {
               "kind": "Content",
@@ -367,7 +367,7 @@
             {
               "kind": "Reference",
               "text": "rpc.NeoServerRpcClient",
-              "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+              "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
             },
             {
               "kind": "Content",
@@ -424,7 +424,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@cityofzion/neon-api!getTokenInfos:function(1)",
+          "canonicalReference": "@epicchain/epicvault-api!getTokenInfos:function(1)",
           "docComment": "",
           "excerptTokens": [
             {
@@ -438,7 +438,7 @@
             {
               "kind": "Reference",
               "text": "sc.Nep17Contract",
-              "canonicalReference": "@cityofzion/neon-core!Nep17Contract:class"
+              "canonicalReference": "@epicchain/epicvault-core!Nep17Contract:class"
             },
             {
               "kind": "Content",
@@ -451,7 +451,7 @@
             {
               "kind": "Reference",
               "text": "rpc.NeoServerRpcClient",
-              "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+              "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
             },
             {
               "kind": "Content",
@@ -469,7 +469,7 @@
             {
               "kind": "Reference",
               "text": "TokenInfo",
-              "canonicalReference": "@cityofzion/neon-api!TokenInfo:interface"
+              "canonicalReference": "@epicchain/epicvault-api!TokenInfo:interface"
             },
             {
               "kind": "Content",
@@ -509,7 +509,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent:interface",
+          "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent:interface",
           "docComment": "",
           "excerptTokens": [
             {
@@ -524,7 +524,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#contractHash:member",
+              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#contractHash:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -551,7 +551,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#decimalAmt:member",
+              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#decimalAmt:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -578,7 +578,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#from:member",
+              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#from:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -588,7 +588,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -606,7 +606,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#integerAmt:member",
+              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#integerAmt:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -620,7 +620,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -638,7 +638,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent#to:member",
+              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#to:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -668,7 +668,7 @@
         },
         {
           "kind": "Class",
-          "canonicalReference": "@cityofzion/neon-api!NetworkFacade:class",
+          "canonicalReference": "@epicchain/epicvault-api!NetworkFacade:class",
           "docComment": "",
           "excerptTokens": [
             {
@@ -684,7 +684,7 @@
           "members": [
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#claimGas:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#claimGas:member(1)",
               "docComment": "/**\n * Claims all the gas available for the specified account. Do note that GAS is automatically claimed when you perform a transaction involving NEO.\n *\n * @param acct - The account to claim gas on\n *\n * @param config - Configuration\n */\n",
               "excerptTokens": [
                 {
@@ -694,7 +694,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -703,7 +703,7 @@
                 {
                   "kind": "Reference",
                   "text": "signingConfig",
-                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!signingConfig:interface"
                 },
                 {
                   "kind": "Content",
@@ -755,7 +755,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#client:member",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#client:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -765,7 +765,7 @@
                 {
                   "kind": "Reference",
                   "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -786,7 +786,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade.fromConfig:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade.fromConfig:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -796,7 +796,7 @@
                 {
                   "kind": "Reference",
                   "text": "NetworkFacadeConfig",
-                  "canonicalReference": "@cityofzion/neon-api!NetworkFacadeConfig:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!NetworkFacadeConfig:interface"
                 },
                 {
                   "kind": "Content",
@@ -814,7 +814,7 @@
                 {
                   "kind": "Reference",
                   "text": "NetworkFacade",
-                  "canonicalReference": "@cityofzion/neon-api!NetworkFacade:class"
+                  "canonicalReference": "@epicchain/epicvault-api!NetworkFacade:class"
                 },
                 {
                   "kind": "Content",
@@ -849,7 +849,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#getCandidates:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#getCandidates:member(1)",
               "docComment": "/**\n * Convenience method for getting list of candidates.\n */\n",
               "excerptTokens": [
                 {
@@ -868,7 +868,7 @@
                 {
                   "kind": "Reference",
                   "text": "Candidate",
-                  "canonicalReference": "@cityofzion/neon-api!~Candidate:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!~Candidate:interface"
                 },
                 {
                   "kind": "Content",
@@ -894,7 +894,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#getRpcNode:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#getRpcNode:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -904,7 +904,7 @@
                 {
                   "kind": "Reference",
                   "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -926,7 +926,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#initialize:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#initialize:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -962,7 +962,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#invoke:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#invoke:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -972,7 +972,7 @@
                 {
                   "kind": "Reference",
                   "text": "sc.ContractCall",
-                  "canonicalReference": "@cityofzion/neon-core!ContractCall:interface"
+                  "canonicalReference": "@epicchain/epicvault-core!ContractCall:interface"
                 },
                 {
                   "kind": "Content",
@@ -990,7 +990,7 @@
                 {
                   "kind": "Reference",
                   "text": "rpc.InvokeResult",
-                  "canonicalReference": "@cityofzion/neon-core!InvokeResult:interface"
+                  "canonicalReference": "@epicchain/epicvault-core!InvokeResult:interface"
                 },
                 {
                   "kind": "Content",
@@ -1025,7 +1025,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#magicNumber:member",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#magicNumber:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1055,7 +1055,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#sign:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#sign:member(1)",
               "docComment": "/**\n * Signs a transaction according to the signing configuration. The input transaction is modified with the signatures and returned.\n *\n * @param txn - Transaction to sign\n *\n * @param config - Configuration\n *\n * @returns \n */\n",
               "excerptTokens": [
                 {
@@ -1065,7 +1065,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -1074,7 +1074,7 @@
                 {
                   "kind": "Reference",
                   "text": "signingConfig",
-                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!signingConfig:interface"
                 },
                 {
                   "kind": "Content",
@@ -1092,7 +1092,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -1135,7 +1135,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#transferToken:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#transferToken:member(1)",
               "docComment": "/**\n * Constructs and executes a transaction of multiple token transfers\n *\n * @param intents - Token transfers\n *\n * @param config - Configuration\n */\n",
               "excerptTokens": [
                 {
@@ -1145,7 +1145,7 @@
                 {
                   "kind": "Reference",
                   "text": "Nep17TransferIntent",
-                  "canonicalReference": "@cityofzion/neon-api!Nep17TransferIntent:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent:interface"
                 },
                 {
                   "kind": "Content",
@@ -1158,7 +1158,7 @@
                 {
                   "kind": "Reference",
                   "text": "signingConfig",
-                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!signingConfig:interface"
                 },
                 {
                   "kind": "Content",
@@ -1210,7 +1210,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#validate:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#validate:member(1)",
               "docComment": "/**\n * Performs validation of all attributes on the given transaction.\n *\n * @param txn - Transaction to validate\n */\n",
               "excerptTokens": [
                 {
@@ -1220,7 +1220,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -1238,7 +1238,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationResult",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationResult:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationResult:interface"
                 },
                 {
                   "kind": "Content",
@@ -1273,7 +1273,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacade#vote:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#vote:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1283,7 +1283,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -1300,7 +1300,7 @@
                 {
                   "kind": "Reference",
                   "text": "signingConfig",
-                  "canonicalReference": "@cityofzion/neon-api!signingConfig:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!signingConfig:interface"
                 },
                 {
                   "kind": "Content",
@@ -1363,7 +1363,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@cityofzion/neon-api!NetworkFacadeConfig:interface",
+          "canonicalReference": "@epicchain/epicvault-api!NetworkFacadeConfig:interface",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1378,7 +1378,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!NetworkFacadeConfig#node:member",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacadeConfig#node:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1392,7 +1392,7 @@
                 {
                   "kind": "Reference",
                   "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -1413,7 +1413,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@cityofzion/neon-api!signingConfig:interface",
+          "canonicalReference": "@epicchain/epicvault-api!signingConfig:interface",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1428,7 +1428,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!signingConfig#signingCallback:member",
+              "canonicalReference": "@epicchain/epicvault-api!signingConfig#signingCallback:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1438,7 +1438,7 @@
                 {
                   "kind": "Reference",
                   "text": "SigningFunction",
-                  "canonicalReference": "@cityofzion/neon-api!SigningFunction:type"
+                  "canonicalReference": "@epicchain/epicvault-api!SigningFunction:type"
                 },
                 {
                   "kind": "Content",
@@ -1459,7 +1459,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@cityofzion/neon-api!SigningFunction:type",
+          "canonicalReference": "@epicchain/epicvault-api!SigningFunction:type",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1473,7 +1473,7 @@
             {
               "kind": "Reference",
               "text": "tx.Transaction",
-              "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+              "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
             },
             {
               "kind": "Content",
@@ -1503,7 +1503,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@cityofzion/neon-api!signWithAccount:function(1)",
+          "canonicalReference": "@epicchain/epicvault-api!signWithAccount:function(1)",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1513,7 +1513,7 @@
             {
               "kind": "Reference",
               "text": "wallet.Account",
-              "canonicalReference": "@cityofzion/neon-core!Account:class"
+              "canonicalReference": "@epicchain/epicvault-core!Account:class"
             },
             {
               "kind": "Content",
@@ -1522,7 +1522,7 @@
             {
               "kind": "Reference",
               "text": "SigningFunction",
-              "canonicalReference": "@cityofzion/neon-api!SigningFunction:type"
+              "canonicalReference": "@epicchain/epicvault-api!SigningFunction:type"
             },
             {
               "kind": "Content",
@@ -1550,7 +1550,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@cityofzion/neon-api!smartCalculateNetworkFee:function(1)",
+          "canonicalReference": "@epicchain/epicvault-api!smartCalculateNetworkFee:function(1)",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1560,7 +1560,7 @@
             {
               "kind": "Reference",
               "text": "tx.Transaction",
-              "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+              "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
             },
             {
               "kind": "Content",
@@ -1569,7 +1569,7 @@
             {
               "kind": "Reference",
               "text": "RPCClient",
-              "canonicalReference": "@cityofzion/neon-core!RPCClient:class"
+              "canonicalReference": "@epicchain/epicvault-core!RPCClient:class"
             },
             {
               "kind": "Content",
@@ -1587,7 +1587,7 @@
             {
               "kind": "Reference",
               "text": "u.BigInteger",
-              "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+              "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
             },
             {
               "kind": "Content",
@@ -1627,7 +1627,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@cityofzion/neon-api!TokenInfo:interface",
+          "canonicalReference": "@epicchain/epicvault-api!TokenInfo:interface",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1642,7 +1642,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!TokenInfo#decimals:member",
+              "canonicalReference": "@epicchain/epicvault-api!TokenInfo#decimals:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1669,7 +1669,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!TokenInfo#symbol:member",
+              "canonicalReference": "@epicchain/epicvault-api!TokenInfo#symbol:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1696,7 +1696,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!TokenInfo#totalSupply:member",
+              "canonicalReference": "@epicchain/epicvault-api!TokenInfo#totalSupply:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1726,7 +1726,7 @@
         },
         {
           "kind": "Class",
-          "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class",
+          "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder:class",
           "docComment": "",
           "excerptTokens": [
             {
@@ -1742,7 +1742,7 @@
           "members": [
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addBasicSignatureField:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addBasicSignatureField:member(1)",
               "docComment": "/**\n * Adds a signature field representing the request for a signature from this account. Under the hood, this adds a Signer and empty Witness to the transaction. The Signer defaults to the basic scope. For more advanced usage, plase manually add your own Signers and Witnesses.\n *\n * @param account - account that has to sign the transaction.\n */\n",
               "excerptTokens": [
                 {
@@ -1752,7 +1752,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -1791,7 +1791,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addContractCall:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addContractCall:member(1)",
               "docComment": "/**\n * You can add multiple intents to the transaction\n */\n",
               "excerptTokens": [
                 {
@@ -1801,7 +1801,7 @@
                 {
                   "kind": "Reference",
                   "text": "sc.ContractCall",
-                  "canonicalReference": "@cityofzion/neon-core!ContractCall:interface"
+                  "canonicalReference": "@epicchain/epicvault-core!ContractCall:interface"
                 },
                 {
                   "kind": "Content",
@@ -1844,7 +1844,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addEmptyWitness:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addEmptyWitness:member(1)",
               "docComment": "/**\n * Adds an unsigned witness to the transaction. Will deduplicate witnesses based on verificationScript. Required to calculate the network fee correctly.\n */\n",
               "excerptTokens": [
                 {
@@ -1854,7 +1854,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -1893,7 +1893,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addEmptyWitnesses:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addEmptyWitnesses:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1903,7 +1903,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -1946,7 +1946,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addGasClaim:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addGasClaim:member(1)",
               "docComment": "/**\n * Adds the logic for claiming gas. Alternatively, you may just trigger the gas claim by performing an actual transaction involving NEO.\n *\n * @param account - Account to claim gas on.\n */\n",
               "excerptTokens": [
                 {
@@ -1956,7 +1956,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -1965,7 +1965,7 @@
                 {
                   "kind": "Reference",
                   "text": "TransactionBuilder",
-                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                  "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder:class"
                 },
                 {
                   "kind": "Content",
@@ -1996,7 +1996,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addNep17Transfer:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addNep17Transfer:member(1)",
               "docComment": "/**\n * Adds the logic to send tokens around.\n *\n * @param account - originating account\n *\n * @param destination - account where the tokens will be sent\n *\n * @param tokenScriptHash - scripthash of the token contract\n *\n * @param amt - Amount of tokens in integer format.\n */\n",
               "excerptTokens": [
                 {
@@ -2006,7 +2006,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -2035,7 +2035,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -2044,7 +2044,7 @@
                 {
                   "kind": "Reference",
                   "text": "TransactionBuilder",
-                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                  "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder:class"
                 },
                 {
                   "kind": "Content",
@@ -2099,7 +2099,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addScript:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addScript:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2147,7 +2147,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addSigners:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addSigners:member(1)",
               "docComment": "/**\n * Add signers. Will deduplicate signers and merge scopes. This does not add any Witnesses.\n */\n",
               "excerptTokens": [
                 {
@@ -2157,7 +2157,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.SignerLike",
-                  "canonicalReference": "@cityofzion/neon-core!SignerLike:interface"
+                  "canonicalReference": "@epicchain/epicvault-core!SignerLike:interface"
                 },
                 {
                   "kind": "Content",
@@ -2200,7 +2200,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#addVote:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addVote:member(1)",
               "docComment": "/**\n * Adds the logic to vote for a candidate.\n *\n * @param account - Account containing the NEO.\n *\n * @param candidatePublicKey - The candidate's publickey in hex big endian.\n */\n",
               "excerptTokens": [
                 {
@@ -2210,7 +2210,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -2227,7 +2227,7 @@
                 {
                   "kind": "Reference",
                   "text": "TransactionBuilder",
-                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                  "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder:class"
                 },
                 {
                   "kind": "Content",
@@ -2266,7 +2266,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#build:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#build:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2276,7 +2276,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -2298,7 +2298,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder.newBuilder:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder.newBuilder:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2308,7 +2308,7 @@
                 {
                   "kind": "Reference",
                   "text": "TransactionBuilder",
-                  "canonicalReference": "@cityofzion/neon-api!TransactionBuilder:class"
+                  "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder:class"
                 },
                 {
                   "kind": "Content",
@@ -2330,7 +2330,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#setFeeAccount:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#setFeeAccount:member(1)",
               "docComment": "/**\n * Sets an account to pay fees for this transaction. The first Signer defaults to the payer.\n *\n * @param account - Account to pay fees from.\n */\n",
               "excerptTokens": [
                 {
@@ -2340,7 +2340,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -2379,7 +2379,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#setNetworkFee:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#setNetworkFee:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2389,7 +2389,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -2428,7 +2428,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionBuilder#setSystemFee:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#setSystemFee:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2438,7 +2438,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -2480,7 +2480,7 @@
         },
         {
           "kind": "Class",
-          "canonicalReference": "@cityofzion/neon-api!TransactionSigner:class",
+          "canonicalReference": "@epicchain/epicvault-api!TransactionSigner:class",
           "docComment": "/**\n * A class with functions to sign transaction\n */\n",
           "excerptTokens": [
             {
@@ -2496,7 +2496,7 @@
           "members": [
             {
               "kind": "Constructor",
-              "canonicalReference": "@cityofzion/neon-api!TransactionSigner:constructor(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionSigner:constructor(1)",
               "docComment": "/**\n * Constructs a new instance of the `TransactionSigner` class\n */\n",
               "excerptTokens": [
                 {
@@ -2506,7 +2506,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -2529,7 +2529,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#signWithAccount:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionSigner#signWithAccount:member(1)",
               "docComment": "/**\n * Sign a transaction with Accounts or Private Keys. This is used when you have full access to signer accounts\n *\n * @param accounts - accounts that will sign this transaction\n */\n",
               "excerptTokens": [
                 {
@@ -2543,7 +2543,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -2586,7 +2586,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#signWithMultiSigAccount:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionSigner#signWithMultiSigAccount:member(1)",
               "docComment": "/**\n * Sign a transaction with multi-signatures for multi-sig account\n *\n * @param multisigAccount - multisig account\n *\n * @param witnesses - signatures from accounts within the multisig-account\n */\n",
               "excerptTokens": [
                 {
@@ -2596,7 +2596,7 @@
                 {
                   "kind": "Reference",
                   "text": "wallet.Account",
-                  "canonicalReference": "@cityofzion/neon-core!Account:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Account:class"
                 },
                 {
                   "kind": "Content",
@@ -2605,7 +2605,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Witness",
-                  "canonicalReference": "@cityofzion/neon-core!Witness:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Witness:class"
                 },
                 {
                   "kind": "Content",
@@ -2656,7 +2656,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#signWithWitness:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionSigner#signWithWitness:member(1)",
               "docComment": "/**\n * Sign a transaction with Witnesses. This can be used when you accept a signature from someone else\n *\n * @param witnesses - witnesses that will be added to the transaction\n */\n",
               "excerptTokens": [
                 {
@@ -2666,7 +2666,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Witness",
-                  "canonicalReference": "@cityofzion/neon-core!Witness:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Witness:class"
                 },
                 {
                   "kind": "Content",
@@ -2709,7 +2709,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@cityofzion/neon-api!TransactionSigner#transaction:member",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionSigner#transaction:member",
               "docComment": "/**\n * transaction to be signed\n */\n",
               "excerptTokens": [
                 {
@@ -2719,7 +2719,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -2743,7 +2743,7 @@
         },
         {
           "kind": "Class",
-          "canonicalReference": "@cityofzion/neon-api!TransactionValidator:class",
+          "canonicalReference": "@epicchain/epicvault-api!TransactionValidator:class",
           "docComment": "/**\n * A class with functions to validate transaction\n */\n",
           "excerptTokens": [
             {
@@ -2759,7 +2759,7 @@
           "members": [
             {
               "kind": "Constructor",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator:constructor(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator:constructor(1)",
               "docComment": "/**\n * Constructs a new instance of the `TransactionValidator` class\n */\n",
               "excerptTokens": [
                 {
@@ -2769,7 +2769,7 @@
                 {
                   "kind": "Reference",
                   "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -2778,7 +2778,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -2809,7 +2809,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#rpcClient:member",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#rpcClient:member",
               "docComment": "/**\n * Transaction will be validated on this rpc node\n */\n",
               "excerptTokens": [
                 {
@@ -2819,7 +2819,7 @@
                 {
                   "kind": "Reference",
                   "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@cityofzion/neon-core!NeoServerRpcClient:class"
+                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -2840,7 +2840,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#transaction:member",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#transaction:member",
               "docComment": "/**\n * Transaction that will be validated\n */\n",
               "excerptTokens": [
                 {
@@ -2850,7 +2850,7 @@
                 {
                   "kind": "Reference",
                   "text": "tx.Transaction",
-                  "canonicalReference": "@cityofzion/neon-core!Transaction:class"
+                  "canonicalReference": "@epicchain/epicvault-core!Transaction:class"
                 },
                 {
                   "kind": "Content",
@@ -2871,7 +2871,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator.TX_LIFESPAN_SUGGESTION:member",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator.TX_LIFESPAN_SUGGESTION:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2901,7 +2901,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validate:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#validate:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2911,7 +2911,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationAttributes",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationAttributes:enum"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes:enum"
                 },
                 {
                   "kind": "Content",
@@ -2920,7 +2920,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationAttributes",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationAttributes:enum"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes:enum"
                 },
                 {
                   "kind": "Content",
@@ -2938,7 +2938,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationResult",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationResult:interface"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationResult:interface"
                 },
                 {
                   "kind": "Content",
@@ -2981,7 +2981,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateNetworkFee:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#validateNetworkFee:member(1)",
               "docComment": "/**\n * Validate NetworkFee\n *\n * @param autoFix - autofix when fee is too low.\n */\n",
               "excerptTokens": [
                 {
@@ -3008,7 +3008,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3017,7 +3017,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -3052,7 +3052,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateScript:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#validateScript:member(1)",
               "docComment": "/**\n * Validate intents\n */\n",
               "excerptTokens": [
                 {
@@ -3071,7 +3071,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3097,7 +3097,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateSystemFee:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#validateSystemFee:member(1)",
               "docComment": "/**\n * validate systemFee\n *\n * @param autoFix - autofix when fee is too low.\n */\n",
               "excerptTokens": [
                 {
@@ -3124,7 +3124,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3133,7 +3133,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -3168,7 +3168,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@cityofzion/neon-api!TransactionValidator#validateValidUntilBlock:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionValidator#validateValidUntilBlock:member(1)",
               "docComment": "/**\n * validate validUntilBlock.\n *\n * @param autoFix - autofix when number is below current height.\n */\n",
               "excerptTokens": [
                 {
@@ -3195,7 +3195,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3233,7 +3233,7 @@
         },
         {
           "kind": "Enum",
-          "canonicalReference": "@cityofzion/neon-api!ValidationAttributes:enum",
+          "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes:enum",
           "docComment": "",
           "excerptTokens": [
             {
@@ -3248,7 +3248,7 @@
           "members": [
             {
               "kind": "EnumMember",
-              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.All:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes.All:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3269,7 +3269,7 @@
             },
             {
               "kind": "EnumMember",
-              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.NetworkFee:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes.NetworkFee:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3290,7 +3290,7 @@
             },
             {
               "kind": "EnumMember",
-              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.None:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes.None:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3311,7 +3311,7 @@
             },
             {
               "kind": "EnumMember",
-              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.Script:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes.Script:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3332,7 +3332,7 @@
             },
             {
               "kind": "EnumMember",
-              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.SystemFee:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes.SystemFee:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3353,7 +3353,7 @@
             },
             {
               "kind": "EnumMember",
-              "canonicalReference": "@cityofzion/neon-api!ValidationAttributes.ValidUntilBlock:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationAttributes.ValidUntilBlock:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3376,7 +3376,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@cityofzion/neon-api!ValidationResult:interface",
+          "canonicalReference": "@epicchain/epicvault-api!ValidationResult:interface",
           "docComment": "",
           "excerptTokens": [
             {
@@ -3391,7 +3391,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!ValidationResult#result:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationResult#result:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3405,7 +3405,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3414,7 +3414,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3423,7 +3423,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3432,7 +3432,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -3441,7 +3441,7 @@
                 {
                   "kind": "Reference",
                   "text": "ValidationSuggestion",
-                  "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type"
+                  "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type"
                 },
                 {
                   "kind": "Content",
@@ -3450,7 +3450,7 @@
                 {
                   "kind": "Reference",
                   "text": "u.BigInteger",
-                  "canonicalReference": "@cityofzion/neon-core!BigInteger:class"
+                  "canonicalReference": "@epicchain/epicvault-core!BigInteger:class"
                 },
                 {
                   "kind": "Content",
@@ -3472,7 +3472,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@cityofzion/neon-api!ValidationResult#valid:member",
+              "canonicalReference": "@epicchain/epicvault-api!ValidationResult#valid:member",
               "docComment": "/**\n * Whether the transaction is valid after validation\n */\n",
               "excerptTokens": [
                 {
@@ -3502,7 +3502,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@cityofzion/neon-api!ValidationSuggestion:type",
+          "canonicalReference": "@epicchain/epicvault-api!ValidationSuggestion:type",
           "docComment": "",
           "excerptTokens": [
             {

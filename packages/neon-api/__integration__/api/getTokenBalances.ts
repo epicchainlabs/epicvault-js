@@ -1,4 +1,4 @@
-import { rpc, CONST, wallet } from "@cityofzion/neon-core";
+import { rpc, CONST, wallet } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 import testWalletJson from "../../../neon-core/__tests__/testWallet.json";
 

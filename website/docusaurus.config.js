@@ -7,7 +7,7 @@ module.exports = {
   projectName: "neon-js",
   scripts: [
     "https://buttons.github.io/buttons.js",
-    // "https://unpkg.com/@cityofzion/neon-js@next",
+    // "https://unpkg.com/@epicchain/epicvault-js@next",
   ],
   favicon: "img/favicon.png",
   customFields: {
@@ -15,12 +15,12 @@ module.exports = {
       {
         caption: "Neon Wallet",
         image:
-          "https://github.com/CityOfZion/neon-wallet/blob/dev/icons/png/512x512.png?raw=true",
+          "https://github.com/epicchain/epicvault-wallet/blob/dev/icons/png/512x512.png?raw=true",
         infoLink: "http://neonwallet.com/",
         pinned: true,
       },
     ],
-    repoUrl: "https://github.com/cityofzion/neon-js",
+    repoUrl: "https://github.com/epicchain/epicvault-js",
   },
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",

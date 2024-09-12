@@ -1,4 +1,4 @@
-import { rpc } from "@cityofzion/neon-core";
+import { rpc } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 
 import { getFeeInformation } from "../../src/api/getFeeInformation";

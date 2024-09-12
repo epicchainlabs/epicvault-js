@@ -1,4 +1,4 @@
-import { rpc } from "@cityofzion/neon-core";
+import { rpc } from "@epicchain/epicvault-core";
 import { getTokenBalances } from "../../src/api/getTokenBalances";
 
 describe("getTokenBalances", () => {

@@ -1,4 +1,4 @@
-import { u, wallet } from "@cityofzion/neon-core";
+import { u, wallet } from "@epicchain/epicvault-core";
 export interface CommonConfig {
   networkMagic: number;
   rpcAddress: string;

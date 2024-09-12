@@ -20,7 +20,7 @@ The following section describes how to deploy a smart contract to the block chai
 
 2. Deploying the contract
 ```javascript
-const Neon = require("@cityofzion/neon-js");
+const Neon = require("@epicchain/epicvault-js");
 const fs = require("fs").promises;
 
 // Create an example account
@@ -76,7 +76,7 @@ The following section describes how to interact with NEP-17 contracts on the blo
 ### Steps
 1. <a name="createconfig"></a> Create a `CommonConfig` matching your environment. Here we create a config and wallet account for our private network
 ```javascript
-const Neon = require("@cityofzion/neon-js");
+const Neon = require("@epicchain/epicvault-js");
 const priv_key =
   "0101010101010101010101010101010101010101010101010101010101010101";
 const acc = new Neon.wallet.Account(priv_key);

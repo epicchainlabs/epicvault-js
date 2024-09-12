@@ -14,8 +14,8 @@
     "lint": "eslint  basic/* advanced/* --cache"
   },
   "dependencies": {
-    "@cityofzion/neon-core": "5.0.0-next.10",
-    "@cityofzion/neon-js": "5.0.0-next.10"
+    "@epicchain/epicvault-core": "5.0.0-next.10",
+    "@epicchain/epicvault-js": "5.0.0-next.10"
   },
   "devDependencies": {
     "eslint": "7.26.0",

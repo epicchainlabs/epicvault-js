@@ -1,6 +1,6 @@
 const nodeLedger = require("@ledgerhq/hw-transport-node-hid").default;
-const ledger = require("@cityofzion/neon-ledger").default;
-const neon = require("@cityofzion/neon-js");
+const ledger = require("@epicchain/epicvault-ledger").default;
+const neon = require("@epicchain/epicvault-js");
 
 const neonJs = { ...neon, ledger };
 const addressNumber = 0;

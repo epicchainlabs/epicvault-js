@@ -1,4 +1,4 @@
-import type { sc } from "@cityofzion/neon-core";
+import type { sc } from "@epicchain/epicvault-core";
 
 const INTENT_PREFIXES = ["pay", "vote"];
 

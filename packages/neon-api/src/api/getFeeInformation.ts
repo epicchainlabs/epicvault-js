@@ -1,4 +1,4 @@
-import { sc, rpc, u } from "@cityofzion/neon-core";
+import { sc, rpc, u } from "@epicchain/epicvault-core";
 
 /**
  * Helper method for retrieving fee-related information from PolicyContract.

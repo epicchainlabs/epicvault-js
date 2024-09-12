@@ -1,5 +1,5 @@
 import { CommonConfig } from "./types";
-import { rpc, tx, sc, u } from "@cityofzion/neon-core";
+import { rpc, tx, sc, u } from "@epicchain/epicvault-core";
 import { addFees, setBlockExpiry } from "./helpers";
 
 export class SmartContract {

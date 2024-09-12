@@ -1,4 +1,4 @@
-const rpc = require("@cityofzion/neon-core").rpc;
+const rpc = require("@epicchain/epicvault-core").rpc;
 
 const START_BLOCK = 500;
 const STOPPING_POINT = 10;

@@ -6,7 +6,7 @@ title: RPC
 The `rpc` module is exposed as:
 
 ```js
-import Neon, { rpc } from "@cityofzion/neon-js";
+import Neon, { rpc } from "@epicchain/epicvault-js";
 const client = Neon.create.rpcClient(URL);
 const alternative = new rpc.RPCClient(URL);
 ```

@@ -6,7 +6,7 @@ title: Utility
 The `u` module is exposed as:
 
 ```js
-import Neon, { u } from "@cityofzion/neon-js";
+import Neon, { u } from "@epicchain/epicvault-js";
 Neon.u.reverseHex(hexstring);
 
 ```
@@ -73,7 +73,7 @@ These methods are convenient wrappers around the CryptoJS functions. They take
 in strings and return strings.
 
 ```js
-import Neon from "@cityofzion/neon-js";
+import Neon from "@epicchain/epicvault-js";
 // Performs a single SHA
 Neon.u.sha256(item);
 // Performs a SHA followed by a SHA

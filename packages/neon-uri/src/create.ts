@@ -17,7 +17,7 @@ export function createVoteUri(publicKey: string): string {
  * To request 1.23456789 GAS to `NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk`:
  *
  * ```ts
- * import {createPayUri} from "@cityofzion/neon-uri";
+ * import {createPayUri} from "@epicchain/epicvault-uri";
  * const uri = createPayUri("NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk", "gas", 123456789);
  * ```
  *

@@ -1,5 +1,5 @@
 import { TransactionBuilder } from "../../src/transaction";
-import { CONST, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { CONST, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 
 const account1 = new wallet.Account(
   "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g"

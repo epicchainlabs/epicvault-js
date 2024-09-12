@@ -1,10 +1,10 @@
 {
-  "name": "@cityofzion/neon-ledger",
+  "name": "@epicchain/epicvault-ledger",
   "description": "Neon Ledger integration for Node.js",
   "version": "5.6.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neon-js.git"
+    "url": "git+https://github.com/epicchain/epicvault-js.git"
   },
   "publishConfig": {
     "access": "public"
@@ -42,14 +42,14 @@
     "lodash": "4.17.21"
   },
   "peerDependencies": {
-    "@cityofzion/neon-core": "^5.3.0"
+    "@epicchain/epicvault-core": "^5.3.0"
   },
   "files": [
     "lib/",
     "typings/"
   ],
   "devDependencies": {
-    "@cityofzion/neon-js": "^5.6.0",
+    "@epicchain/epicvault-js": "^5.6.0",
     "@ledgerhq/hw-transport-node-hid": "6.27.12",
     "@ledgerhq/hw-transport-u2f": "5.36.0-deprecated",
     "@types/ledgerhq__hw-transport-node-hid": "4.22.2"

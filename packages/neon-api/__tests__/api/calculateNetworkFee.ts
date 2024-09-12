@@ -1,4 +1,4 @@
-import { tx, u } from "@cityofzion/neon-core";
+import { tx, u } from "@epicchain/epicvault-core";
 import { calculateNetworkFee } from "../../src/api";
 
 describe("calculateNetworkFee", () => {

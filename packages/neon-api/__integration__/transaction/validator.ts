@@ -2,7 +2,7 @@ import {
   TransactionValidator,
   ValidationAttributes,
 } from "../../src/transaction";
-import { sc, tx, u, rpc, wallet, CONST } from "@cityofzion/neon-core";
+import { sc, tx, u, rpc, wallet, CONST } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 
 let rpcClient: rpc.NeoServerRpcClient;

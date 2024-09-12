@@ -25,7 +25,7 @@ call to the endpoint to grab some basic details that we will use later.
  
 
 ```js
-import Neon from "@cityofzion/neon-js";
+import Neon from "@epicchain/epicvault-js";
 
 const url = "http://localhost:20332";
 const privateKey = "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g";

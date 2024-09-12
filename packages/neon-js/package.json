@@ -1,10 +1,10 @@
 {
-  "name": "@cityofzion/neon-js",
+  "name": "@epicchain/epicvault-js",
   "description": "Neon-JS SDK for interacting with NEO blockchain",
   "version": "5.6.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neon-js.git"
+    "url": "git+https://github.com/epicchain/epicvault-js.git"
   },
   "publishConfig": {
     "access": "public"
@@ -31,8 +31,8 @@
     "pretty": "prettier --write --loglevel=warn \"./{src,__{tests,integration}__}/**/*.ts\""
   },
   "dependencies": {
-    "@cityofzion/neon-api": "^5.4.0",
-    "@cityofzion/neon-core": "^5.6.0"
+    "@epicchain/epicvault-api": "^5.4.0",
+    "@epicchain/epicvault-core": "^5.6.0"
   },
   "files": [
     "dist/",

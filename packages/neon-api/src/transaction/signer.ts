@@ -1,4 +1,4 @@
-import { tx, wallet, u } from "@cityofzion/neon-core";
+import { tx, wallet, u } from "@epicchain/epicvault-core";
 
 /**
  * A class with functions to sign transaction

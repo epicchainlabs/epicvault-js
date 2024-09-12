@@ -1,4 +1,4 @@
-import { CONST, rpc, sc, u, wallet } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, u, wallet } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../testHelpers";
 import testWallet from "../../neon-core/__tests__/testWallet.json";
 import { NetworkFacade } from "../src/NetworkFacade";

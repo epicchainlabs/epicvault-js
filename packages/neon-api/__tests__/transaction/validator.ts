@@ -1,4 +1,4 @@
-import { rpc, tx, u } from "@cityofzion/neon-core";
+import { rpc, tx, u } from "@epicchain/epicvault-core";
 import {
   TransactionValidator,
   ValidationAttributes,
