@@ -1,21 +1,21 @@
 {
-  "name": "@cityofzion/neon-js",
+  "name": "@epicchain/epicvault-js",
   "description": "Neon-JS SDK for interacting with NEO blockchain",
-  "version": "5.6.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neon-js.git"
+    "url": "git+https://github.com/epicchainlabs/epicvault-js.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "neo",
+    "epicchain",
     "antshares",
     "javascript",
     "libraries"
   ],
-  "author": "Yak Jun Xiang <snowypowers@gmail.com> (https://github.com/snowypowers)",
+  "author": "xmoohad <xmoohad@gmail.com> (https://github.com/xmoohad)",
   "license": "MIT",
   "main": "dist/index.js",
   "browser": "dist/browser.js",

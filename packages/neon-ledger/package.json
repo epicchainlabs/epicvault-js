@@ -1,21 +1,21 @@
 {
-  "name": "@cityofzion/neon-ledger",
-  "description": "Neon Ledger integration for Node.js",
-  "version": "5.6.0",
+  "name": "@epicchain/epicvault-ledger",
+  "description": "EpicVault Ledger Integration for EpicVault.js enables secure and seamless hardware wallet support within the EpicVault ecosystem.",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neon-js.git"
+    "url": "git+https://github.com/epicchainlabs/epicvault-js.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
-    "neo",
+    "epicchain",
     "antshares",
     "javascript",
     "libraries"
   ],
-  "author": "Yak Jun Xiang <snowypowers@gmail.com> (https://github.com/snowypowers)",
+  "author": "xmoohad <xmoohad@epic-chain.org> (https://github.com/xmoohad)",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "lib/index.js",
