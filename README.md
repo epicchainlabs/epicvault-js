@@ -7,7 +7,7 @@
 
 # Overview
 
-EpicVault JS is a sophisticated and robust JavaScript SDK crafted for seamless interaction with the EpicChain blockchain platform. This library empowers developers with a lightweight and efficient framework to integrate EpicChain (XPR) and EpicPulse (XPP) functionalities into their web applications and decentralized applications (dApps). 
+EpicVault JS is a sophisticated and robust JavaScript SDK crafted for seamless interaction with the EpicChain blockchain platform. This library empowers developers with a lightweight and efficient framework to integrate EpicChain (XPR) and EpicPulse (XPP) functionalities into their web applications and decentralized applications (dApps).
 
 EpicVault JS is designed to simplify complex blockchain interactions and streamline the development process, providing a comprehensive suite of tools for building cutting-edge blockchain solutions. The library is used by various applications and tools within the EpicChain ecosystem, serving as a fundamental component for blockchain developers and enthusiasts alike.
 
@@ -26,7 +26,7 @@ EpicVault JS can be easily installed and integrated into your projects. Below ar
 To install EpicVault JS for use in a Node.js environment, execute the following command:
 
 ```bash
-npm i @epicchainlabs/epicvault-js
+npm i @epicchain/epicvault-js
 ```
 
 This command installs the latest version of EpicVault JS and its dependencies, allowing you to utilize the SDK in your server-side applications or build tools.
@@ -36,7 +36,7 @@ This command installs the latest version of EpicVault JS and its dependencies, a
 For browser-based projects, you can include EpicVault JS via a Content Delivery Network (CDN). Add the following script tag to your HTML file:
 
 ```html
-<script src="https://unpkg.com/@epicchainlabs/epicvault-js"></script>
+<script src="https://unpkg.com/@epicchain/epicvault-js"></script>
 ```
 
 This method provides a convenient way to access the SDK directly from the browser, without needing to manage local dependencies.
@@ -52,7 +52,7 @@ In a Node.js environment, you can import and use EpicVault JS as follows:
 ```js
 import {
     default as EpicVault
-} from "@epicchainlabs/epicvault-js";
+} from "@epicchain/epicvault-js";
 
 // Create a new account
 const account = EpicVault.create.account("XgsJXcjSB4sLRMQgW6CGc9887Lc87MmsUu");
@@ -139,6 +139,6 @@ This will start a local development server, allowing you to preview changes and 
 
 # License
 
-EpicVault JS is open-source software licensed under the [MIT License](https://github.com/epicchainlabs/epicvault-js/blob/master/LICENSE.md). 
+EpicVault JS is open-source software licensed under the [MIT License](https://github.com/epicchainlabs/epicvault-js/blob/master/LICENSE.md).
 
 The main author and maintainer of this project is [Your Name](https://github.com/your-github-profile). We extend our gratitude to all contributors and supporters who help improve and advance this library.
