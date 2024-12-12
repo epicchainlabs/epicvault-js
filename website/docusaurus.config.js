@@ -1,26 +1,26 @@
 module.exports = {
-  title: "neon-js",
-  tagline: "JS SDK for NEO3 blockchain",
-  url: "https://docs.coz.io",
+  title: "epicvault-js",
+  tagline: "The JS SDK for EpicChain Blockchain is a comprehensive JavaScript library designed to facilitate seamless interaction with the EpicChain blockchain.",
+  url: "https://epic-chain.org",
   baseUrl: "/neo3/neon-js/",
-  organizationName: "cityofzion",
-  projectName: "neon-js",
+  organizationName: "epicchainlabs",
+  projectName: "epicvault-js",
   scripts: [
     "https://buttons.github.io/buttons.js",
-    // "https://unpkg.com/@cityofzion/neon-js@next",
+    // "https://unpkg.com/@epicchainlabs/epicvault-js@next",
   ],
   favicon: "img/favicon.png",
   customFields: {
     users: [
       {
-        caption: "Neon Wallet",
+        caption: "EpicVault Wallet",
         image:
-          "https://github.com/CityOfZion/neon-wallet/blob/dev/icons/png/512x512.png?raw=true",
-        infoLink: "http://neonwallet.com/",
+          "https://github.com/epicchainlabs/epicvault-desktop/blob/dev/icons/png/512x512.png?raw=true",
+        infoLink: "http://epic-chain.org/epicvault-desktop/",
         pinned: true,
       },
     ],
-    repoUrl: "https://github.com/cityofzion/neon-js",
+    repoUrl: "https://github.com/epicchainlabs/epicvault-js",
   },
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",

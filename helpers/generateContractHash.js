@@ -1,11 +1,11 @@
 const sc = require("@cityofzion/neon-core").sc;
 
 const nativeContractNames = [
-  "NeoToken",
-  "GasToken",
-  "PolicyContract",
+  "EpicChain",
+  "EpicPulse",
+  "CovenantChain",
   "ManagementContract",
-  "OracleContract",
+  "OracleNexus",
   "DesignationContract",
 ];
 

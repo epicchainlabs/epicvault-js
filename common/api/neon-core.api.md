@@ -360,8 +360,8 @@ declare namespace CONST {
         DEFAULT_SCRYPT,
         DEFAULT_WALLET,
         DEFAULT_ACCOUNT_CONTRACT,
-        NEP2_HEADER,
-        NEP2_FLAG,
+        XEP2_HEADER,
+        XEP2_FLAG,
         TX_VERSION
     }
 }
@@ -1329,23 +1329,23 @@ interface MethodTokenLike {
 // @public (undocumented)
 enum NATIVE_CONTRACT_HASH {
     // (undocumented)
-    CryptoLib = "726cb6e0cd8628a1350a611384688911ab75f51b",
+    CryptoHive = "726cb6e0cd8628a1350a611384688911ab75f51b",
     // (undocumented)
-    GasToken = "d2a4cff31913016155e38e474a2c06d08be276cf",
+    EpicPulse = "d2a4cff31913016155e38e474a2c06d08be276cf",
     // (undocumented)
-    LedgerContract = "da65b600f7124ce6c79950c1772a36403104f2be",
+    QuantumVaultAsset = "da65b600f7124ce6c79950c1772a36403104f2be",
     // (undocumented)
     ManagementContract = "fffdc93764dbaddd97c48f252a53ea4643faa3fd",
     // (undocumented)
-    NeoToken = "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+    EpicChain = "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
     // (undocumented)
-    OracleContract = "fe924b7cfe89ddd271abaf7210a80a7e11178758",
+    OracleNexus = "fe924b7cfe89ddd271abaf7210a80a7e11178758",
     // (undocumented)
-    PolicyContract = "cc5e4edd9f5f8dba8bb65734541df7a1c081c67b",
+    CovenantChain = "cc5e4edd9f5f8dba8bb65734541df7a1c081c67b",
     // (undocumented)
-    RoleManagement = "49cf4e5378ffcd4dec034fd98a174c5491e395e2",
+    QuantumGuardNexus = "49cf4e5378ffcd4dec034fd98a174c5491e395e2",
     // (undocumented)
-    StdLib = "acce6fd80d44e1796aa0c2c625e9e4e0ce39efc0"
+    EssentialLib = "acce6fd80d44e1796aa0c2c625e9e4e0ce39efc0"
 }
 
 // @public (undocumented)
@@ -1544,10 +1544,10 @@ interface Nep17TransferEvent {
 }
 
 // @public (undocumented)
-const NEP2_FLAG = "e0";
+const XEP2_FLAG = "e0";
 
 // @public (undocumented)
-const NEP2_HEADER = "0142";
+const XEP2_HEADER = "0142";
 
 // @public
 class Network implements NeonObject<NetworkLike> {
@@ -2333,7 +2333,7 @@ interface OrWitnessConditionJson {
 function parse(stringFlags: string): WitnessScope;
 
 // @public
-class PolicyContract extends BaseContract {
+class CovenantChain extends BaseContract {
     constructor();
     // (undocumented)
     getExecFeeFactor(): ContractCall;
@@ -2342,7 +2342,7 @@ class PolicyContract extends BaseContract {
     // (undocumented)
     static getMethods(): ContractMethodDefinition[];
     // (undocumented)
-    static get INSTANCE(): PolicyContract;
+    static get INSTANCE(): CovenantChain;
 }
 
 // @public
@@ -2649,7 +2649,7 @@ declare namespace sc {
         Nep17Contract,
         NeoContract,
         GasContract,
-        PolicyContract,
+        CovenantChain,
         calculateExecutionFee,
         NEFLike,
         NEFJson,

@@ -25,7 +25,7 @@ const inputs = {
   toAccount: new wallet.Account(
     "L2QTooFoDFyRFTxmtiVHt5CfsXfVnexdbENGDkkrrgTTryiLsPMG"
   ),
-  tokenScriptHash: CONST.NATIVE_CONTRACT_HASH.NeoToken,
+  tokenScriptHash: CONST.NATIVE_CONTRACT_HASH.EpicChain,
   amountToTransfer: 1,
   systemFee: 0,
   networkFee: 0,
@@ -88,7 +88,7 @@ signatures) and also the cost of running the verification of signatures.
  */
 async function checkNetworkFee() {
   const feePerByteInvokeResponse = await rpcClient.invokeFunction(
-    CONST.NATIVE_CONTRACT_HASH.PolicyContract,
+    CONST.NATIVE_CONTRACT_HASH.CovenantChain,
     "getFeePerByte"
   );
 
@@ -225,7 +225,7 @@ async function checkBalance() {
   // Check for gas funds for fees
   const gasRequirements = vars.tx.networkFee.add(vars.tx.systemFee);
   const gasBalance = balanceResponse.balance.filter((bal) =>
-    bal.assethash.includes(CONST.NATIVE_CONTRACT_HASH.GasToken)
+    bal.assethash.includes(CONST.NATIVE_CONTRACT_HASH.EpicPulse)
   );
   const gasAmount =
     gasBalance.length === 0

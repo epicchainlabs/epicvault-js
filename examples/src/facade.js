@@ -47,7 +47,7 @@ const intent = {
   from: new Neon.wallet.Account(privateKey),
   to: address,
   decimalAmt: 0.00000001,
-  contractHash: Neon.CONST.NATIVE_CONTRACT_HASH.GasToken,
+  contractHash: Neon.CONST.NATIVE_CONTRACT_HASH.EpicPulse,
 };
 
 /**

@@ -22,7 +22,7 @@ For this tutorial, you will need:
 First, we initialize the `NetworkFacade` pointing to our endpoint. Note that the
 method call returns a promise. During initialization, the class will make an API
 call to the endpoint to grab some basic details that we will use later.
- 
+
 
 ```js
 import Neon from "@cityofzion/neon-js";
@@ -47,13 +47,13 @@ const intent = {
   from: new Neon.wallet.Account(privateKey),
   to: address,
   decimalAmt: 0.00000001,
-  contractHash: Neon.CONST.NATIVE_CONTRACT_HASH.GasToken,
+  contractHash: Neon.CONST.NATIVE_CONTRACT_HASH.EpicPulse,
 };
 ```
 
 We will also need to create a siging configuration to tell the class how to sign
 the transaction. In this example, we will use a private key.
- 
+
 
 ```js
 const signingConfig = {
@@ -67,7 +67,7 @@ const signingConfig = {
 
 The facade will take care of all the details such as setting an appropriate
 validUntilBlock, filling in the minimum GAS fees required and sending it off.
- 
+
 
 ```js
 facadePromise

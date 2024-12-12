@@ -3,7 +3,7 @@ const rpc = require("@cityofzion/neon-core").rpc;
 const START_BLOCK = 500;
 const STOPPING_POINT = 10;
 
-const client = new rpc.RPCClient("http://seed3t.neo.org:20332");
+const client = new rpc.RPCClient("http://testnet3-seed.epic-chain.org:20111");
 
 let currentBlock = START_BLOCK;
 let found = 0;

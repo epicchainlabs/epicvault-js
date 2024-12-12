@@ -69,7 +69,7 @@ A simple wrapper method is provided for convenience.
 
 ```js
 const props = {
-  scriptHash: Neon.CONST.NATIVE_CONTRACT_HASH.NeoToken,
+  scriptHash: Neon.CONST.NATIVE_CONTRACT_HASH.EpicChain,
   operation: "symbol",
   args: [],
 };
@@ -99,7 +99,7 @@ const param1 = Neon.create.contractParam("String", "balanceOf");
 const param2 = sc.ContractParam.hash160("NNtxeX9UhKfHySqPQ29hQnZe22k8LwcFk1");
 
 rpc.Query.invoke(
-  CONST.NATIVE_CONTRACT_HASH.NeoToken,
+  CONST.NATIVE_CONTRACT_HASH.EpicChain,
   param1,
   sc.ContractParam.array(param2)
 ).then((res) => {

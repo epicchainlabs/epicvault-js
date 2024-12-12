@@ -103,7 +103,7 @@ c.encrypt("new password").then(() => c.export());
 ```
 
 This action will encrypt the private key with the provided password and replace
-any old NEP2 key.
+any old XEP2 key.
 
 ### Wallet
 
@@ -206,9 +206,9 @@ These methods are exposed for completeness but you are encouraged to use the
 constructors of the main objects `Balance` and `Claims` instead of manually
 recreating your own objects.
 
-### NEP2
+### XEP2
 
-The NEP2 standard describes the procedure to encrypt or decrypt a private key.
+The XEP2 standard describes the procedure to encrypt or decrypt a private key.
 The encryption method accepts either a WIF or HEX private key. However, the
 decryption method will always return a WIF for consistency.
 
@@ -218,13 +218,13 @@ nicely in browsers.
 ```js
 const privateKey = Neon.create.privateKey();
 const WIF = Neon.get.WIFFromPrivateKey(privateKey);
-const nep2Key = await Neon.encrypt(privateKey, "myPassword");
+const XEP2Key = await Neon.encrypt(privateKey, "myPassword");
 const decryptedKey = await Neon.decrypt(nep2Key, "myPassword");
 WIF === decryptedKey; // true
 
 const privateKey = wallet.generatePrivateKey();
 const WIF = new wallet.Account(privateKey).WIF;
-const nep2Key = await wallet.encrypt(WIF, "myPassword");
+const XEP2Key = await wallet.encrypt(WIF, "myPassword");
 const decryptedKey = await wallet.decrypt(nep2Key, "myPassword");
 WIF === decryptedKey; // true
 ```

@@ -20,8 +20,7 @@ export default () => {
               </div>
               <div class="card__body">
                 <p>
-                  For things related to the NEO ecosystem, please check out the
-                  COZ forums.
+                For everything related to the EpicChain ecosystem, be sure to visit EpicChain Lab's forums. It's the go-to place for discussions, updates, technical support, and collaboration opportunities within the community.
                 </p>
               </div>
               <div class="card__footer">
@@ -42,14 +41,13 @@ export default () => {
               </div>
               <div class="card__body">
                 <p>
-                  If you encounter an issue that feels like a bug, feel free to
-                  open an issue directly on our Github repository.
+                If you encounter an issue that seems like a bug, don't hesitate to open an issue directly on our GitHub repository.
                 </p>
               </div>
               <div class="card__footer">
                 <a
                   class="button button--secondary button--block"
-                  href="https://github.com/cityofzion/neon-js"
+                  href="https://github.com/epicchainlabs/epicvault-js"
                 >
                   Github
                 </a>
@@ -63,14 +61,14 @@ export default () => {
                 <h3>Other issues</h3>
               </div>
               <div class="card__body">
-                <p>For non-technical discussion, there is always Reddit.</p>
+                <p>For non-technical discussion, there is always Twitter.</p>
               </div>
               <div class="card__footer">
                 <a
                   class="button button--secondary button--block"
-                  href="https://www.reddit.com/r/NEO/"
+                  href="https://www.x.com/epicchainlabs/"
                 >
-                  Reddit
+                  Twitter
                 </a>
               </div>
             </div>

@@ -1,32 +1,19 @@
 import { rpc } from "@cityofzion/neon-core";
 
 const TESTNET_URLS = [
-  "http://seed1.ngd.network:20332",
-  "http://seed2.ngd.network:20332",
-  "http://seed3.ngd.network:20332",
-  "http://seed4.ngd.network:20332",
-  "http://seed5.ngd.network:20332",
-  "http://seed6.ngd.network:20332",
-  "http://seed7.ngd.network:20332",
-  "http://seed8.ngd.network:20332",
-  "http://seed9.ngd.network:20332",
-  "http://seed10.ngd.network:20332",
+  "http://testnet1-seed.epic-chain.org:20111",
+  "http://testnet2-seed.epic-chain.org:20111",
+  "http://testnet3-seed.epic-chain.org:20111",
+  "http://testnet4-seed.epic-chain.org:20111",
+  "http://testnet5-seed.epic-chain.org:20111",
 ];
 
 const MAINNET_URLS = [
-  "http://seed1.ngd.network:10332",
-  "http://seed2.ngd.network:10332",
-  "http://seed3.ngd.network:10332",
-  "http://seed4.ngd.network:10332",
-  "http://seed5.ngd.network:10332",
-  "http://seed6.ngd.network:10332",
-  "http://seed7.ngd.network:10332",
-  "http://seed8.ngd.network:10332",
-  "http://seed9.ngd.network:10332",
-  "http://seed10.ngd.network:10332",
-  "https://mainnet1.neo2.coz.io:443",
-  "https://mainnet2.neo2.coz.io:443",
-  "https://mainnet3.neo2.coz.io:443",
+  "http://mainnet1-seed.epic-chain.org:10111",
+  "http://mainnet2-seed.epic-chain.org:10111",
+  "http://mainnet3-seed.epic-chain.org:10111",
+  "http://mainnet4-seed.epic-chain.org:10111",
+  "http://mainnet5-seed.epic-chain.org:10111",
 ];
 
 export function getUrls(net: string): string[] {
@@ -65,5 +52,5 @@ export async function getUrl(net: string): Promise<string> {
       continue;
     }
   }
-  throw new Error("Exhausted all urls but found no available RPC");
+  throw new Error("Explored all URLs, but no RPC available—still searching for a connection!");
 }
