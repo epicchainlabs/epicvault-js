@@ -5,6 +5,6 @@
     "outDir": "lib",
     "module": "es6"
   },
-  "references": [{ "path": "../neon-core" }],
+  "references": [{ "path": "../epicvault-core" }],
   "include": ["src/**/*"]
 }

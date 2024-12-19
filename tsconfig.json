@@ -2,10 +2,10 @@
   "files": [],
   "include": [],
   "references": [
-    { "path": "./packages/neon-core" },
-    { "path": "./packages/neon-api" },
-    { "path": "./packages/neon-uri" },
-    { "path": "./packages/neon-ledger"},
-    { "path": "./packages/neon-js" }
+    { "path": "./packages/epicvault-core" },
+    { "path": "./packages/epicvault-api" },
+    { "path": "./packages/epicvault-uri" },
+    { "path": "./packages/epicvault-ledger"},
+    { "path": "./packages/epicvault-js" }
   ]
 }

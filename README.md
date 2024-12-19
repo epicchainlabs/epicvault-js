@@ -79,7 +79,7 @@ console.log(account);
 
 The global `EpicVault` object provides access to all the functionalities of the SDK, enabling you to manage blockchain interactions directly from the browser.
 
-> **Important Note:** For optimal performance and compatibility, we recommend using only `epicvault-js` within your project. Avoid combining `epicvault-js` with other incompatible libraries to prevent conflicts and ensure smooth operation. For further details, see [this issue](https://github.com/epicchainlabs/epicvault-js/issues/850) on GitHub.
+> **Important Note:** For optimal performance and compatibility, we recommend using only `epicvault-js` within your project. Avoid combining `epicvault-js` with other incompatible libraries to prevent conflicts and ensure smooth operation. For further details, see [this issue](https://github.com/epicchainlabs/epicvault-js/issues/) on GitHub.
 
 # Contributing
 
@@ -139,6 +139,6 @@ This will start a local development server, allowing you to preview changes and 
 
 # License
 
-EpicVault JS is open-source software licensed under the [MIT License](https://github.com/epicchainlabs/epicvault-js/blob/master/LICENSE.md).
+EpicVault JS is open-source software licensed under the [MIT License](https://github.com/epicchainlabs/epicvault-js/blob/master/LICENSE).
 
 The main author and maintainer of this project is [Your Name](https://github.com/your-github-profile). We extend our gratitude to all contributors and supporters who help improve and advance this library.

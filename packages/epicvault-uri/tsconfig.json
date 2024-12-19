@@ -4,6 +4,6 @@
     "rootDir": "src",
     "outDir": "lib"
   },
-  "references": [{ "path": "../neon-core" }],
+  "references": [{ "path": "../epicvault-core" }],
   "include": ["src/**/*"]
 }

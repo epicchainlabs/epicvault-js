@@ -1088,7 +1088,7 @@
                 {
                   "kind": "Reference",
                   "text": "BatchQuery",
-                  "canonicalReference": "@epicchain/epicvault-core!rpc.BatchQuery:class"
+                  "canonicalReference": "@!rpc.BatchQuery:class"
                 },
                 {
                   "kind": "Content",

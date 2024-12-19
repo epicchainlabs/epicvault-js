@@ -1,46 +1,81 @@
 # Contributing
 
-Thank you for reading this file. Do adhere to these guidelines as much as possible so everyone can have a good time :)
+Thank you so much for taking the time to read and contribute to this project! We deeply appreciate your interest in making this project better. By following these guidelines, we can ensure that everyone has a smooth, productive, and enjoyable experience collaborating together. Let's dive in and see how you can contribute!
 
-## How to contribute
+## How to Contribute
 
-### Open an issue
+We believe that open-source collaboration thrives when contributions are clear, structured, and in line with a common vision. Whether you're fixing a bug, suggesting an improvement, or submitting a new feature, we encourage you to contribute in the best possible way.
 
-Do open an issue so that everyone knows what is happening. This reduces the chance of double work and allows everyone, new or old, to join in the discussion and development.
+### Open an Issue
 
-### Scope your work
+Before jumping into development, we recommend that you **open an issue**. This serves as the first step in the collaboration process. By opening an issue, you're ensuring that everyone is on the same page and aware of the work that is being proposed. It helps reduce the chances of duplicating work and fosters an open discussion where everyone, whether experienced or new to the project, can participate.
 
-Scope your work such that it can be described within 1 commit message. This is important as we will be squashing your commits when merging and thus, you will only have one commit message to work with.
+- **Provide a clear description** of the issue or feature request.
+- **Share steps to reproduce** (for bugs) or **expected behavior** (for feature requests).
+- **Label issues** with appropriate tags (bug, enhancement, help wanted, etc.).
 
-We are going to adhere to Conventional Commits style for commit messages so this is a good guideline for it.
+By opening an issue first, you invite feedback and collaboration, helping to guide your efforts toward the most effective solution.
 
-[Conventional Commits](https://conventionalcommits.org/)
+### Scope Your Work
+
+Once the issue is open, it's time to get to work! **Scope your work** so that each change can be described in a single commit message. This is crucial as we will be squashing commits when merging pull requests. The goal is to keep each change atomic and manageable so it can be described with a concise commit message.
+
+For an example of how to structure your commits, we follow the [Conventional Commits](https://conventionalcommits.org/) style. This will help maintain clarity and uniformity across the project.
+
+Here's a basic breakdown of commit message format:
+- **type(scope): message**
+  - **type**: What the commit is doing, e.g., `fix`, `feat`, `docs`, `test`, or `refactor`.
+  - **scope**: A brief reference to the affected part of the codebase (e.g., `api`, `sc`, `wallet`).
+  - **message**: A short, clear description of what is being done.
+
+By following this style, we make it easier for everyone to understand the purpose of each change and how it fits into the bigger picture.
 
 ### Work from `dev`
 
-All our development work in progress happens on the `dev` branch. To start, please create a branch off `dev` . All your changes should live on this new branch and the pull request be created from this branch to either `dev` or `master` .
+To keep things organized, **work from the `dev` branch** for all development work. Here's how you can proceed:
 
-During development:
+1. **Create a new branch off `dev`**:
+   - This helps to ensure that you're working on the latest version of the codebase and avoids conflicts with other contributors.
+   - Branches should have descriptive names like `feature/add-new-endpoint` or `bugfix/fix-null-pointer`.
 
-* Ensure code is formatted through `npm run lint`.
-* Ensure tests pass through `npm run test:unit`.
+2. **All changes should stay on this new branch**:
+   - Make sure you commit your work regularly.
+   - Once your work is done, submit a **Pull Request (PR)** from this branch to either `dev` (for new features) or `master` (for bug fixes).
 
-  Just before you submit, you can run `npm run test` to run integration tests together. We do not encourage running integration tests in `watch` mode or everytime as it performs real transactions on the blockchain and should be reserved for the final step.
+During the development process, make sure to follow these guidelines:
+- **Format your code** using the linter: `npm run lint`.
+- **Ensure unit tests pass** by running `npm run test:unit`. This will check that individual components function as expected.
+- **Before submitting your PR**, run `npm run test` to ensure all integration tests pass as well. This helps to verify that the system works as a whole. Avoid running integration tests in "watch mode" since they interact with the blockchain and perform real transactions, which should only be done in the final test step.
 
-  There is no need to squash your work as we will do that when the maintainer merges the PR.
+### Submit Your Pull Request (PR)
 
-### Submit your PR
+Once your work is ready, it's time to **submit your PR**. This is where the real magic happens! When creating your PR, make sure to:
 
-Title your PR with a conventional commit message as such:
+1. **Title the PR** with a conventional commit message. This is a clear way to communicate the changes you've made.
 
-```
-type(scope):desc
-```
+   Example:
+   ```
+   feat(wallet): add support for multi-currency transactions
+   ```
 
-Type can be `fix` , `feat` , `docs` , `test` or `refactor` . This list is not exhaustive.
+2. **Choose the correct target branch**:
+   - For **bug fixes**, submit your PR to the `master` branch.
+   - For **new features**, submit it to the `dev` branch.
 
-Scope is the package folder that you are focusing on, `api` , `sc` , `wallet` , etc.
+3. **Review your PR** before submitting:
+   - Check that your code follows the style guide and adheres to the project’s standards.
+   - Ensure that the description clearly explains the purpose of the PR and any relevant details.
 
-For bugfixes, point the PR at `master` . For new features, please point it at `dev` .
+### And You Are Done!
 
-### And you are done!
+Once your PR has been submitted, the maintainer will review your work and provide feedback. We may ask for some changes before merging, but rest assured, your contribution will be reviewed with care and respect. After merging, your change will become part of the project!
+
+We appreciate every contribution, no matter how big or small, and encourage you to submit more PRs if you have more ideas to improve the project. Thank you for being a part of the community and helping make this project better!
+
+---
+
+We truly appreciate your efforts and look forward to seeing the improvements and features you bring to the table. If you have any questions or need further clarification, feel free to reach out. Happy coding!
+
+---
+
+**Made with ❤️ by the EpicChain Labs Team**
