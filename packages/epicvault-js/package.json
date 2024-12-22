@@ -1,7 +1,7 @@
 {
   "name": "@epicchain/epicvault-js",
   "description": "The EpicVault-JS SDK is a powerful JavaScript software development kit designed for seamless interaction with the EpicChain blockchain.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/epicchainlabs/epicvault-js.git"
@@ -11,7 +11,7 @@
   },
   "keywords": [
     "epicchain",
-    "antshares",
+    "xmoohad",
     "javascript",
     "libraries"
   ],
@@ -31,8 +31,8 @@
     "pretty": "prettier --write --loglevel=warn \"./{src,__{tests,integration}__}/**/*.ts\""
   },
   "dependencies": {
-    "@cityofzion/neon-api": "^5.4.0",
-    "@cityofzion/neon-core": "^5.5.0"
+    "@epicchain/epicvault-api": "^1.0.0",
+    "@epicchain/epicvault-core": "^1.0.1"
   },
   "files": [
     "dist/",

@@ -1,7 +1,7 @@
 {
   "name": "@epicchain/epicvault-uri",
   "description": "The EpicVault-uri Module is a specialized component within the EpicVault ecosystem designed to manage.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/epicchainlabs/epicvault-js.git"
@@ -11,7 +11,7 @@
   },
   "keywords": [
     "epicchain",
-    "antshares",
+    "xmoohad",
     "javascript",
     "libraries"
   ],
@@ -34,7 +34,7 @@
     "test:unit": "jest /packages/.*/__tests__/.*"
   },
   "peerDependencies": {
-    "@cityofzion/neon-core": "^5.0.0"
+    "@epicchain/epicvault-core": "^1.0.1"
   },
   "files": [
     "dist/",
