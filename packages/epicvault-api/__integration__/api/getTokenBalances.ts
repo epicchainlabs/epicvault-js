@@ -1,15 +1,15 @@
-import { rpc, CONST, wallet } from "@cityofzion/neon-core";
+import { rpc, CONST, wallet } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 import testWalletJson from "../../../neon-core/__tests__/testWallet.json";
 
 import { getTokenBalances } from "../../src/api/getTokenBalances";
 
-let client: rpc.NeoServerRpcClient;
+let client: rpc.EpicChainServerRpcClient;
 const address = testWalletJson.accounts[0].address;
 
 beforeAll(async () => {
   const url = await TestHelpers.getIntegrationEnvUrl();
-  client = new rpc.NeoServerRpcClient(url);
+  client = new rpc.EpicChainServerRpcClient(url);
 }, 20000);
 
 describe("getTokenBalances", () => {

@@ -11,7 +11,7 @@ import { constructMultiSigVerificationScript } from "./multisig";
 import { decrypt, encrypt, ScryptParams } from "./nep2";
 import {
   isAddress,
-  isNEP2,
+  isXEP2,
   isPrivateKey,
   isPublicKey,
   isScriptHash,
@@ -154,7 +154,7 @@ export class Account implements NeonObject<AccountJSON> {
     } else if (isWIF(str)) {
       this._privateKey = core.getPrivateKeyFromWIF(str);
       this._WIF = str;
-    } else if (isNEP2(str)) {
+    } else if (isXEP2(str)) {
       this._encrypted = str;
     } else {
       throw new ReferenceError(`Invalid input: ${str}`);

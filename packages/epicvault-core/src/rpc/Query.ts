@@ -37,7 +37,7 @@ export interface ApplicationLogJson {
   executions: {
     trigger: string;
     vmstate: string;
-    gasconsumed: string;
+    epicpulseconsumed: string;
     stack?: StackItemJson[];
     notifications: {
       contract: string;
@@ -58,7 +58,7 @@ export interface InvokeResult<T extends StackItemJson = StackItemJson> {
   /** Amount of gas consumed up to the point of stopping in the VM. If state is FAULT, this value is not representative of the amount of gas it will consume if it somehow succeeds on the blockchain.
    * This is a decimal value.
    */
-  gasconsumed: string;
+  epicpulseconsumed: string;
   /** A human-readable string clarifying the exception that occurred. Only available when state is "FAULT". */
   exception: string | null;
   stack: T[];
@@ -176,7 +176,7 @@ export interface GetVersionResult {
     maxvaliduntilblockincrement: number;
     maxtransactionsperblock: number;
     memorypoolmaxtransactions: number;
-    initialgasdistribution: number;
+    initialepicpulsedistribution: number;
   };
 }
 
@@ -200,7 +200,7 @@ export interface ValidateAddressResult {
   isvalid: boolean;
 }
 
-export interface GetUnclaimedGasResult {
+export interface getUnclaimedEpicPulseResult {
   unclaimed: string;
   address: string;
 }
@@ -694,11 +694,11 @@ export class Query<TParams extends JsonRpcParams, TResponse> {
    * This Query returns the available unclaimed bonus GAS for a NEO address
    * @param addr - a NEO address
    */
-  public static getUnclaimedGas(
+  public static getUnclaimedEpicPulse(
     addr: string
-  ): Query<[string], GetUnclaimedGasResult> {
+  ): Query<[string], getUnclaimedEpicPulseResult> {
     return new Query({
-      method: "getunclaimedgas",
+      method: "getUnclaimedEpicPulse",
       params: [addr],
     });
   }

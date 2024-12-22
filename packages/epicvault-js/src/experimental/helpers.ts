@@ -1,7 +1,7 @@
-import { CONST, rpc, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 import { CommonConfig } from "./types";
-import { GASContract } from "./nep17";
-import { smartCalculateNetworkFee } from "@cityofzion/neon-api";
+import { EpicPulseContract } from "./nep17";
+import { smartCalculateNetworkFee } from "@epicchain/epicvault-api";
 
 /**
  * Calculate the GAS costs for validation and inclusion of the transaction in a block
@@ -159,7 +159,7 @@ export async function getSystemFee(
         `Script execution failed. ExecutionEngine state = FAULT. ${response.exception}`
       );
     }
-    return u.BigInteger.fromDecimal(response.gasconsumed, 0);
+    return u.BigInteger.fromDecimal(response.epicpulseconsumed, 0);
   } catch (e) {
     throw new Error(`Failed to get system fee. ${e}`);
   }
@@ -253,7 +253,7 @@ export async function addFees(
     );
   }
 
-  const GAS = new GASContract(config);
+  const GAS = new EpicPulseContract(config);
   const gasBalance = await GAS.balanceOf(config.account.address);
   const requiredGAS = parseFloat(
     transaction.systemFee.add(transaction.networkFee).toDecimal(8)

@@ -1,4 +1,4 @@
-import { NeoServerRpcMixin } from "./clients/NeoServerRpcClient";
+import { EpicChainServerRpcMixin } from "./clients/EpicChainServerRpcClient";
 import {
   RpcDispatcher,
   ApplicationLogsRpcMixin,
@@ -8,7 +8,7 @@ import { Query } from "./Query";
 
 const PING_TIMEOUT = 2000;
 class FullRpcClient extends TokenTrackerRpcMixin(
-  ApplicationLogsRpcMixin(NeoServerRpcMixin(RpcDispatcher))
+  ApplicationLogsRpcMixin(EpicChainServerRpcMixin(RpcDispatcher))
 ) {
   public get [Symbol.toStringTag](): string {
     return `FullRpcClient(${this.url})`;

@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.34.4",
+    "@types/bn.js": "^5.1.6",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.3",
     "@types/tapable": "2.2.2",

@@ -208,7 +208,7 @@ export async function decrypt(
   return getWIFFromPrivateKey(privateKey);
 }
 
-export async function decryptNeo2(
+export async function decryptEpicChain(
   encryptedKey: string,
   keyphrase: string,
   scryptParams: ScryptParams = DEFAULT_SCRYPT

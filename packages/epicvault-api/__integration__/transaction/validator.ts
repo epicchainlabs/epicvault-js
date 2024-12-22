@@ -2,13 +2,13 @@ import {
   TransactionValidator,
   ValidationAttributes,
 } from "../../src/transaction";
-import { sc, tx, u, rpc, wallet, CONST } from "@cityofzion/neon-core";
+import { sc, tx, u, rpc, wallet, CONST } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 
-let rpcClient: rpc.NeoServerRpcClient;
+let rpcClient: rpc.EpicChainServerRpcClient;
 beforeAll(async () => {
   const url = await TestHelpers.getIntegrationEnvUrl();
-  rpcClient = new rpc.NeoServerRpcClient(url);
+  rpcClient = new rpc.EpicChainServerRpcClient(url);
 }, 20000);
 
 const sig = {

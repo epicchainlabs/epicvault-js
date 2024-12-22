@@ -17,7 +17,7 @@ We will be performing a couple of invokes to show you how to retrieve contract d
 NOTE: This tutorial is written in Typescript. There
  */
 
-import { rpc, sc, u } from "@cityofzion/neon-core";
+import { rpc, sc, u } from "@epicchain/epicvault-core";
 
 const url = "http://localhost:20332";
 
@@ -45,7 +45,7 @@ function getGasTotalSupply() {
   console.log("--- Current GAS total supply ---");
   // This is a hexstring
   const gasTotalSupplyScript = new sc.ScriptBuilder()
-    .emitContractCall(sc.GasContract.INSTANCE.totalSupply())
+    .emitContractCall(sc.EpicPulseContract.INSTANCE.totalSupply())
     .build();
 
   //We wrap the script in a HexString class so the SDK can handle the conversion to Base64 for us.
@@ -56,7 +56,7 @@ function getGasTotalSupply() {
     console.log(`Gas total supply is ${transformGasDecimal(gasTotalSupply)}`);
     console.log(
       `This action took ${transformGasDecimal(
-        gasTotalSupplyResult.gasconsumed
+        gasTotalSupplyResult.epicpulseconsumed
       )} GAS to run.\n\n`
     );
   });
@@ -72,7 +72,7 @@ This time, we will try out the invokefunction RPC call.
 
 function getNeoCandidates() {
   console.log("--- Candidates and their votes ---");
-  const neoCandidateContractCall = sc.NeoContract.INSTANCE.getCandidates();
+  const neoCandidateContractCall = sc.EpicChainContract.INSTANCE.getCandidates();
   return rpcClient
     .invokeFunction(
       neoCandidateContractCall.scriptHash,
@@ -92,7 +92,7 @@ function getNeoCandidates() {
 
       console.log(
         `This action took: ${transformGasDecimal(
-          neoCandidateResult.gasconsumed
+          neoCandidateResult.epicpulseconsumed
         )} GAS to run.`
       );
       console.log("\n\n");
@@ -101,7 +101,7 @@ function getNeoCandidates() {
 
 /**
        One other important function that invokefunction/invokescript serves is to help us estimate the GAS required to execute the script.
-       As the node is actually executing the script within the blockchain context, the gasconsumed field is pretty accurate assuming that the signers field is populated correctly.
+       As the node is actually executing the script within the blockchain context, the epicpulseconsumed field is pretty accurate assuming that the signers field is populated correctly.
        This is also how neon-js is able to assemble transactions with a good GAS fee estimate.
        */
 

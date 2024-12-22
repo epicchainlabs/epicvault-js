@@ -272,8 +272,8 @@
             },
             {
               "kind": "Reference",
-              "text": "rpc.NeoServerRpcClient",
-              "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+              "text": "rpc.EpicChainServerRpcClient",
+              "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
             },
             {
               "kind": "Content",
@@ -353,8 +353,8 @@
             },
             {
               "kind": "Reference",
-              "text": "sc.Nep17Contract",
-              "canonicalReference": "@epicchain/epicvault-core!Nep17Contract:class"
+              "text": "sc.Xep17Contract",
+              "canonicalReference": "@epicchain/epicvault-core!Xep17Contract:class"
             },
             {
               "kind": "Content",
@@ -366,8 +366,8 @@
             },
             {
               "kind": "Reference",
-              "text": "rpc.NeoServerRpcClient",
-              "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+              "text": "rpc.EpicChainServerRpcClient",
+              "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
             },
             {
               "kind": "Content",
@@ -437,8 +437,8 @@
             },
             {
               "kind": "Reference",
-              "text": "sc.Nep17Contract",
-              "canonicalReference": "@epicchain/epicvault-core!Nep17Contract:class"
+              "text": "sc.Xep17Contract",
+              "canonicalReference": "@epicchain/epicvault-core!Xep17Contract:class"
             },
             {
               "kind": "Content",
@@ -450,8 +450,8 @@
             },
             {
               "kind": "Reference",
-              "text": "rpc.NeoServerRpcClient",
-              "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+              "text": "rpc.EpicChainServerRpcClient",
+              "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
             },
             {
               "kind": "Content",
@@ -509,22 +509,22 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent:interface",
+          "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent:interface",
           "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export interface Nep17TransferIntent "
+              "text": "export interface Xep17TransferIntent "
             }
           ],
           "fileUrlPath": "src/NetworkFacade.ts",
           "releaseTag": "Public",
-          "name": "Nep17TransferIntent",
+          "name": "Xep17TransferIntent",
           "preserveMemberOrder": false,
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#contractHash:member",
+              "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent#contractHash:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -551,7 +551,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#decimalAmt:member",
+              "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent#decimalAmt:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -578,7 +578,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#from:member",
+              "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent#from:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -606,7 +606,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#integerAmt:member",
+              "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent#integerAmt:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -638,7 +638,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent#to:member",
+              "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent#to:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -764,8 +764,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+                  "text": "rpc.EpicChainServerRpcClient",
+                  "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -903,8 +903,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+                  "text": "rpc.EpicChainServerRpcClient",
+                  "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -1144,8 +1144,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "Nep17TransferIntent",
-                  "canonicalReference": "@epicchain/epicvault-api!Nep17TransferIntent:interface"
+                  "text": "Xep17TransferIntent",
+                  "canonicalReference": "@epicchain/epicvault-api!Xep17TransferIntent:interface"
                 },
                 {
                   "kind": "Content",
@@ -1391,8 +1391,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+                  "text": "rpc.EpicChainServerRpcClient",
+                  "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -1996,12 +1996,12 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addNep17Transfer:member(1)",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addXep17Transfer:member(1)",
               "docComment": "/**\n * Adds the logic to send tokens around.\n *\n * @param account - originating account\n *\n * @param destination - account where the tokens will be sent\n *\n * @param tokenScriptHash - scripthash of the token contract\n *\n * @param amt - Amount of tokens in integer format.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "addNep17Transfer(account: "
+                  "text": "addXep17Transfer(account: "
                 },
                 {
                   "kind": "Reference",
@@ -2095,7 +2095,7 @@
               ],
               "isOptional": false,
               "isAbstract": false,
-              "name": "addNep17Transfer"
+              "name": "addXep17Transfer"
             },
             {
               "kind": "Method",
@@ -2768,8 +2768,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+                  "text": "rpc.EpicChainServerRpcClient",
+                  "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
                 },
                 {
                   "kind": "Content",
@@ -2818,8 +2818,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "rpc.NeoServerRpcClient",
-                  "canonicalReference": "@epicchain/epicvault-core!NeoServerRpcClient:class"
+                  "text": "rpc.EpicChainServerRpcClient",
+                  "canonicalReference": "@epicchain/epicvault-core!EpicChainServerRpcClient:class"
                 },
                 {
                   "kind": "Content",

@@ -1,10 +1,10 @@
-import { sc, rpc, u } from "@cityofzion/neon-core";
+import { sc, rpc, u } from "@epicchain/epicvault-core";
 
 /**
  * Helper method for retrieving fee-related information from CovenantChain.
  */
 export async function getFeeInformation(
-  client: rpc.NeoServerRpcClient
+  client: rpc.EpicChainServerRpcClient
 ): Promise<{ feePerByte: u.BigInteger; executionFeeFactor: u.BigInteger }> {
   const policyScript = new sc.ScriptBuilder()
     .emitContractCall(sc.CovenantChain.INSTANCE.getFeePerByte())

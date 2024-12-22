@@ -250,7 +250,7 @@ describe("RPC Methods", () => {
         maxvaliduntilblockincrement: expect.any(Number),
         maxtransactionsperblock: expect.any(Number),
         memorypoolmaxtransactions: expect.any(Number),
-        initialgasdistribution: expect.any(Number),
+        initialepicpulsedistribution: expect.any(Number),
       }),
     });
   });
@@ -275,7 +275,7 @@ describe("RPC Methods", () => {
         expect.arrayContaining([
           "script",
           "state",
-          "gasconsumed",
+          "epicpulseconsumed",
           "stack",
           "exception",
         ])
@@ -307,7 +307,7 @@ describe("RPC Methods", () => {
         expect.arrayContaining([
           "script",
           "state",
-          "gasconsumed",
+          "epicpulseconsumed",
           "stack",
           "exception",
         ])
@@ -325,7 +325,7 @@ describe("RPC Methods", () => {
         expect.arrayContaining([
           "script",
           "state",
-          "gasconsumed",
+          "epicpulseconsumed",
           "stack",
           "exception",
         ])
@@ -362,7 +362,7 @@ describe("RPC Methods", () => {
         expect.arrayContaining([
           "script",
           "state",
-          "gasconsumed",
+          "epicpulseconsumed",
           "stack",
           "exception",
         ])

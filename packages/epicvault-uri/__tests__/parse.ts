@@ -13,7 +13,7 @@ describe("parse", () => {
         intent: "pay",
         description: "Transfer some NEO to NNWAo5vdVJz1oyCuNiaTBA3amBHnWCF4Yk",
         contractCall: {
-          scriptHash: "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+          scriptHash: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
           operation: "transfer",
           args: [
             { type: "Hash160", value: "" },
@@ -66,7 +66,7 @@ describe("parse", () => {
         description:
           "Vote for 02028a99826edc0c97d18e22b6932373d908d323aa7f92656a77ec26e8861699ef",
         contractCall: {
-          scriptHash: "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+          scriptHash: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
           operation: "vote",
           args: [
             { type: "Hash160", value: "" },

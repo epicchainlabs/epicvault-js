@@ -43,8 +43,8 @@ a hexstring that can be sent to the network with a Transaction.
 
 ```js
 const sb = Neon.create.scriptBuilder();
-// Build script to call 'symbol()' from contract at ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5
-sb.emitAppCall("ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5", "symbol");
+// Build script to call 'symbol()' from contract at 6dc3bff7b2e6061f3cad5744edf307c14823328e
+sb.emitAppCall("6dc3bff7b2e6061f3cad5744edf307c14823328e", "symbol");
 
 // Test the script with invokescript
 rpc.Query.invokeScript(sb.str).execute(nodeURL);

@@ -1,17 +1,17 @@
-import { rpc, sc, u } from "@cityofzion/neon-core";
+import { rpc, sc, u } from "@epicchain/epicvault-core";
 
 const CHUNK_SIZE = 2;
 
 export async function getTokenBalances(
   address: string,
-  contracts: (string | sc.Nep17Contract)[],
-  client: rpc.NeoServerRpcClient
+  contracts: (string | sc.Xep17Contract)[],
+  client: rpc.EpicChainServerRpcClient
 ): Promise<string[]> {
   const script = contracts
     .map((scriptHash) =>
-      scriptHash instanceof sc.Nep17Contract
+      scriptHash instanceof sc.Xep17Contract
         ? scriptHash
-        : new sc.Nep17Contract(scriptHash)
+        : new sc.Xep17Contract(scriptHash)
     )
     .map((contract) => [contract.decimals(), contract.balanceOf(address)])
     .reduce((sb, contractCalls) => {

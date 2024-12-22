@@ -1,13 +1,13 @@
-import { CONST, rpc, sc, u, wallet } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, u, wallet } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../testHelpers";
 import testWallet from "../../neon-core/__tests__/testWallet.json";
 import { NetworkFacade } from "../src/NetworkFacade";
 import { signWithAccount } from "../src/transaction";
 
-let client: rpc.NeoServerRpcClient;
+let client: rpc.EpicChainServerRpcClient;
 beforeAll(async () => {
   const url = await TestHelpers.getIntegrationEnvUrl();
-  client = new rpc.NeoServerRpcClient(url);
+  client = new rpc.EpicChainServerRpcClient(url);
 }, 20000);
 
 describe("NetworkFacade", () => {
@@ -42,7 +42,7 @@ describe("NetworkFacade", () => {
 
     const currentHeight = await facade.getRpcNode().getBlockCount();
     const unclaimedGasResult = await facade.invoke(
-      sc.NeoContract.INSTANCE.unclaimedGas(acct.address, currentHeight)
+      sc.EpicChainContract.INSTANCE.unclaimedGas(acct.address, currentHeight)
     );
 
     const expectedMinGasClaimed = parseInt(

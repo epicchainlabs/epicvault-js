@@ -19,7 +19,7 @@ import {
 /**
  * Verifies a XEP2. This merely verifies the format. It is unable to verify if it is has been tampered with.
  */
-export function isNEP2(nep2: string): boolean {
+export function isXEP2(nep2: string): boolean {
   try {
     if (nep2.length !== 58) {
       return false;

@@ -118,7 +118,7 @@ interface ApplicationLogJson {
     executions: {
         trigger: string;
         vmstate: string;
-        gasconsumed: string;
+        epicpulseconsumed: string;
         stack?: StackItemJson[];
         notifications: {
             contract: string;
@@ -728,7 +728,7 @@ function createScript(...scripts: (ContractCall | ContractCallJson | string)[]):
 function decrypt(encryptedKey: string, keyphrase: string, scryptParams?: ScryptParams, addressVersion?: number): Promise<string>;
 
 // @public (undocumented)
-function decryptNeo2(encryptedKey: string, keyphrase: string, scryptParams?: ScryptParams): Promise<string>;
+function decryptEpicChain(encryptedKey: string, keyphrase: string, scryptParams?: ScryptParams): Promise<string>;
 
 // @public (undocumented)
 const _default: (label: string) => Logger;
@@ -824,11 +824,11 @@ function fromHex(hexstring: string): OpCode;
 function fromMethodName(methodName: string): InteropServiceCode;
 
 // @public (undocumented)
-class GasContract extends Nep17Contract {
+class EpicPulseContract extends Xep17Contract {
     constructor();
     static getMethods(): ContractMethodDefinition[];
     // (undocumented)
-    static get INSTANCE(): GasContract;
+    static get INSTANCE(): EpicPulseContract;
 }
 
 // @public (undocumented)
@@ -991,7 +991,7 @@ function getSignaturesFromInvocationScript(invocationScript: string): string[];
 function getSigningThresholdFromVerificationScript(verificationScript: string): number;
 
 // @public (undocumented)
-interface GetUnclaimedGasResult {
+interface getUnclaimedEpicPulseResult {
     // (undocumented)
     address: string;
     // (undocumented)
@@ -1015,7 +1015,7 @@ interface GetVersionResult {
         maxvaliduntilblockincrement: number;
         maxtransactionsperblock: number;
         memorypoolmaxtransactions: number;
-        initialgasdistribution: number;
+        initialepicpulsedistribution: number;
     };
     // (undocumented)
     tcpport: number;
@@ -1208,7 +1208,7 @@ enum InteropServiceCode {
 // @public
 interface InvokeResult<T extends StackItemJson = StackItemJson> {
     exception: string | null;
-    gasconsumed: string;
+    epicpulseconsumed: string;
     script: string;
     // (undocumented)
     session?: string;
@@ -1228,7 +1228,7 @@ function isHex(str: string): boolean;
 function isMultisigContract(input: HexString): boolean;
 
 // @public
-function isNEP2(nep2: string): boolean;
+function isXEP2(nep2: string): boolean;
 
 // @public
 function isPrivateKey(key: string): boolean;
@@ -1337,11 +1337,11 @@ enum NATIVE_CONTRACT_HASH {
     // (undocumented)
     ManagementContract = "fffdc93764dbaddd97c48f252a53ea4643faa3fd",
     // (undocumented)
-    EpicChain = "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+    EpicChain = "6dc3bff7b2e6061f3cad5744edf307c14823328e",
     // (undocumented)
     OracleNexus = "fe924b7cfe89ddd271abaf7210a80a7e11178758",
     // (undocumented)
-    CovenantChain = "cc5e4edd9f5f8dba8bb65734541df7a1c081c67b",
+    CovenantChain = "add3e350a8789c507686ea677da85d89272f064b",
     // (undocumented)
     QuantumGuardNexus = "49cf4e5378ffcd4dec034fd98a174c5491e395e2",
     // (undocumented)
@@ -1418,7 +1418,7 @@ interface NEFLike {
 }
 
 // @public (undocumented)
-class NeoContract extends Nep17Contract {
+class NeoContract extends Xep17Contract {
     constructor();
     // (undocumented)
     getCandidates(): ContractCall;
@@ -1443,16 +1443,16 @@ interface NeonSerializable {
     size: number;
 }
 
-// Warning: (ae-forgotten-export) The symbol "NeoServerRpcClient_base" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "EpicChainServerRpcClient_base" needs to be exported by the entry point index.d.ts
 //
 // @public
-class NeoServerRpcClient extends NeoServerRpcClient_base {
+class EpicChainServerRpcClient extends EpicChainServerRpcClient_base {
     // (undocumented)
     get [Symbol.toStringTag](): string;
 }
 
 // @public (undocumented)
-function NeoServerRpcMixin<TBase extends RpcDispatcherMixin>(base: TBase): {
+function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(base: TBase): {
     new (...args: any[]): {
         traverseIterator(sessionId: string, iteratorId: string, count: number): Promise<StackItem[]>;
         getBestBlockHash(): Promise<string>;
@@ -1477,7 +1477,7 @@ function NeoServerRpcMixin<TBase extends RpcDispatcherMixin>(base: TBase): {
         getVersion(): Promise<GetVersionResult>;
         sendRawTransaction(transaction: Transaction | string | HexString): Promise<string>;
         submitBlock(block: string): Promise<string>;
-        getUnclaimedGas(addr: string): Promise<string>;
+        getUnclaimedEpicPulse(addr: string): Promise<string>;
         invokeContractVerify(scriptHash: string, args: unknown[], signers?: (Signer | SignerJson)[]): Promise<InvokeResult>;
         invokeFunction<T extends StackItemJson = StackItemJson>(scriptHash: string, operation: string, params?: unknown[], signers?: (Signer | SignerJson)[]): Promise<InvokeResult<T>>;
         invokeScript(script: string | HexString, signers?: (Signer | SignerJson)[]): Promise<InvokeResult>;
@@ -1512,7 +1512,7 @@ interface Nep11TransferEvent {
 }
 
 // @public
-class Nep17Contract extends BaseContract {
+class Xep17Contract extends BaseContract {
     constructor(scriptHash: string, additionalMethods?: ContractMethodDefinition[]);
     balanceOf(address: string): ContractCall;
     // (undocumented)
@@ -2434,7 +2434,7 @@ class Query<TParams extends JsonRpcParams, TResponse> {
     static getRawTransaction(txid: string, verbose: 1 | true): Query<[string, 1 | true], GetRawTransactionResult>;
     static getStorage(scriptHash: string, key: string): Query<[string, string], string>;
     static getTransactionHeight(txid: string): Query<[string], number>;
-    static getUnclaimedGas(addr: string): Query<[string], GetUnclaimedGasResult>;
+    static getUnclaimedEpicPulse(addr: string): Query<[string], getUnclaimedEpicPulseResult>;
     static getVersion(): Query<[], GetVersionResult>;
     // (undocumented)
     id: number;
@@ -2504,7 +2504,7 @@ declare namespace rpc {
         CliPlugin,
         SendResult,
         ValidateAddressResult,
-        GetUnclaimedGasResult,
+        getUnclaimedEpicPulseResult,
         Query,
         RPCClient,
         buildParser,
@@ -2525,8 +2525,8 @@ declare namespace rpc {
         ApplicationLogsRpcClient,
         TokenTrackerRpcMixin,
         TokenTrackerRpcClient,
-        NeoServerRpcMixin,
-        NeoServerRpcClient,
+        EpicChainServerRpcMixin,
+        EpicChainServerRpcClient,
         BatchQuery
     }
 }
@@ -2646,9 +2646,9 @@ declare namespace sc {
         ContractPermission,
         OpToken,
         BaseContract,
-        Nep17Contract,
+        Xep17Contract,
         NeoContract,
-        GasContract,
+        EpicPulseContract,
         CovenantChain,
         calculateExecutionFee,
         NEFLike,
@@ -3243,9 +3243,9 @@ declare namespace wallet {
         getAddressVersion,
         encrypt,
         decrypt,
-        decryptNeo2,
+        decryptEpicChain,
         ScryptParams,
-        isNEP2,
+        isXEP2,
         isWIF,
         isPrivateKey,
         isPublicKey,
@@ -3417,9 +3417,9 @@ enum WitnessScope {
 
 // Warnings were encountered during analysis:
 //
-// src/rpc/clients/NeoServerRpcClient.ts:58:5 - (ae-forgotten-export) The symbol "BlockJson" needs to be exported by the entry point index.d.ts
-// src/rpc/clients/NeoServerRpcClient.ts:97:5 - (ae-forgotten-export) The symbol "BlockHeaderJson" needs to be exported by the entry point index.d.ts
-// src/rpc/clients/NeoServerRpcClient.ts:209:5 - (ae-forgotten-export) The symbol "Validator" needs to be exported by the entry point index.d.ts
+// src/rpc/clients/EpicChainServerRpcClient.ts:58:5 - (ae-forgotten-export) The symbol "BlockJson" needs to be exported by the entry point index.d.ts
+// src/rpc/clients/EpicChainServerRpcClient.ts:97:5 - (ae-forgotten-export) The symbol "BlockHeaderJson" needs to be exported by the entry point index.d.ts
+// src/rpc/clients/EpicChainServerRpcClient.ts:209:5 - (ae-forgotten-export) The symbol "Validator" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

@@ -14,7 +14,7 @@ describe("buildParser", () => {
       parser({
         script: "",
         state: "HALT",
-        gasconsumed: "0",
+        epicpulseconsumed: "0",
         stack: [{ type: "Integer", value: "1" }],
         exception: null,
       })
@@ -58,7 +58,7 @@ describe("SimpleParser", () => {
     const result = SimpleParser({
       script: "",
       state: "HALT",
-      gasconsumed: "0",
+      epicpulseconsumed: "0",
       stack: [
         { type: "ByteString", value: "525058" },
         { type: "Integer", value: "1" },
@@ -73,7 +73,7 @@ describe("SimpleParser", () => {
       SimpleParser({
         script: "",
         state: "HALT",
-        gasconsumed: "0",
+        epicpulseconsumed: "0",
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         stack: [{ type: "Weird", value: null }],

@@ -1,8 +1,8 @@
-import { CONST, rpc, wallet, sc, tx, u } from "@cityofzion/neon-core";
+import { CONST, rpc, wallet, sc, tx, u } from "@epicchain/epicvault-core";
 import { CommonConfig } from "../types";
 import { setBlockExpiry, addFees } from "../helpers";
 
-export class Nep17Contract {
+export class Xep17Contract {
   /**
    * Base class for communicating with NEP-5 contracts on the block chain.
    */
@@ -202,9 +202,9 @@ export class Nep17Contract {
   }
 }
 
-export class NEOContract extends Nep17Contract {
+export class EpicChainContract extends Xep17Contract {
   /**
-   * Convenience class initializing a Nep17Contract to the NEO token
+   * Convenience class initializing a Xep17Contract to the NEO token
    * exposing additional claim functions
    * @param config -
    */
@@ -241,7 +241,7 @@ export class NEOContract extends Nep17Contract {
       throw new Error("From address is not a valid NEO address");
     }
 
-    const unclaimed = await this.rpcClient.getUnclaimedGas(address);
+    const unclaimed = await this.rpcClient.getUnclaimedEpicPulse(address);
     if (u.BigInteger.fromNumber(unclaimed).compare(50000000) < 0) {
       throw new Error("Minimum claim value is 0.5");
     }
@@ -254,17 +254,17 @@ export class NEOContract extends Nep17Contract {
    * Get the available bonus GAS for address
    * @param address - NEO address
    */
-  public async getUnclaimedGas(address: string): Promise<number> {
+  public async getUnclaimedEpicPulse(address: string): Promise<number> {
     if (!wallet.isAddress(address)) {
       throw new Error("From address is not a valid NEO address");
     }
-    return parseFloat(await this.rpcClient.getUnclaimedGas(address));
+    return parseFloat(await this.rpcClient.getUnclaimedEpicPulse(address));
   }
 }
 
-export class GASContract extends Nep17Contract {
+export class EpicPulseContract extends Xep17Contract {
   /**
-   * Convenience class initializing a Nep17Contract to GAS token
+   * Convenience class initializing a Xep17Contract to GAS token
    * @param config -
    */
   constructor(config: CommonConfig) {

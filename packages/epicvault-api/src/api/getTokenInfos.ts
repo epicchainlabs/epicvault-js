@@ -1,4 +1,4 @@
-import { rpc, sc, u } from "@cityofzion/neon-core";
+import { rpc, sc, u } from "@epicchain/epicvault-core";
 
 export interface TokenInfo {
   symbol: string;
@@ -9,14 +9,14 @@ export interface TokenInfo {
 const CHUNK_SIZE = 3;
 
 export async function getTokenInfos(
-  contracts: (string | sc.Nep17Contract)[],
-  client: rpc.NeoServerRpcClient
+  contracts: (string | sc.Xep17Contract)[],
+  client: rpc.EpicChainServerRpcClient
 ): Promise<TokenInfo[]> {
   const script = contracts
     .map((scriptHash) =>
-      scriptHash instanceof sc.Nep17Contract
+      scriptHash instanceof sc.Xep17Contract
         ? scriptHash
-        : new sc.Nep17Contract(scriptHash)
+        : new sc.Xep17Contract(scriptHash)
     )
     .map((contract) => [
       contract.symbol(),

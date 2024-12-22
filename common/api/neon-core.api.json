@@ -541,7 +541,7 @@
                     },
                     {
                       "kind": "Content",
-                      "text": "\"ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5\""
+                      "text": "\"6dc3bff7b2e6061f3cad5744edf307c14823328e\""
                     }
                   ],
                   "initializerTokenRange": {
@@ -583,7 +583,7 @@
                     },
                     {
                       "kind": "Content",
-                      "text": "\"cc5e4edd9f5f8dba8bb65734541df7a1c081c67b\""
+                      "text": "\"add3e350a8789c507686ea677da85d89272f064b\""
                     }
                   ],
                   "initializerTokenRange": {
@@ -866,7 +866,7 @@
                     },
                     {
                       "kind": "Content",
-                      "text": "{\n        trigger: string;\n        vmstate: string;\n        gasconsumed: string;\n        stack?: "
+                      "text": "{\n        trigger: string;\n        vmstate: string;\n        epicpulseconsumed: string;\n        stack?: "
                     },
                     {
                       "kind": "Reference",
@@ -2606,22 +2606,22 @@
             },
             {
               "kind": "Interface",
-              "canonicalReference": "@epicchain/epicvault-core!rpc.GetUnclaimedGasResult:interface",
+              "canonicalReference": "@epicchain/epicvault-core!rpc.getUnclaimedEpicPulseResult:interface",
               "docComment": "",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export interface GetUnclaimedGasResult "
+                  "text": "export interface getUnclaimedEpicPulseResult "
                 }
               ],
               "fileUrlPath": "src/rpc/Query.ts",
               "releaseTag": "Public",
-              "name": "GetUnclaimedGasResult",
+              "name": "getUnclaimedEpicPulseResult",
               "preserveMemberOrder": false,
               "members": [
                 {
                   "kind": "PropertySignature",
-                  "canonicalReference": "@epicchain/epicvault-core!rpc.GetUnclaimedGasResult#address:member",
+                  "canonicalReference": "@epicchain/epicvault-core!rpc.getUnclaimedEpicPulseResult#address:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -2648,7 +2648,7 @@
                 },
                 {
                   "kind": "PropertySignature",
-                  "canonicalReference": "@epicchain/epicvault-core!rpc.GetUnclaimedGasResult#unclaimed:member",
+                  "canonicalReference": "@epicchain/epicvault-core!rpc.getUnclaimedEpicPulseResult#unclaimed:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -2729,7 +2729,7 @@
                     },
                     {
                       "kind": "Content",
-                      "text": "{\n        addressversion: number;\n        network: number;\n        validatorscount: number;\n        msperblock: number;\n        maxtraceableblocks: number;\n        maxvaliduntilblockincrement: number;\n        maxtransactionsperblock: number;\n        memorypoolmaxtransactions: number;\n        initialgasdistribution: number;\n    }"
+                      "text": "{\n        addressversion: number;\n        network: number;\n        validatorscount: number;\n        msperblock: number;\n        maxtraceableblocks: number;\n        maxvaliduntilblockincrement: number;\n        maxtransactionsperblock: number;\n        memorypoolmaxtransactions: number;\n        initialepicpulsedistribution: number;\n    }"
                     },
                     {
                       "kind": "Content",
@@ -2950,12 +2950,12 @@
                 },
                 {
                   "kind": "PropertySignature",
-                  "canonicalReference": "@epicchain/epicvault-core!rpc.InvokeResult#gasconsumed:member",
+                  "canonicalReference": "@epicchain/epicvault-core!rpc.InvokeResult#epicpulseconsumed:member",
                   "docComment": "/**\n * Amount of gas consumed up to the point of stopping in the VM. If state is FAULT, this value is not representative of the amount of gas it will consume if it somehow succeeds on the blockchain. This is a decimal value.\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
-                      "text": "gasconsumed: "
+                      "text": "epicpulseconsumed: "
                     },
                     {
                       "kind": "Content",
@@ -2969,7 +2969,7 @@
                   "isReadonly": false,
                   "isOptional": false,
                   "releaseTag": "Public",
-                  "name": "gasconsumed",
+                  "name": "epicpulseconsumed",
                   "propertyTypeTokenRange": {
                     "startIndex": 1,
                     "endIndex": 2
@@ -3305,32 +3305,32 @@
             },
             {
               "kind": "Class",
-              "canonicalReference": "@epicchain/epicvault-core!rpc.NeoServerRpcClient:class",
+              "canonicalReference": "@epicchain/epicvault-core!rpc.EpicChainServerRpcClient:class",
               "docComment": "/**\n * RPC Client model to query a NEO node. Contains built-in methods to query using RPC calls.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare class NeoServerRpcClient extends "
+                  "text": "export declare class EpicChainServerRpcClient extends "
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeoServerRpcClient_base",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeoServerRpcClient_base"
+                  "text": "EpicChainServerRpcClient_base",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicChainServerRpcClient_base"
                 },
                 {
                   "kind": "Content",
                   "text": " "
                 }
               ],
-              "fileUrlPath": "src/rpc/clients/NeoServerRpcClient.ts",
+              "fileUrlPath": "src/rpc/clients/EpicChainServerRpcClient.ts",
               "releaseTag": "Public",
               "isAbstract": false,
-              "name": "NeoServerRpcClient",
+              "name": "EpicChainServerRpcClient",
               "preserveMemberOrder": false,
               "members": [
                 {
                   "kind": "Property",
-                  "canonicalReference": "@epicchain/epicvault-core!rpc.NeoServerRpcClient#[Symbol.toStringTag]:member",
+                  "canonicalReference": "@epicchain/epicvault-core!rpc.EpicChainServerRpcClient#[Symbol.toStringTag]:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -3376,12 +3376,12 @@
             },
             {
               "kind": "Function",
-              "canonicalReference": "@epicchain/epicvault-core!rpc.NeoServerRpcMixin:function(1)",
+              "canonicalReference": "@epicchain/epicvault-core!rpc.EpicChainServerRpcMixin:function(1)",
               "docComment": "",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare function NeoServerRpcMixin<TBase extends "
+                  "text": "export declare function EpicChainServerRpcMixin<TBase extends "
                 },
                 {
                   "kind": "Reference",
@@ -3717,7 +3717,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<string>;\n        getUnclaimedGas(addr: string): "
+                  "text": "<string>;\n        getUnclaimedEpicPulse(addr: string): "
                 },
                 {
                   "kind": "Reference",
@@ -4030,7 +4030,7 @@
                   "text": ";"
                 }
               ],
-              "fileUrlPath": "src/rpc/clients/NeoServerRpcClient.ts",
+              "fileUrlPath": "src/rpc/clients/EpicChainServerRpcClient.ts",
               "returnTypeTokenRange": {
                 "startIndex": 5,
                 "endIndex": 144
@@ -4060,7 +4060,7 @@
                   }
                 }
               ],
-              "name": "NeoServerRpcMixin"
+              "name": "EpicChainServerRpcMixin"
             },
             {
               "kind": "Interface",
@@ -7734,12 +7734,12 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!rpc.Query.getUnclaimedGas:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!rpc.Query.getUnclaimedEpicPulse:member(1)",
                   "docComment": "/**\n * This Query returns the available unclaimed bonus GAS for a NEO address\n *\n * @param addr - a NEO address\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
-                      "text": "static getUnclaimedGas(addr: "
+                      "text": "static getUnclaimedEpicPulse(addr: "
                     },
                     {
                       "kind": "Content",
@@ -7760,8 +7760,8 @@
                     },
                     {
                       "kind": "Reference",
-                      "text": "GetUnclaimedGasResult",
-                      "canonicalReference": "@epicchain/epicvault-core!rpc.GetUnclaimedGasResult:interface"
+                      "text": "getUnclaimedEpicPulseResult",
+                      "canonicalReference": "@epicchain/epicvault-core!rpc.getUnclaimedEpicPulseResult:interface"
                     },
                     {
                       "kind": "Content",
@@ -7792,7 +7792,7 @@
                   ],
                   "isOptional": false,
                   "isAbstract": false,
-                  "name": "getUnclaimedGas"
+                  "name": "getUnclaimedEpicPulse"
                 },
                 {
                   "kind": "Method",
@@ -16488,33 +16488,33 @@
             },
             {
               "kind": "Class",
-              "canonicalReference": "@epicchain/epicvault-core!sc.GasContract:class",
+              "canonicalReference": "@epicchain/epicvault-core!sc.EpicPulseContract:class",
               "docComment": "",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare class GasContract extends "
+                  "text": "export declare class EpicPulseContract extends "
                 },
                 {
                   "kind": "Reference",
-                  "text": "Nep17Contract",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract:class"
+                  "text": "Xep17Contract",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract:class"
                 },
                 {
                   "kind": "Content",
                   "text": " "
                 }
               ],
-              "fileUrlPath": "src/sc/contracts/GasContract.ts",
+              "fileUrlPath": "src/sc/contracts/EpicPulseContract.ts",
               "releaseTag": "Public",
               "isAbstract": false,
-              "name": "GasContract",
+              "name": "EpicPulseContract",
               "preserveMemberOrder": false,
               "members": [
                 {
                   "kind": "Constructor",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.GasContract:constructor(1)",
-                  "docComment": "/**\n * Constructs a new instance of the `GasContract` class\n */\n",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicPulseContract:constructor(1)",
+                  "docComment": "/**\n * Constructs a new instance of the `EpicPulseContract` class\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -16528,7 +16528,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.GasContract.getMethods:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicPulseContract.getMethods:member(1)",
                   "docComment": "/**\n * The list of methods found on the GAS contract.\n */\n",
                   "excerptTokens": [
                     {
@@ -16564,7 +16564,7 @@
                 },
                 {
                   "kind": "Property",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.GasContract.INSTANCE:member",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicPulseContract.INSTANCE:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -16573,8 +16573,8 @@
                     },
                     {
                       "kind": "Reference",
-                      "text": "GasContract",
-                      "canonicalReference": "@epicchain/epicvault-core!sc.GasContract:class"
+                      "text": "EpicPulseContract",
+                      "canonicalReference": "@epicchain/epicvault-core!sc.EpicPulseContract:class"
                     },
                     {
                       "kind": "Content",
@@ -19246,8 +19246,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "Nep17Contract",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract:class"
+                  "text": "Xep17Contract",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract:class"
                 },
                 {
                   "kind": "Content",
@@ -19609,12 +19609,12 @@
             },
             {
               "kind": "Class",
-              "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract:class",
+              "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract:class",
               "docComment": "/**\n * A standard NEP-17 contract according to specification.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare class Nep17Contract extends "
+                  "text": "export declare class Xep17Contract extends "
                 },
                 {
                   "kind": "Reference",
@@ -19626,16 +19626,16 @@
                   "text": " "
                 }
               ],
-              "fileUrlPath": "src/sc/contracts/Nep17Contract.ts",
+              "fileUrlPath": "src/sc/contracts/Xep17Contract.ts",
               "releaseTag": "Public",
               "isAbstract": false,
-              "name": "Nep17Contract",
+              "name": "Xep17Contract",
               "preserveMemberOrder": false,
               "members": [
                 {
                   "kind": "Constructor",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract:constructor(1)",
-                  "docComment": "/**\n * Constructs a new instance of the `Nep17Contract` class\n */\n",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract:constructor(1)",
+                  "docComment": "/**\n * Constructs a new instance of the `Xep17Contract` class\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -19687,8 +19687,8 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract#balanceOf:member(1)",
-                  "docComment": "/**\n * Retrieves the balance of the address. The balance returned will be an integer which needs to be processed according to the number of decimals for this token.\n *\n * @param address - The address to enquire.\n *\n * @example\n *\n * const contract = new Nep17Contract(contractHash); const balanceOfCall = contract.balanceOf(address); const result =\n */\n",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract#balanceOf:member(1)",
+                  "docComment": "/**\n * Retrieves the balance of the address. The balance returned will be an integer which needs to be processed according to the number of decimals for this token.\n *\n * @param address - The address to enquire.\n *\n * @example\n *\n * const contract = new Xep17Contract(contractHash); const balanceOfCall = contract.balanceOf(address); const result =\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -19736,7 +19736,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract#decimals:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract#decimals:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19768,7 +19768,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract.getMethods:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract.getMethods:member(1)",
                   "docComment": "/**\n * The list of methods found on the NEP-5 specification.\n */\n",
                   "excerptTokens": [
                     {
@@ -19804,7 +19804,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract#symbol:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract#symbol:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19836,7 +19836,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract#totalSupply:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract#totalSupply:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19868,7 +19868,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.Nep17Contract#transfer:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.Xep17Contract#transfer:member(1)",
                   "docComment": "/**\n * Transfers some token between addresses. The amount of tokens needs to be\n *\n * @param from - The address from where the funds originate.\n *\n * @param to - The address where the funds will arrive at.\n *\n * @param amount - The amount of tokens to transfer in integer format.\n */\n",
                   "excerptTokens": [
                     {
@@ -41955,12 +41955,12 @@
             },
             {
               "kind": "Function",
-              "canonicalReference": "@epicchain/epicvault-core!wallet.decryptNeo2:function(1)",
+              "canonicalReference": "@epicchain/epicvault-core!wallet.decryptEpicChain:function(1)",
               "docComment": "",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare function decryptNeo2(encryptedKey: "
+                  "text": "export declare function decryptEpicChain(encryptedKey: "
                 },
                 {
                   "kind": "Content",
@@ -42034,7 +42034,7 @@
                   "isOptional": true
                 }
               ],
-              "name": "decryptNeo2"
+              "name": "decryptEpicChain"
             },
             {
               "kind": "Function",
@@ -42994,12 +42994,12 @@
             },
             {
               "kind": "Function",
-              "canonicalReference": "@epicchain/epicvault-core!wallet.isNEP2:function(1)",
+              "canonicalReference": "@epicchain/epicvault-core!wallet.isXEP2:function(1)",
               "docComment": "/**\n * Verifies a XEP2. This merely verifies the format. It is unable to verify if it is has been tampered with.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare function isNEP2(nep2: "
+                  "text": "export declare function isXEP2(nep2: "
                 },
                 {
                   "kind": "Content",
@@ -43035,7 +43035,7 @@
                   "isOptional": false
                 }
               ],
-              "name": "isNEP2"
+              "name": "isXEP2"
             },
             {
               "kind": "Function",

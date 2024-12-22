@@ -23,7 +23,7 @@ For users who just require the bare functionality, you may just use the core
 package:
 
 ```js
-import { tx, wallet } from "@cityofzion/neon-core";
+import { tx, wallet } from "@epicchain/epicvault-core";
 const t = new tx.Transaction();
 const acct = new wallet.Account();
 ```

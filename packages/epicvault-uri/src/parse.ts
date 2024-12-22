@@ -1,10 +1,10 @@
-import type { sc } from "@cityofzion/neon-core";
+import type { sc } from "@epicchain/epicvault-core";
 
 const INTENT_PREFIXES = ["pay", "vote"];
 
 // We hardcode these so we can avoid a full dependency.
 const NATIVE_TOKENS = {
-  neo: "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+  neo: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
   gas: "d2a4cff31913016155e38e474a2c06d08be276cf",
 };
 

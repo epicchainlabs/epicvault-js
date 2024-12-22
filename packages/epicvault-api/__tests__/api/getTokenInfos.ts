@@ -1,4 +1,4 @@
-import { rpc } from "@cityofzion/neon-core";
+import { rpc } from "@epicchain/epicvault-core";
 import { getTokenInfos } from "../../src/api/getTokenInfos";
 
 describe("getTokenInfos", () => {
@@ -8,7 +8,7 @@ describe("getTokenInfos", () => {
         return {
           script: "",
           state: "HALT",
-          gasconsumed: "0.04",
+          epicpulseconsumed: "0.04",
           exception: null,
           stack: [
             {
@@ -38,7 +38,7 @@ describe("getTokenInfos", () => {
           ],
         };
       }),
-    } as unknown as rpc.NeoServerRpcClient;
+    } as unknown as rpc.EpicChainServerRpcClient;
 
     const result = await getTokenInfos(
       [
@@ -68,12 +68,12 @@ describe("getTokenInfos", () => {
         return {
           script: "",
           state: "FAULT",
-          gasconsumed: "0.04",
+          epicpulseconsumed: "0.04",
           exception: "expected exception message",
           stack: [],
         };
       }),
-    } as unknown as rpc.NeoServerRpcClient;
+    } as unknown as rpc.EpicChainServerRpcClient;
 
     expect(
       async () =>
@@ -90,11 +90,11 @@ describe("getTokenInfos", () => {
         return {
           script: "",
           state: "FAULT",
-          gasconsumed: "0.04",
+          epicpulseconsumed: "0.04",
           stack: [],
         };
       }),
-    } as unknown as rpc.NeoServerRpcClient;
+    } as unknown as rpc.EpicChainServerRpcClient;
 
     expect(
       async () =>

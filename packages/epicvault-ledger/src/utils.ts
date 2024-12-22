@@ -1,4 +1,4 @@
-import { u } from "@cityofzion/neon-core";
+import { u } from "@epicchain/epicvault-core";
 
 /**
  * Converts a signature in DER format to HEX format.

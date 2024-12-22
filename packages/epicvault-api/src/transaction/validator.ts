@@ -1,4 +1,4 @@
-import { tx, rpc, u } from "@cityofzion/neon-core";
+import { tx, rpc, u } from "@epicchain/epicvault-core";
 
 export enum ValidationAttributes {
   None = 0,
@@ -41,14 +41,14 @@ export class TransactionValidator {
   /**
    * Transaction will be validated on this rpc node
    */
-  public rpcClient: rpc.NeoServerRpcClient;
+  public rpcClient: rpc.EpicChainServerRpcClient;
 
   /**
    * Transaction that will be validated
    */
   public transaction: tx.Transaction;
 
-  constructor(rpc: rpc.NeoServerRpcClient, transaction: tx.Transaction) {
+  constructor(rpc: rpc.EpicChainServerRpcClient, transaction: tx.Transaction) {
     this.rpcClient = rpc;
     this.transaction = transaction;
   }
@@ -117,8 +117,8 @@ export class TransactionValidator {
         "Cannot get precise systemFee as script execution on node reports FAULT."
       );
     }
-    const gasConsumed = invokeResponse.gasconsumed;
-    const suggestion = u.BigInteger.fromDecimal(gasConsumed, 0);
+    const epicpulseconsumed = invokeResponse.epicpulseconsumed;
+    const suggestion = u.BigInteger.fromDecimal(epicpulseconsumed, 0);
     const compareResult = suggestion.compare(prev);
     if (compareResult > 0) {
       // Did not hit the minimum fees to run the script.

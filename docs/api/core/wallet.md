@@ -243,7 +243,7 @@ Neon.is.scriptHash(scriptHashStr);
 
 wallet.isAddress(addrStr);
 wallet.isPrivateKey(keyStr);
-wallet.isNEP2(keyStr);
+wallet.isXEP2(keyStr);
 wallet.isPublicKey(publicKeyStr);
 wallet.isWIF(wifStr);
 wallet.isScriptHash(scriptHashStr);

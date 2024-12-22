@@ -1,13 +1,13 @@
-import { rpc, CONST } from "@cityofzion/neon-core";
+import { rpc, CONST } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
 
 import { getTokenInfos, TokenInfo } from "../../src/api/getTokenInfos";
 
-let client: rpc.NeoServerRpcClient;
+let client: rpc.EpicChainServerRpcClient;
 
 beforeAll(async () => {
   const url = await TestHelpers.getIntegrationEnvUrl();
-  client = new rpc.NeoServerRpcClient(url);
+  client = new rpc.EpicChainServerRpcClient(url);
 }, 20000);
 
 describe("getTokenInfos", () => {

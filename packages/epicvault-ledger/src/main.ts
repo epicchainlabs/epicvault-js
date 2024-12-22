@@ -1,5 +1,5 @@
 import Transport from "@ledgerhq/hw-transport";
-import { u } from "@cityofzion/neon-core";
+import { u } from "@epicchain/epicvault-core";
 import {
   StatusWord,
   evalTransportError,

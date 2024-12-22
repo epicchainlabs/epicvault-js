@@ -12,7 +12,7 @@ describe("Verify: Valid", () => {
   test.each(["6PYLHmDf6AjF4AsVtosmxHuPYeuyJL3SLuw7J1U8i7HxKAnYNsp61HYRfF"])(
     "NEP2: %s",
     (i: string) => {
-      expect(verify.isNEP2(i)).toBeTruthy();
+      expect(verify.isXEP2(i)).toBeTruthy();
     }
   );
 
@@ -88,7 +88,7 @@ describe("Verify: Invalid", () => {
     "7PYLHmDf6AjF4AsVtosmxHuPYeuyJL3SLuw7J1U8i7HxKAnYNsp61HYRfF",
     "6PRRWQToT7GCPe21SYwLUBC9LSWsuzFoP63PNZCdvm3wWUKtpkJTW9Uwpa",
   ])("NEP2: %s", (i: string) => {
-    expect(verify.isNEP2(i)).toBeFalsy();
+    expect(verify.isXEP2(i)).toBeFalsy();
   });
 
   test.each([

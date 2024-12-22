@@ -1,5 +1,5 @@
 import { TransactionBuilder } from "../../src/transaction";
-import { CONST, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { CONST, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 
 const account1 = new wallet.Account(
   "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g"
@@ -180,14 +180,14 @@ describe("template methods", () => {
     });
   });
 
-  test("addNep17Transfer", () => {
+  test("addXep17Transfer", () => {
     const account = new wallet.Account(
       "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g"
     );
     const destination = "NMBfzaEq2c5zodiNbLPoohVENARMbJim1r";
 
     const result = new TransactionBuilder()
-      .addNep17Transfer(
+      .addXep17Transfer(
         account,
         destination,
         CONST.NATIVE_CONTRACT_HASH.EpicPulse,

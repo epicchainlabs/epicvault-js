@@ -89,7 +89,7 @@ const config = {
 ```
 2. Create a contract object and interact with it
 ```javascript
-const NEO = new Neon.experimental.nep17.NEOContract(config);
+const NEO = new Neon.experimental.nep17.EpicChainContract(config);
 async function run() {
   console.log(await NEO.name());
   console.log(await NEO.symbol());
@@ -145,7 +145,7 @@ expected result is
 {
   script: '10c00c09746573745f66756e630c14412adcec8b92a0c3e3b5dc81a9a008e029398cad41627d5b52',
   state: 'HALT',
-  gasconsumed: '1007420',
+  epicpulseconsumed: '1007420',
   stack: [ { type: 'Integer', value: '2' } ],
   tx: null
 }

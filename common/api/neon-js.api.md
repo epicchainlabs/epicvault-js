@@ -40,7 +40,7 @@ const _default: {
     is: {
         address: typeof neonCore.wallet.isAddress;
         publicKey: typeof neonCore.wallet.isPublicKey;
-        encryptedKey: typeof neonCore.wallet.isNEP2;
+        encryptedKey: typeof neonCore.wallet.isXEP2;
         privateKey: typeof neonCore.wallet.isPrivateKey;
         wif: typeof neonCore.wallet.isWIF;
         scriptHash: typeof neonCore.wallet.isScriptHash;
@@ -82,7 +82,7 @@ declare namespace experimental {
 export { experimental }
 
 // @public (undocumented)
-class GASContract extends Nep17Contract {
+class EpicPulseContract extends Xep17Contract {
     constructor(config: CommonConfig);
 }
 
@@ -93,23 +93,23 @@ function getContractHash(sender: u_2.HexString, nefChecksum: number, contractNam
 export const logging: typeof neonCore.logging;
 
 // @public (undocumented)
-class NEOContract extends Nep17Contract {
+class EpicChainContract extends Xep17Contract {
     constructor(config: CommonConfig);
     claimGas(address: string): Promise<string>;
-    getUnclaimedGas(address: string): Promise<number>;
+    getUnclaimedEpicPulse(address: string): Promise<number>;
     transfer(from: string, to: string, amount: number): Promise<string>;
 }
 
 declare namespace nep17 {
     export {
-        Nep17Contract,
-        NEOContract,
-        GASContract
+        Xep17Contract,
+        EpicChainContract,
+        EpicPulseContract
     }
 }
 
 // @public (undocumented)
-class Nep17Contract {
+class Xep17Contract {
     constructor(contractHash: u_2.HexString, config: CommonConfig);
     balanceOf(address: string): Promise<number>;
     // (undocumented)

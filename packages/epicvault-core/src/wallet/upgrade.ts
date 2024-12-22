@@ -1,5 +1,5 @@
 import Account from "./Account";
-import { decryptNeo2 } from "./nep2";
+import { decryptEpicChain } from "./nep2";
 import { DEFAULT_SCRYPT } from "../consts";
 
 /**
@@ -20,7 +20,7 @@ export async function upgrade(
   }
 
   if (passphrase) {
-    const wifKey = await decryptNeo2(
+    const wifKey = await decryptEpicChain(
       account.encrypted,
       passphrase,
       scryptParams

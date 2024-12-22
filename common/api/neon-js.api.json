@@ -376,8 +376,8 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isNEP2",
-              "canonicalReference": "@epicchain/epicvault-core!isNEP2:function"
+              "text": "neonCore.wallet.isXEP2",
+              "canonicalReference": "@epicchain/epicvault-core!isXEP2:function"
             },
             {
               "kind": "Content",
@@ -696,17 +696,17 @@
               "members": [
                 {
                   "kind": "Class",
-                  "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.GASContract:class",
+                  "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicPulseContract:class",
                   "docComment": "",
                   "excerptTokens": [
                     {
                       "kind": "Content",
-                      "text": "export declare class GASContract extends "
+                      "text": "export declare class EpicPulseContract extends "
                     },
                     {
                       "kind": "Reference",
-                      "text": "Nep17Contract",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract:class"
+                      "text": "Xep17Contract",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract:class"
                     },
                     {
                       "kind": "Content",
@@ -716,13 +716,13 @@
                   "fileUrlPath": "src/experimental/nep17/base.ts",
                   "releaseTag": "Public",
                   "isAbstract": false,
-                  "name": "GASContract",
+                  "name": "EpicPulseContract",
                   "preserveMemberOrder": false,
                   "members": [
                     {
                       "kind": "Constructor",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.GASContract:constructor(1)",
-                      "docComment": "/**\n * Convenience class initializing a Nep17Contract to GAS token\n *\n * @param config - \n */\n",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicPulseContract:constructor(1)",
+                      "docComment": "/**\n * Convenience class initializing a Xep17Contract to GAS token\n *\n * @param config - \n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -761,17 +761,17 @@
                 },
                 {
                   "kind": "Class",
-                  "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.NEOContract:class",
+                  "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract:class",
                   "docComment": "",
                   "excerptTokens": [
                     {
                       "kind": "Content",
-                      "text": "export declare class NEOContract extends "
+                      "text": "export declare class EpicChainContract extends "
                     },
                     {
                       "kind": "Reference",
-                      "text": "Nep17Contract",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract:class"
+                      "text": "Xep17Contract",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract:class"
                     },
                     {
                       "kind": "Content",
@@ -781,13 +781,13 @@
                   "fileUrlPath": "src/experimental/nep17/base.ts",
                   "releaseTag": "Public",
                   "isAbstract": false,
-                  "name": "NEOContract",
+                  "name": "EpicChainContract",
                   "preserveMemberOrder": false,
                   "members": [
                     {
                       "kind": "Constructor",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.NEOContract:constructor(1)",
-                      "docComment": "/**\n * Convenience class initializing a Nep17Contract to the NEO token exposing additional claim functions\n *\n * @param config - \n */\n",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract:constructor(1)",
+                      "docComment": "/**\n * Convenience class initializing a Xep17Contract to the NEO token exposing additional claim functions\n *\n * @param config - \n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -819,7 +819,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.NEOContract#claimGas:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#claimGas:member(1)",
                       "docComment": "/**\n * Claim gas for address\n *\n * @param address - NEO address\n *\n * @returns transaction id\n */\n",
                       "excerptTokens": [
                         {
@@ -872,12 +872,12 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.NEOContract#getUnclaimedGas:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#getUnclaimedEpicPulse:member(1)",
                       "docComment": "/**\n * Get the available bonus GAS for address\n *\n * @param address - NEO address\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
-                          "text": "getUnclaimedGas(address: "
+                          "text": "getUnclaimedEpicPulse(address: "
                         },
                         {
                           "kind": "Content",
@@ -921,11 +921,11 @@
                       ],
                       "isOptional": false,
                       "isAbstract": false,
-                      "name": "getUnclaimedGas"
+                      "name": "getUnclaimedEpicPulse"
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.NEOContract#transfer:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#transfer:member(1)",
                       "docComment": "/**\n * Move tokens from one address to another\n *\n * @param from - source NEO address\n *\n * @param to - destination NEO address\n *\n * @param amount - quantity of tokens to send\n */\n",
                       "excerptTokens": [
                         {
@@ -1017,24 +1017,24 @@
                 },
                 {
                   "kind": "Class",
-                  "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract:class",
+                  "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract:class",
                   "docComment": "",
                   "excerptTokens": [
                     {
                       "kind": "Content",
-                      "text": "export declare class Nep17Contract "
+                      "text": "export declare class Xep17Contract "
                     }
                   ],
                   "fileUrlPath": "src/experimental/nep17/base.ts",
                   "releaseTag": "Public",
                   "isAbstract": false,
-                  "name": "Nep17Contract",
+                  "name": "Xep17Contract",
                   "preserveMemberOrder": false,
                   "members": [
                     {
                       "kind": "Constructor",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract:constructor(1)",
-                      "docComment": "/**\n * Constructs a new instance of the `Nep17Contract` class\n */\n",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract:constructor(1)",
+                      "docComment": "/**\n * Constructs a new instance of the `Xep17Contract` class\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -1083,7 +1083,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#balanceOf:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#balanceOf:member(1)",
                       "docComment": "/**\n * Get the number of tokens owned by NEO address\n */\n",
                       "excerptTokens": [
                         {
@@ -1136,7 +1136,7 @@
                     },
                     {
                       "kind": "Property",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#config:member",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#config:member",
                       "docComment": "",
                       "excerptTokens": [
                         {
@@ -1167,7 +1167,7 @@
                     },
                     {
                       "kind": "Property",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#contractHash:member",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#contractHash:member",
                       "docComment": "/**\n * Base class for communicating with NEP-5 contracts on the block chain.\n */\n",
                       "excerptTokens": [
                         {
@@ -1198,7 +1198,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#decimals:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#decimals:member(1)",
                       "docComment": "/**\n * Get the number of decimals the token can have\n */\n",
                       "excerptTokens": [
                         {
@@ -1234,7 +1234,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#name:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#name:member(1)",
                       "docComment": "/**\n * Get the human readable name of the token\n */\n",
                       "excerptTokens": [
                         {
@@ -1270,7 +1270,7 @@
                     },
                     {
                       "kind": "Property",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#rpcClient:member",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#rpcClient:member",
                       "docComment": "",
                       "excerptTokens": [
                         {
@@ -1301,7 +1301,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#symbol:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#symbol:member(1)",
                       "docComment": "/**\n * Get the abbreviated name of the token. Often used to represent the token in exchanges\n */\n",
                       "excerptTokens": [
                         {
@@ -1337,7 +1337,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#totalSupply:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#totalSupply:member(1)",
                       "docComment": "/**\n * Get the total amount of tokens deployed to the system\n *\n * Note: this is not the same as the total freely available tokens for exchanging. A certain amount might be locked in the contract until a specific release date.\n */\n",
                       "excerptTokens": [
                         {
@@ -1373,7 +1373,7 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Nep17Contract#transfer:member(1)",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#transfer:member(1)",
                       "docComment": "/**\n * Move tokens from one address to another\n *\n * @param from - source NEO address\n *\n * @param to - destination NEO address\n *\n * @param amount - quantity of tokens to send\n */\n",
                       "excerptTokens": [
                         {

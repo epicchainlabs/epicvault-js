@@ -15,19 +15,19 @@ import { wallet } from '@cityofzion/neon-core';
 export function calculateNetworkFee(txn: tx.Transaction, feePerByte: number | u.BigInteger, executionFeeFactor: number | u.BigInteger): u.BigInteger;
 
 // @public
-export function getFeeInformation(client: rpc.NeoServerRpcClient): Promise<{
+export function getFeeInformation(client: rpc.EpicChainServerRpcClient): Promise<{
     feePerByte: u.BigInteger;
     executionFeeFactor: u.BigInteger;
 }>;
 
 // @public (undocumented)
-export function getTokenBalances(address: string, contracts: (string | sc.Nep17Contract)[], client: rpc.NeoServerRpcClient): Promise<string[]>;
+export function getTokenBalances(address: string, contracts: (string | sc.Xep17Contract)[], client: rpc.EpicChainServerRpcClient): Promise<string[]>;
 
 // @public (undocumented)
-export function getTokenInfos(contracts: (string | sc.Nep17Contract)[], client: rpc.NeoServerRpcClient): Promise<TokenInfo[]>;
+export function getTokenInfos(contracts: (string | sc.Xep17Contract)[], client: rpc.EpicChainServerRpcClient): Promise<TokenInfo[]>;
 
 // @public (undocumented)
-export interface Nep17TransferIntent {
+export interface Xep17TransferIntent {
     // (undocumented)
     contractHash: string;
     // (undocumented)
@@ -44,13 +44,13 @@ export interface Nep17TransferIntent {
 export class NetworkFacade {
     claimGas(acct: wallet.Account, config: signingConfig): Promise<string>;
     // (undocumented)
-    client: rpc.NeoServerRpcClient;
+    client: rpc.EpicChainServerRpcClient;
     // (undocumented)
     static fromConfig(config: NetworkFacadeConfig): Promise<NetworkFacade>;
     // Warning: (ae-forgotten-export) The symbol "Candidate" needs to be exported by the entry point index.d.ts
     getCandidates(): Promise<Candidate[]>;
     // (undocumented)
-    getRpcNode(): rpc.NeoServerRpcClient;
+    getRpcNode(): rpc.EpicChainServerRpcClient;
     // (undocumented)
     initialize(): Promise<void>;
     // (undocumented)
@@ -58,7 +58,7 @@ export class NetworkFacade {
     // (undocumented)
     magicNumber: number;
     sign(txn: tx.Transaction, config: signingConfig): Promise<tx.Transaction>;
-    transferToken(intents: Nep17TransferIntent[], config: signingConfig): Promise<string>;
+    transferToken(intents: Xep17TransferIntent[], config: signingConfig): Promise<string>;
     validate(txn: tx.Transaction): Promise<ValidationResult>;
     // (undocumented)
     vote(acct: wallet.Account, candidatePublicKey: string, config: signingConfig): Promise<string>;
@@ -67,7 +67,7 @@ export class NetworkFacade {
 // @public (undocumented)
 export interface NetworkFacadeConfig {
     // (undocumented)
-    node: string | rpc.NeoServerRpcClient;
+    node: string | rpc.EpicChainServerRpcClient;
 }
 
 // @public (undocumented)
@@ -106,7 +106,7 @@ export class TransactionBuilder {
     // (undocumented)
     addEmptyWitnesses(...accounts: wallet.Account[]): this;
     addGasClaim(account: wallet.Account): TransactionBuilder;
-    addNep17Transfer(account: wallet.Account, destination: string, tokenScriptHash: string, amt: number | string | u.BigInteger): TransactionBuilder;
+    addXep17Transfer(account: wallet.Account, destination: string, tokenScriptHash: string, amt: number | string | u.BigInteger): TransactionBuilder;
     // (undocumented)
     addScript(hexString: string): this;
     addSigners(...signers: tx.SignerLike[]): this;
@@ -133,8 +133,8 @@ export class TransactionSigner {
 
 // @public
 export class TransactionValidator {
-    constructor(rpc: rpc.NeoServerRpcClient, transaction: tx.Transaction);
-    rpcClient: rpc.NeoServerRpcClient;
+    constructor(rpc: rpc.EpicChainServerRpcClient, transaction: tx.Transaction);
+    rpcClient: rpc.EpicChainServerRpcClient;
     transaction: tx.Transaction;
     // (undocumented)
     static TX_LIFESPAN_SUGGESTION: number;

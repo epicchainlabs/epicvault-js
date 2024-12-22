@@ -1,7 +1,7 @@
 {
   "name": "@epicchain/epicvault-core",
   "description": "EpicVault-JS Core is the essential JavaScript library that forms the backbone of the EpicVault ecosystem.",
-  "version": "5.0.0",
+  "version": "1.0.0",
   "engines": {
     "node": ">=16.19.0"
   },
@@ -39,6 +39,7 @@
     "test:unit": "jest /packages/.*/__tests__/.*"
   },
   "dependencies": {
+    "@types/bn.js": "^5.1.6",
     "bn.js": "5.2.1",
     "bs58": "5.0.0",
     "buffer": "6.0.3",
@@ -51,7 +52,6 @@
     "loglevel-plugin-prefix": "0.8.4"
   },
   "devDependencies": {
-    "@types/bn.js": "5.1.1",
     "@types/crypto-js": "4.2.0",
     "@types/elliptic": "6.4.14",
     "@types/lodash": "4.14.191"

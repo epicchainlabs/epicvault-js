@@ -1,4 +1,4 @@
-import { rpc } from "@cityofzion/neon-core";
+import { rpc } from "@epicchain/epicvault-core";
 import { getTokenBalances } from "../../src/api/getTokenBalances";
 
 describe("getTokenBalances", () => {
@@ -8,7 +8,7 @@ describe("getTokenBalances", () => {
         return {
           script: "",
           state: "HALT",
-          gasconsumed: "4000000",
+          epicpulseconsumed: "4000000",
           stack: [
             {
               type: "Integer",
@@ -37,7 +37,7 @@ describe("getTokenBalances", () => {
           ],
         };
       }),
-    } as unknown as rpc.NeoServerRpcClient;
+    } as unknown as rpc.EpicChainServerRpcClient;
 
     const result = await getTokenBalances(
       "NPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
@@ -58,12 +58,12 @@ describe("getTokenBalances", () => {
         return {
           script: "",
           state: "FAULT",
-          gasconsumed: "4000000",
+          epicpulseconsumed: "4000000",
           exception: "expected exception message",
           stack: [],
         };
       }),
-    } as unknown as rpc.NeoServerRpcClient;
+    } as unknown as rpc.EpicChainServerRpcClient;
 
     expect(
       async () =>
@@ -85,11 +85,11 @@ describe("getTokenBalances", () => {
         return {
           script: "",
           state: "FAULT",
-          gasconsumed: "4000000",
+          epicpulseconsumed: "4000000",
           stack: [],
         };
       }),
-    } as unknown as rpc.NeoServerRpcClient;
+    } as unknown as rpc.EpicChainServerRpcClient;
 
     expect(
       async () =>

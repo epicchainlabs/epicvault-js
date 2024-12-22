@@ -141,7 +141,7 @@
   "extra": {
     "password": "wallet",
     "description": "seed wallet for solonet 3.0.0-rc2",
-    "NEO": "ef4073a0f2b305a38ec4050e4d3d28bc40ea63f5",
+    "NEO": "6dc3bff7b2e6061f3cad5744edf307c14823328e",
     "GAS": "d2a4cff31913016155e38e474a2c06d08be276cf"
   }
 }

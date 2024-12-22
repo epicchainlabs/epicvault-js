@@ -16,7 +16,7 @@ native assets but operate very similarly to how NEP-5 tokens work in Neo2.
 First, some setup:
  */
 
-import { CONST, rpc, sc, wallet, tx, u } from "@cityofzion/neon-core";
+import { CONST, rpc, sc, wallet, tx, u } from "@epicchain/epicvault-core";
 
 const inputs = {
   fromAccount: new wallet.Account(
@@ -173,7 +173,7 @@ async function checkSystemFee() {
     );
   }
   const requiredSystemFee = u.BigInteger.fromNumber(
-    invokeFunctionResponse.gasconsumed
+    invokeFunctionResponse.epicpulseconsumed
   );
   if (inputs.systemFee && inputs.systemFee >= requiredSystemFee) {
     vars.tx.systemFee = u.BigInteger.fromNumber(inputs.systemFee);

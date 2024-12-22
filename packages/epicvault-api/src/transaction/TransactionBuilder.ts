@@ -1,4 +1,4 @@
-import { tx, sc, u, wallet } from "@cityofzion/neon-core";
+import { tx, sc, u, wallet } from "@epicchain/epicvault-core";
 
 export class TransactionBuilder {
   private vmScripts: (sc.ContractCall | string)[] = [];
@@ -20,7 +20,7 @@ export class TransactionBuilder {
   public addGasClaim(account: wallet.Account): TransactionBuilder {
     const address = account.address;
     return this.addContractCall(
-      sc.NeoContract.INSTANCE.transfer(address, address, 0)
+      sc.EpicChainContract.INSTANCE.transfer(address, address, 0)
     ).addBasicSignatureField(account);
   }
 
@@ -31,14 +31,14 @@ export class TransactionBuilder {
    * @param tokenScriptHash - scripthash of the token contract
    * @param amt - Amount of tokens in integer format.
    */
-  public addNep17Transfer(
+  public addXep17Transfer(
     account: wallet.Account,
     destination: string,
     tokenScriptHash: string,
     amt: number | string | u.BigInteger
   ): TransactionBuilder {
     const address = account.address;
-    const contract = new sc.Nep17Contract(tokenScriptHash);
+    const contract = new sc.Xep17Contract(tokenScriptHash);
     return this.addContractCall(
       contract.transfer(address, destination, amt)
     ).addBasicSignatureField(account);
@@ -56,7 +56,7 @@ export class TransactionBuilder {
     const address = account.address;
 
     return this.addContractCall(
-      sc.NeoContract.INSTANCE.vote(address, candidatePublicKey)
+      sc.EpicChainContract.INSTANCE.vote(address, candidatePublicKey)
     ).addBasicSignatureField(account);
   }
 

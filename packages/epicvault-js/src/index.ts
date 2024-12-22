@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as api from "@cityofzion/neon-api";
-import * as neonCore from "@cityofzion/neon-core";
+import * as neonCore from "@epicchain/epicvault-core";
 import * as experimental from "./experimental";
 
 const { sc, rpc, wallet, CONST, u, tx, logging } = neonCore;
@@ -42,7 +42,7 @@ const create = {
 const is = {
   address: wallet.isAddress,
   publicKey: wallet.isPublicKey,
-  encryptedKey: wallet.isNEP2,
+  encryptedKey: wallet.isXEP2,
   privateKey: wallet.isPrivateKey,
   wif: wallet.isWIF,
   scriptHash: wallet.isScriptHash,

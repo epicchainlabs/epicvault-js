@@ -1,4 +1,4 @@
-import { rpc, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { rpc, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 import { getTokenInfos } from "./api";
 import { Candidate, getCandidates } from "./api/getCandidates";
 import {
@@ -10,10 +10,10 @@ import {
 import { SigningFunction } from "./transaction/signing";
 
 export interface NetworkFacadeConfig {
-  node: string | rpc.NeoServerRpcClient;
+  node: string | rpc.EpicChainServerRpcClient;
 }
 
-export interface Nep17TransferIntent {
+export interface Xep17TransferIntent {
   from: wallet.Account;
   to: string;
   integerAmt?: number | string | u.BigInteger;
@@ -28,7 +28,7 @@ export interface signingConfig {
 
 export class NetworkFacade {
   public magicNumber = 0;
-  public client: rpc.NeoServerRpcClient;
+  public client: rpc.EpicChainServerRpcClient;
 
   public static async fromConfig(
     config: NetworkFacadeConfig
@@ -40,7 +40,7 @@ export class NetworkFacade {
   private constructor(config: NetworkFacadeConfig) {
     this.client =
       typeof config.node === "string"
-        ? new rpc.NeoServerRpcClient(config.node)
+        ? new rpc.EpicChainServerRpcClient(config.node)
         : config.node;
   }
 
@@ -49,7 +49,7 @@ export class NetworkFacade {
     this.magicNumber = response.protocol.network;
   }
 
-  public getRpcNode(): rpc.NeoServerRpcClient {
+  public getRpcNode(): rpc.EpicChainServerRpcClient {
     return this.client;
   }
 
@@ -59,7 +59,7 @@ export class NetworkFacade {
    * @param config - Configuration
    */
   public async transferToken(
-    intents: Nep17TransferIntent[],
+    intents: Xep17TransferIntent[],
     config: signingConfig
   ): Promise<string> {
     const client = this.getRpcNode();
@@ -71,14 +71,14 @@ export class NetworkFacade {
           intent.decimalAmt,
           tokenInfo.decimals
         );
-        txBuilder.addNep17Transfer(
+        txBuilder.addXep17Transfer(
           intent.from,
           intent.to,
           intent.contractHash,
           amt
         );
       } else if (intent.integerAmt) {
-        txBuilder.addNep17Transfer(
+        txBuilder.addXep17Transfer(
           intent.from,
           intent.to,
           intent.contractHash,

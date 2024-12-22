@@ -27,8 +27,8 @@ export enum NATIVE_CONTRACT_HASH {
  * @deprecated Please use NATIVE_CONTRACT_HASH
  */
 export const ASSET_ID: { [key: string]: string } = {
-  NEO: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
-  GAS: "bc8459660544656355b4f60861c22f544341e828",
+  EpicChain: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
+  EpicPulse: "bc8459660544656355b4f60861c22f544341e828",
 };
 export const DEFAULT_REQ = {
   jsonrpc: "1.0",

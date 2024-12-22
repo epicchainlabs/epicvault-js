@@ -1,4 +1,4 @@
-import { rpc, sc, u } from "@cityofzion/neon-core";
+import { rpc, sc, u } from "@epicchain/epicvault-core";
 
 export interface Candidate {
   publicKey: string;
@@ -18,10 +18,10 @@ type getCandidatesStack = [
   }
 ];
 export async function getCandidates(
-  client: rpc.NeoServerRpcClient
+  client: rpc.EpicChainServerRpcClient
 ): Promise<Candidate[]> {
   const script = new sc.ScriptBuilder()
-    .emitContractCall(sc.NeoContract.INSTANCE.getCandidates())
+    .emitContractCall(sc.EpicChainContract.INSTANCE.getCandidates())
     .build();
 
   const res = await client.invokeScript(u.HexString.fromHex(script));

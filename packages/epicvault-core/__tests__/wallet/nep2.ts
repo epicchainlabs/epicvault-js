@@ -1,5 +1,5 @@
 import * as XEP2 from "../../src/wallet/nep2";
-import { isNEP2, isWIF } from "../../src/wallet/verify";
+import { isXEP2, isWIF } from "../../src/wallet/verify";
 import testKeys from "../testKeys.json";
 
 const simpleScrypt = {
@@ -51,7 +51,7 @@ describe("NEP2", () => {
   describe("Default", () => {
     test("encrypt", async () => {
       const result = await XEP2.encrypt(testKey.wif, testKey.passphrase);
-      expect(isNEP2(result)).toBeTruthy();
+      expect(isXEP2(result)).toBeTruthy();
       expect(result).toBe(testKey.encryptedWif);
     }, 10000);
 
@@ -81,7 +81,7 @@ describe("NEP2", () => {
           data.passphrase,
           simpleScrypt
         );
-        expect(isNEP2(result)).toBeTruthy();
+        expect(isXEP2(result)).toBeTruthy();
         expect(result).toBe(data.encryptedWif);
       });
 
@@ -128,7 +128,7 @@ describe.each([
     data: { wif: string; encryptedWif: string; passphrase: string }
   ) => {
     test("decrypt neo2 key", async () => {
-      const result = await XEP2.decryptNeo2(
+      const result = await XEP2.decryptEpicChain(
         data.encryptedWif,
         data.passphrase,
         simpleScrypt
