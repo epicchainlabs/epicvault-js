@@ -1,7 +1,7 @@
 {
   "name": "@epicchain/epicvault-core",
   "description": "EpicVault-JS Core is the essential JavaScript library that forms the backbone of the EpicVault ecosystem.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=16.19.0"
   },
