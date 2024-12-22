@@ -44,7 +44,7 @@ async function sendDataToSign(
 /**
  * Requests the open application name from the Ledger.
  * @param ledger - Ledger instance
- * @returns the ledger application name. Expected "NEO3"
+ * @returns the ledger application name. Expected "EpicChain"
  */
 export async function getAppName(ledger: Transport): Promise<string> {
   try {
@@ -111,7 +111,7 @@ export async function getDevicePaths(
  * Requests the public key of a requested address from the Ledger.
  * @param ledger - Ledger instance
  * @param bip44String - BIP44 string (40 bytes)
- * @param showAddressOnDevice - whether to show the public key as NEO3 address
+ * @param showAddressOnDevice - whether to show the public key as EpicChain address
  * on the Ledger
  * @returns An unencoded public key (65 bytes)
  */
@@ -139,7 +139,7 @@ export async function getPublicKey(
 }
 
 /**
- * Requests the device to sign a message using the NEO application.
+ * Requests the device to sign a message using the EpicChain application.
  * @param ledger - Ledger instance
  * @param payload - message to sign as a hexstring.
  * @param bip44String - BIP44 string (40 bytes)

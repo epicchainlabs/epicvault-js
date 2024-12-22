@@ -1,4 +1,4 @@
-import * as nep17 from "./nep17";
+import * as nep17 from "./xep17";
 import { SmartContract } from "./contract";
 import {
   getSystemFee,

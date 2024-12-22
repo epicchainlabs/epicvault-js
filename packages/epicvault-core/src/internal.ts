@@ -17,7 +17,7 @@ export function parseEnum<T extends object>(
 /**
  * Simple type helper to merge types that have the same field names.
  */
-export type NeonLike<NeonType, JsonType> = {
+export type EpicVaultLike<NeonType, JsonType> = {
   [Property in keyof NeonType & keyof JsonType]:
     | NeonType[Property]
     | JsonType[Property];

@@ -138,7 +138,7 @@ export function isAddress(address: string, verifyAddressVersion = -1): boolean {
       verifyAddressVersion >= 0 &&
       givenAddressVersion !== verifyAddressVersion
     ) {
-      // Address might have come from a different network such as Neo Legacy.
+      // Address might have come from a different network such as EpicChain.
       return false;
     }
 
@@ -150,7 +150,7 @@ export function isAddress(address: string, verifyAddressVersion = -1): boolean {
     // As other chains use similar checksum methods, we need to attempt to transform the programHash back into the address
     const scriptHash = reverseHex(programHash.slice(2, 42));
     if (getAddressFromScriptHash(scriptHash, givenAddressVersion) !== address) {
-      // address is not valid Neo address, could be btc, ltc etc.
+      // address is not valid EpicChain address, could be btc, ltc etc.
       return false;
     }
     return true;

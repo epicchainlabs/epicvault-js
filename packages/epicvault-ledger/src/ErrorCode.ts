@@ -48,7 +48,7 @@ export function evalTransportError(err: Error): Error {
   const transportErr = cloneDeep(err) as TransportStatusError;
   switch (transportErr.statusCode) {
     case StatusWord.APP_CLOSED:
-      transportErr.message = "Your NEO app is closed! Please login.";
+      transportErr.message = "Your EpicChain app is closed! Please login.";
       break;
     case StatusWord.DENY:
       transportErr.message = "Action rejected by user";

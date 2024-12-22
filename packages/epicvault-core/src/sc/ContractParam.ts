@@ -1,6 +1,6 @@
 import { BigInteger, HexString } from "../u";
 import { getScriptHashFromAddress, isAddress, isPublicKey } from "../wallet";
-import { NeonObject } from "../model";
+import { EpicVaultObject } from "../model";
 import { parseEnum } from "../internal";
 
 export enum ContractParamType {
@@ -66,7 +66,7 @@ export type ContractParamLike = Pick<
  * ContractParam.boolean(true);
  * ContractParam.string("12ab");
  */
-export class ContractParam implements NeonObject<ContractParamLike> {
+export class ContractParam implements EpicVaultObject<ContractParamLike> {
   public static any(value: string | HexString | null = null): ContractParam {
     return new ContractParam({
       type: ContractParamType.Any,

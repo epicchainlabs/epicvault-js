@@ -3,7 +3,7 @@ import {
   deserializeArrayOf,
   getSerializedSize,
   HexString,
-  NeonSerializable,
+  EpicVaultSerializable,
   serializeArrayOf,
   StringStream,
 } from "../../u";
@@ -78,7 +78,7 @@ export type WitnessConditionJson =
   | CalledByContractWitnessConditionJson
   | CalledByGroupWitnessConditionJson;
 
-export abstract class WitnessCondition implements NeonSerializable {
+export abstract class WitnessCondition implements EpicVaultSerializable {
   public abstract get type(): WitnessConditionType;
   public get size(): number {
     return 1;

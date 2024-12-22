@@ -684,12 +684,12 @@
           "members": [
             {
               "kind": "Method",
-              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#claimGas:member(1)",
-              "docComment": "/**\n * Claims all the gas available for the specified account. Do note that GAS is automatically claimed when you perform a transaction involving NEO.\n *\n * @param acct - The account to claim gas on\n *\n * @param config - Configuration\n */\n",
+              "canonicalReference": "@epicchain/epicvault-api!NetworkFacade#claimEpicPulse:member(1)",
+              "docComment": "/**\n * Claims all the epicpulse available for the specified account. Do note that EpicPulse is automatically claimed when you perform a transaction involving EpicChain.\n *\n * @param acct - The account to claim epicpulse on\n *\n * @param config - Configuration\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "claimGas(acct: "
+                  "text": "claimEpicPulse(acct: "
                 },
                 {
                   "kind": "Reference",
@@ -751,7 +751,7 @@
               ],
               "isOptional": false,
               "isAbstract": false,
-              "name": "claimGas"
+              "name": "claimEpicPulse"
             },
             {
               "kind": "Property",
@@ -1946,12 +1946,12 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addGasClaim:member(1)",
-              "docComment": "/**\n * Adds the logic for claiming gas. Alternatively, you may just trigger the gas claim by performing an actual transaction involving NEO.\n *\n * @param account - Account to claim gas on.\n */\n",
+              "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addEpicPulseClaim:member(1)",
+              "docComment": "/**\n * Adds the logic for claiming epicpulse. Alternatively, you may just trigger the epicpulse claim by performing an actual transaction involving EpicChain.\n *\n * @param account - Account to claim EpicPulse on.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "addGasClaim(account: "
+                  "text": "addEpicPulseClaim(account: "
                 },
                 {
                   "kind": "Reference",
@@ -1992,7 +1992,7 @@
               ],
               "isOptional": false,
               "isAbstract": false,
-              "name": "addGasClaim"
+              "name": "addEpicPulseClaim"
             },
             {
               "kind": "Method",
@@ -2201,7 +2201,7 @@
             {
               "kind": "Method",
               "canonicalReference": "@epicchain/epicvault-api!TransactionBuilder#addVote:member(1)",
-              "docComment": "/**\n * Adds the logic to vote for a candidate.\n *\n * @param account - Account containing the NEO.\n *\n * @param candidatePublicKey - The candidate's publickey in hex big endian.\n */\n",
+              "docComment": "/**\n * Adds the logic to vote for a candidate.\n *\n * @param account - Account containing the EpicChain.\n *\n * @param candidatePublicKey - The candidate's publickey in hex big endian.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

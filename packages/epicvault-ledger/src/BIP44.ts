@@ -10,7 +10,7 @@ function to8BitHex(num: number): string {
 }
 
 /**
- * Returns a BIP44 string specific to NEO.
+ * Returns a BIP44 string specific to EpicChain.
  */
 export function BIP44(address = 0, change = 0, account = 0): string {
   assertPositiveInteger(address, "address");

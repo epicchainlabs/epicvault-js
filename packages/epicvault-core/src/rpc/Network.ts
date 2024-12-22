@@ -1,5 +1,5 @@
 import Protocol, { ProtocolJSON, ProtocolLike } from "./Protocol";
-import { NeonObject } from "../model";
+import { EpicVaultObject } from "../model";
 
 export interface NetworkLike {
   name: string;
@@ -33,11 +33,11 @@ function compareMaps(
 }
 
 /**
- * Network interface representing a NEO blockchain network.
+ * Network interface representing a EpicChain blockchain network.
  * This inherits from the network.protocol file used in the C# implementation and adds in additional configurations.
  * @param config - NetworkLike JS object
  */
-export class Network implements NeonObject<NetworkLike> {
+export class Network implements EpicVaultObject<NetworkLike> {
   public name: string;
   public protocol: Protocol;
   public nodes: string[];

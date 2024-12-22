@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as api from "@cityofzion/neon-api";
-import * as neonCore from "@epicchain/epicvault-core";
+import * as epicvaultCore from "@epicchain/epicvault-core";
 import * as experimental from "./experimental";
 
-const { sc, rpc, wallet, CONST, u, tx, logging } = neonCore;
+const { sc, rpc, wallet, CONST, u, tx, logging } = epicvaultCore;
 
 /**
  * Semantic path for creation of a resource.
  */
 const create = {
-  account: (k: string): neonCore.wallet.Account => new wallet.Account(k),
+  account: (k: string): epicvaultCore.wallet.Account => new wallet.Account(k),
   privateKey: wallet.generatePrivateKey,
   signature: wallet.generateSignature,
-  wallet: (k: neonCore.wallet.WalletJSON): neonCore.wallet.Wallet =>
+  wallet: (k: epicvaultCore.wallet.WalletJSON): epicvaultCore.wallet.Wallet =>
     new wallet.Wallet(k),
   contractParam: (
     type: keyof typeof sc.ContractParamType,
@@ -20,19 +20,19 @@ const create = {
       | string
       | number
       | boolean
-      | neonCore.sc.ContractParamJson[]
+      | epicvaultCore.sc.ContractParamJson[]
       | null
       | undefined
-  ): neonCore.sc.ContractParam => sc.ContractParam.fromJson({ type, value }),
+  ): epicvaultCore.sc.ContractParam => sc.ContractParam.fromJson({ type, value }),
   script: sc.createScript,
-  scriptBuilder: (): neonCore.sc.ScriptBuilder => new sc.ScriptBuilder(),
-  rpcClient: (net: string): neonCore.rpc.RPCClient => new rpc.RPCClient(net),
+  scriptBuilder: (): epicvaultCore.sc.ScriptBuilder => new sc.ScriptBuilder(),
+  rpcClient: (net: string): epicvaultCore.rpc.RPCClient => new rpc.RPCClient(net),
   query: (
-    req: neonCore.rpc.QueryLike<unknown[]>
-  ): neonCore.rpc.Query<unknown[], unknown> => new rpc.Query(req),
-  network: (net: Partial<neonCore.rpc.NetworkJSON>): neonCore.rpc.Network =>
+    req: epicvaultCore.rpc.QueryLike<unknown[]>
+  ): epicvaultCore.rpc.Query<unknown[], unknown> => new rpc.Query(req),
+  network: (net: Partial<epicvaultCore.rpc.NetworkJSON>): epicvaultCore.rpc.Network =>
     new rpc.Network(net),
-  stringStream: (str?: string): neonCore.u.StringStream =>
+  stringStream: (str?: string): epicvaultCore.u.StringStream =>
     new u.StringStream(str),
 };
 

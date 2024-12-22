@@ -1,7 +1,7 @@
 import { NATIVE_CONTRACT_HASH } from "../../consts";
 import { ContractMethodDefinition } from "../manifest";
 import { Xep17Contract } from "./Xep17Contract";
-import gasAbi from "./templates/GasTemplateAbi.json";
+import gasAbi from "./templates/EpicPulseTemplateAbi.json";
 
 let SINGLETON: EpicPulseContract;
 

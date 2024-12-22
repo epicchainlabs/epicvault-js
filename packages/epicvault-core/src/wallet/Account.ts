@@ -8,7 +8,7 @@ import { hash160, HexString, remove0xPrefix, reverseHex } from "../u";
 import { isMultisigContract } from "../sc";
 import * as core from "./core";
 import { constructMultiSigVerificationScript } from "./multisig";
-import { decrypt, encrypt, ScryptParams } from "./nep2";
+import { decrypt, encrypt, ScryptParams } from "./xep2";
 import {
   isAddress,
   isXEP2,
@@ -17,7 +17,7 @@ import {
   isScriptHash,
   isWIF,
 } from "./verify";
-import { NeonObject } from "../model";
+import { EpicVaultObject } from "../model";
 
 const log = logger("wallet");
 
@@ -54,7 +54,7 @@ export interface AccountJSON {
  * const acct = new Account("L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g");
  * acct.address; // "ALq7AWrhAueN6mJNqk6FHJjnsEoPRytLdW"
  */
-export class Account implements NeonObject<AccountJSON> {
+export class Account implements EpicVaultObject<AccountJSON> {
   /**
    * Create a multi-sig account from a list of public keys
    * @param signingThreshold - Minimum number of signatures required for verification. Must be larger than 0 and less than number of keys provided.

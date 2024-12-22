@@ -34,7 +34,7 @@ import {
   deserializeValidUntilBlock,
   deserializeSigners,
 } from "./main";
-import { NeonObject } from "../../model";
+import { EpicVaultObject } from "../../model";
 const log = logger("tx");
 
 export interface TransactionLike {
@@ -65,9 +65,9 @@ export interface TransactionJson {
   witnesses: WitnessJson[];
 }
 
-export class Transaction implements NeonObject<TransactionLike> {
+export class Transaction implements EpicVaultObject<TransactionLike> {
   /**
-   * Only version=0 is valid for NEO3
+   * Only version=0 is valid for EpicChain
    */
   public version: number;
   /**
@@ -88,7 +88,7 @@ export class Transaction implements NeonObject<TransactionLike> {
    *
    * @remarks
    * The most reliable way to calculate minimum systemFee is to use invokeScript method to test, as it's hard to know what the contract will do.
-   * If transaction only invokes native contracts, systemFee can be calculated offline. It is distributed to NEO holders.
+   * If transaction only invokes native contracts, systemFee can be calculated offline. It is distributed to EpicChain holders.
    *
    * @example
    * const systemFee = SUM(OpCodePrices + InteropServiceCodePrices)

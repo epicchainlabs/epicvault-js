@@ -15,7 +15,7 @@ class FullRpcClient extends TokenTrackerRpcMixin(
   }
 }
 /**
- * RPC Client model to query a NEO node. Contains built-in methods to query using RPC calls.
+ * RPC Client model to query a EpicChain node. Contains built-in methods to query using RPC calls.
  */
 export class RPCClient extends FullRpcClient {
   public net: string;
@@ -24,8 +24,8 @@ export class RPCClient extends FullRpcClient {
   private _latencies: number[];
 
   /**
-   * @param net - A url pointing to a NEO RPC node.
-   * @param version - version of NEO node. Used to check if RPC methods have been implemented. it will default to DEFAULT_RPC found in CONST
+   * @param net - A url pointing to a EpicChain RPC node.
+   * @param version - version of EpicChain node. Used to check if RPC methods have been implemented. it will default to DEFAULT_RPC found in CONST
    */
   public constructor(net: string) {
     super(net);

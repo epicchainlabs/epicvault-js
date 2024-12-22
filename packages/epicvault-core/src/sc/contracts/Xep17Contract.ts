@@ -3,7 +3,7 @@ import { ContractParam } from "../ContractParam";
 import { ContractMethodDefinition } from "../manifest/ContractMethodDefinition";
 import { ContractCall } from "../types";
 import { BaseContract } from "./BaseContract";
-import defaultAbi from "./templates/Nep17TemplateAbi.json";
+import defaultAbi from "./templates/Xep17TemplateAbi.json";
 
 /**
  * A standard NEP-17 contract according to specification.

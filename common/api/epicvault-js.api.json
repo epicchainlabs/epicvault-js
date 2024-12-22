@@ -187,7 +187,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.Account",
+              "text": "epicvaultCore.wallet.Account",
               "canonicalReference": "@epicchain/epicvault-core!Account:class"
             },
             {
@@ -196,7 +196,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.generatePrivateKey",
+              "text": "epicvaultCore.wallet.generatePrivateKey",
               "canonicalReference": "@epicchain/epicvault-core!generatePrivateKey:function"
             },
             {
@@ -205,7 +205,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.generateSignature",
+              "text": "epicvaultCore.wallet.generateSignature",
               "canonicalReference": "@epicchain/epicvault-core!generateSignature:function"
             },
             {
@@ -214,7 +214,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.WalletJSON",
+              "text": "epicvaultCore.wallet.WalletJSON",
               "canonicalReference": "@epicchain/epicvault-core!WalletJSON:interface"
             },
             {
@@ -223,7 +223,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.Wallet",
+              "text": "epicvaultCore.wallet.Wallet",
               "canonicalReference": "@epicchain/epicvault-core!Wallet:class"
             },
             {
@@ -232,7 +232,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.sc.ContractParamJson",
+              "text": "epicvaultCore.sc.ContractParamJson",
               "canonicalReference": "@epicchain/epicvault-core!ContractParamJson:interface"
             },
             {
@@ -241,7 +241,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.sc.ContractParam",
+              "text": "epicvaultCore.sc.ContractParam",
               "canonicalReference": "@epicchain/epicvault-core!ContractParam:class"
             },
             {
@@ -250,7 +250,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.sc.createScript",
+              "text": "epicvaultCore.sc.createScript",
               "canonicalReference": "@epicchain/epicvault-core!createScript:function"
             },
             {
@@ -259,7 +259,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.sc.ScriptBuilder",
+              "text": "epicvaultCore.sc.ScriptBuilder",
               "canonicalReference": "@epicchain/epicvault-core!ScriptBuilder:class"
             },
             {
@@ -268,7 +268,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.rpc.RPCClient",
+              "text": "epicvaultCore.rpc.RPCClient",
               "canonicalReference": "@epicchain/epicvault-core!RPCClient:class"
             },
             {
@@ -277,7 +277,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.rpc.QueryLike",
+              "text": "epicvaultCore.rpc.QueryLike",
               "canonicalReference": "@epicchain/epicvault-core!QueryLike:interface"
             },
             {
@@ -286,7 +286,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.rpc.Query",
+              "text": "epicvaultCore.rpc.Query",
               "canonicalReference": "@epicchain/epicvault-core!Query:class"
             },
             {
@@ -304,7 +304,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.rpc.NetworkJSON",
+              "text": "epicvaultCore.rpc.NetworkJSON",
               "canonicalReference": "@epicchain/epicvault-core!NetworkJSON:interface"
             },
             {
@@ -313,7 +313,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.rpc.Network",
+              "text": "epicvaultCore.rpc.Network",
               "canonicalReference": "@epicchain/epicvault-core!Network:class"
             },
             {
@@ -322,7 +322,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.u.StringStream",
+              "text": "epicvaultCore.u.StringStream",
               "canonicalReference": "@epicchain/epicvault-core!StringStream:class"
             },
             {
@@ -331,7 +331,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.tx.TransactionAttribute.deserialize",
+              "text": "epicvaultCore.tx.TransactionAttribute.deserialize",
               "canonicalReference": "@epicchain/epicvault-core!TransactionAttribute.deserialize:member"
             },
             {
@@ -340,7 +340,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.tx.Witness.deserialize",
+              "text": "epicvaultCore.tx.Witness.deserialize",
               "canonicalReference": "@epicchain/epicvault-core!Witness.deserialize:member"
             },
             {
@@ -349,7 +349,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.tx.Transaction.deserialize",
+              "text": "epicvaultCore.tx.Transaction.deserialize",
               "canonicalReference": "@epicchain/epicvault-core!Transaction.deserialize:member"
             },
             {
@@ -358,7 +358,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isAddress",
+              "text": "epicvaultCore.wallet.isAddress",
               "canonicalReference": "@epicchain/epicvault-core!isAddress:function"
             },
             {
@@ -367,7 +367,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isPublicKey",
+              "text": "epicvaultCore.wallet.isPublicKey",
               "canonicalReference": "@epicchain/epicvault-core!isPublicKey:function"
             },
             {
@@ -376,7 +376,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isXEP2",
+              "text": "epicvaultCore.wallet.isXEP2",
               "canonicalReference": "@epicchain/epicvault-core!isXEP2:function"
             },
             {
@@ -385,7 +385,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isPrivateKey",
+              "text": "epicvaultCore.wallet.isPrivateKey",
               "canonicalReference": "@epicchain/epicvault-core!isPrivateKey:function"
             },
             {
@@ -394,7 +394,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isWIF",
+              "text": "epicvaultCore.wallet.isWIF",
               "canonicalReference": "@epicchain/epicvault-core!isWIF:function"
             },
             {
@@ -403,7 +403,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.isScriptHash",
+              "text": "epicvaultCore.wallet.isScriptHash",
               "canonicalReference": "@epicchain/epicvault-core!isScriptHash:function"
             },
             {
@@ -412,7 +412,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.sign",
+              "text": "epicvaultCore.wallet.sign",
               "canonicalReference": "@epicchain/epicvault-core!sign:function"
             },
             {
@@ -421,7 +421,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.verify",
+              "text": "epicvaultCore.wallet.verify",
               "canonicalReference": "@epicchain/epicvault-core!verify:function"
             },
             {
@@ -430,7 +430,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.encrypt",
+              "text": "epicvaultCore.wallet.encrypt",
               "canonicalReference": "@epicchain/epicvault-core!encrypt:function"
             },
             {
@@ -439,7 +439,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet.decrypt",
+              "text": "epicvaultCore.wallet.decrypt",
               "canonicalReference": "@epicchain/epicvault-core!decrypt:function"
             },
             {
@@ -448,7 +448,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.u",
+              "text": "epicvaultCore.u",
               "canonicalReference": "@epicchain/epicvault-core!u"
             },
             {
@@ -457,7 +457,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.CONST",
+              "text": "epicvaultCore.CONST",
               "canonicalReference": "@epicchain/epicvault-core!CONST"
             },
             {
@@ -498,7 +498,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.CONST",
+              "text": "epicvaultCore.CONST",
               "canonicalReference": "@epicchain/epicvault-core!CONST"
             }
           ],
@@ -524,7 +524,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@epicchain/epicvault-js!experimental.deployContract:function(1)",
-              "docComment": "/**\n * Deploy a smart contract\n *\n * @param nef - A smart contract in Neo executable file format. Commonly created by a NEO compiler and stored as .NEF on disk\n *\n * @param manifest - the manifest corresponding to the smart contract\n *\n * @param config - \n */\n",
+              "docComment": "/**\n * Deploy a smart contract\n *\n * @param nef - A smart contract in EpicChain executable file format. Commonly created by a EpicChain compiler and stored as .NEF on disk\n *\n * @param manifest - the manifest corresponding to the smart contract\n *\n * @param config - \n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -609,7 +609,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@epicchain/epicvault-js!experimental.getContractHash:function(1)",
-              "docComment": "/**\n * Get the hash that identifies the contract on the chain matching the specified NEF\n *\n * @param sender - The sender of the transaction\n *\n * @param nefChecksum - The checksum of the Neo Executable File. A NEF file is a smart contract commonly created by a NEO compiler and stored as .NEF on disk\n *\n * @param contractName - The name as indicated in the manifest\n */\n",
+              "docComment": "/**\n * Get the hash that identifies the contract on the chain matching the specified NEF\n *\n * @param sender - The sender of the transaction\n *\n * @param nefChecksum - The checksum of the EpicChain Executable File. A NEF file is a smart contract commonly created by a EpicChain compiler and stored as .NEF on disk\n *\n * @param contractName - The name as indicated in the manifest\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -722,7 +722,7 @@
                     {
                       "kind": "Constructor",
                       "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicPulseContract:constructor(1)",
-                      "docComment": "/**\n * Convenience class initializing a Xep17Contract to GAS token\n *\n * @param config - \n */\n",
+                      "docComment": "/**\n * Convenience class initializing a Xep17Contract to EpicPulse token\n *\n * @param config - \n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -787,7 +787,7 @@
                     {
                       "kind": "Constructor",
                       "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract:constructor(1)",
-                      "docComment": "/**\n * Convenience class initializing a Xep17Contract to the NEO token exposing additional claim functions\n *\n * @param config - \n */\n",
+                      "docComment": "/**\n * Convenience class initializing a Xep17Contract to the EpicChain token exposing additional claim functions\n *\n * @param config - \n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -819,12 +819,12 @@
                     },
                     {
                       "kind": "Method",
-                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#claimGas:member(1)",
-                      "docComment": "/**\n * Claim gas for address\n *\n * @param address - NEO address\n *\n * @returns transaction id\n */\n",
+                      "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#claimEpicPulse:member(1)",
+                      "docComment": "/**\n * Claim EpicPulse for address\n *\n * @param address - EpicChain address\n *\n * @returns transaction id\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
-                          "text": "claimGas(address: "
+                          "text": "claimEpicPulse(address: "
                         },
                         {
                           "kind": "Content",
@@ -868,12 +868,12 @@
                       ],
                       "isOptional": false,
                       "isAbstract": false,
-                      "name": "claimGas"
+                      "name": "claimEpicPulse"
                     },
                     {
                       "kind": "Method",
                       "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#getUnclaimedEpicPulse:member(1)",
-                      "docComment": "/**\n * Get the available bonus GAS for address\n *\n * @param address - NEO address\n */\n",
+                      "docComment": "/**\n * Get the available bonus EpicPulse for address\n *\n * @param address - EpicChain address\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -926,7 +926,7 @@
                     {
                       "kind": "Method",
                       "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.EpicChainContract#transfer:member(1)",
-                      "docComment": "/**\n * Move tokens from one address to another\n *\n * @param from - source NEO address\n *\n * @param to - destination NEO address\n *\n * @param amount - quantity of tokens to send\n */\n",
+                      "docComment": "/**\n * Move tokens from one address to another\n *\n * @param from - source EpicChain address\n *\n * @param to - destination EpicChain address\n *\n * @param amount - quantity of tokens to send\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -1084,7 +1084,7 @@
                     {
                       "kind": "Method",
                       "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#balanceOf:member(1)",
-                      "docComment": "/**\n * Get the number of tokens owned by NEO address\n */\n",
+                      "docComment": "/**\n * Get the number of tokens owned by EpicChain address\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -1374,7 +1374,7 @@
                     {
                       "kind": "Method",
                       "canonicalReference": "@epicchain/epicvault-js!experimental.nep17.Xep17Contract#transfer:member(1)",
-                      "docComment": "/**\n * Move tokens from one address to another\n *\n * @param from - source NEO address\n *\n * @param to - destination NEO address\n *\n * @param amount - quantity of tokens to send\n */\n",
+                      "docComment": "/**\n * Move tokens from one address to another\n *\n * @param from - source EpicChain address\n *\n * @param to - destination EpicChain address\n *\n * @param amount - quantity of tokens to send\n */\n",
                       "excerptTokens": [
                         {
                           "kind": "Content",
@@ -1592,7 +1592,7 @@
                 {
                   "kind": "Method",
                   "canonicalReference": "@epicchain/epicvault-js!experimental.SmartContract#invoke:member(1)",
-                  "docComment": "/**\n * Run an invocation on the smart contract. Requires the contract to be created with a valid CommonConfig.account\n *\n * Note: - results are persisted to the blockchain. - currently only supports Sender as signer Tip: use `testInvoke` for querying data without needing to pay GAS.\n *\n * @param operation - name of operation to call\n *\n * @param params - parameters to pass.\n *\n * @param signers - custom list of signers to add to the transaction. It is up to the user to ensure that the sender is the first signer.\n *\n * @returns transaction id\n */\n",
+                  "docComment": "/**\n * Run an invocation on the smart contract. Requires the contract to be created with a valid CommonConfig.account\n *\n * Note: - results are persisted to the blockchain. - currently only supports Sender as signer Tip: use `testInvoke` for querying data without needing to pay EpicPulse.\n *\n * @param operation - name of operation to call\n *\n * @param params - parameters to pass.\n *\n * @param signers - custom list of signers to add to the transaction. It is up to the user to ensure that the sender is the first signer.\n *\n * @returns transaction id\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -1898,7 +1898,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.logging",
+              "text": "epicvaultCore.logging",
               "canonicalReference": "@epicchain/epicvault-core!logging"
             }
           ],
@@ -1926,7 +1926,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.rpc",
+              "text": "epicvaultCore.rpc",
               "canonicalReference": "@epicchain/epicvault-core!rpc"
             }
           ],
@@ -1954,7 +1954,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.sc",
+              "text": "epicvaultCore.sc",
               "canonicalReference": "@epicchain/epicvault-core!sc"
             }
           ],
@@ -1982,7 +1982,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.tx",
+              "text": "epicvaultCore.tx",
               "canonicalReference": "@epicchain/epicvault-core!tx"
             }
           ],
@@ -2010,7 +2010,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.u",
+              "text": "epicvaultCore.u",
               "canonicalReference": "@epicchain/epicvault-core!u"
             }
           ],
@@ -2038,7 +2038,7 @@
             },
             {
               "kind": "Reference",
-              "text": "neonCore.wallet",
+              "text": "epicvaultCore.wallet",
               "canonicalReference": "@epicchain/epicvault-core!wallet"
             }
           ],

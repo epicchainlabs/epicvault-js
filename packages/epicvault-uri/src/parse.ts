@@ -4,12 +4,12 @@ const INTENT_PREFIXES = ["pay", "vote"];
 
 // We hardcode these so we can avoid a full dependency.
 const NATIVE_TOKENS = {
-  neo: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
-  gas: "d2a4cff31913016155e38e474a2c06d08be276cf",
+  epicchain: "6dc3bff7b2e6061f3cad5744edf307c14823328e",
+  epicpulse: "d2a4cff31913016155e38e474a2c06d08be276cf",
 };
 
 /**
- * Results of parsing a NEO uri. Contains a displayable string describing the intent and a partial ContractCall object that requires more information to be used in a Transaction.
+ * Results of parsing a EpicChain uri. Contains a displayable string describing the intent and a partial ContractCall object that requires more information to be used in a Transaction.
  */
 export interface UriIntent {
   intent: "pay" | "vote";
@@ -27,7 +27,7 @@ export function parse(uri: string): UriIntent {
   const [scheme, uriBody] = uri.split(":", 2);
   validateScheme(scheme);
   if (!uriBody) {
-    throw new Error("URI did not contain anything after neo:");
+    throw new Error("URI did not contain anything after epicchain:");
   }
 
   const bodyParts = uriBody.split("?", 2);
@@ -46,8 +46,8 @@ export function parse(uri: string): UriIntent {
 }
 
 function validateScheme(scheme: string): void {
-  if (scheme !== "neo") {
-    throw new Error("URI provided did not start with neo");
+  if (scheme !== "epicchain") {
+    throw new Error("URI provided did not start with epicchain");
   }
 }
 
@@ -111,7 +111,7 @@ function createPayDescription(
   amount?: string
 ): string {
   const tokenName =
-    assetString === "neo" || assetString === "gas"
+    assetString === "epicchain" || assetString === "epicpulse"
       ? assetString.toUpperCase()
       : `tokens(${assetString})`;
 
@@ -119,7 +119,7 @@ function createPayDescription(
 }
 
 function parseAssetToScriptHash(assetString: string): string {
-  if (assetString === "neo" || assetString === "gas") {
+  if (assetString === "epicchain" || assetString === "epicpulse") {
     return NATIVE_TOKENS[assetString];
   }
   if (assetString.length !== 40) {
@@ -138,7 +138,7 @@ function createVoteIntent(
     intent: "vote",
     description: `Vote for ${publicKey}`,
     contractCall: {
-      scriptHash: NATIVE_TOKENS.neo,
+      scriptHash: NATIVE_TOKENS.epicchain,
       operation: "vote",
       args: [
         { type: "Hash160", value: "" },

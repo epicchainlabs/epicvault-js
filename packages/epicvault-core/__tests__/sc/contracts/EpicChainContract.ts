@@ -14,7 +14,7 @@ test("scriptHash", () => {
 
 describe("EpicChain specific methods", () => {
   test("unclaimedEpicPulse", () => {
-    const result = contract.unclaimedGas(address, 123);
+    const result = contract.unclaimedEpicChain(address, 123);
 
     expect(result).toEqual({
       scriptHash: "6dc3bff7b2e6061f3cad5744edf307c14823328e",

@@ -4,7 +4,7 @@ import { ContractParam } from "../ContractParam";
 import { ContractMethodDefinition } from "../manifest";
 import { ContractCall } from "../types";
 import { Xep17Contract } from "./Xep17Contract";
-import neoAbi from "./templates/NeoTemplateAbi.json";
+import epicchainAbi from "./templates/EpicChainTemplateAbi.json";
 
 let SINGLETON: EpicChainContract;
 
@@ -17,19 +17,19 @@ export class EpicChainContract extends Xep17Contract {
   }
 
   /**
-   * The list of methods found on the NEO contract.
+   * The list of methods found on the EpicChain contract.
    */
   public static getMethods(): ContractMethodDefinition[] {
-    return neoAbi.methods.map((m) => ContractMethodDefinition.fromJson(m));
+    return epicchainAbi.methods.map((m) => ContractMethodDefinition.fromJson(m));
   }
 
   constructor() {
     super(NATIVE_CONTRACT_HASH.EpicChain, EpicChainContract.getMethods());
   }
 
-  public unclaimedGas(address: string, end: number | BigInteger): ContractCall {
+  public unclaimedEpicChain(address: string, end: number | BigInteger): ContractCall {
     return this.call(
-      "unclaimedGas",
+      "unclaimedEpicChain",
       ContractParam.hash160(address),
       ContractParam.integer(end)
     );

@@ -21,7 +21,7 @@ import { StackItem, StackItemJson } from "../../sc";
 export function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(
   base: TBase
 ) {
-  return class NeoServerRpcInterface extends base {
+  return class EpicChainServerRpcInterface extends base {
     //#region Blockchain
 
     /**
@@ -241,7 +241,7 @@ export function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(
     }
 
     /**
-     * Gets the version of the NEO node along with various other metadata.
+     * Gets the version of the EpicChain node along with various other metadata.
      */
     public async getVersion(): Promise<GetVersionResult> {
       const response = await this.execute(Query.getVersion());
@@ -275,7 +275,7 @@ export function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(
     //#region SmartContract
 
     /**
-     * Get the amount of unclaimed GAS for a NEO address. This is returned as the raw value. To get the display value, divide this by 100000000.
+     * Get the amount of unclaimed EpicPulse for a EpicChain address. This is returned as the raw value. To get the display value, divide this by 100000000.
      */
     public async getUnclaimedEpicPulse(addr: string): Promise<string> {
       const response = await this.execute(Query.getUnclaimedEpicPulse(addr));
@@ -329,14 +329,14 @@ export function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(
     //#region Wallet
 
     /**
-     * Returns the gas fee for a transaction.
+     * Returns the EpicPulse fee for a transaction.
      * Transaction needs to have:
      * - All the intended signers
      * - Empty witnesses corresponding to the signers
      * - Non-zero script
      *
      * @param tx - transaction to calculate fee for
-     * @returns GAS fee as an stringified integer
+     * @returns EpicPulse fee as an stringified integer
      */
     public async calculateNetworkFee(
       tx: Transaction | HexString | string
@@ -357,7 +357,7 @@ export function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(
     }
 
     /**
-     * Checks if the provided address is a valid NEO address.
+     * Checks if the provided address is a valid EpicChain address.
      */
     public async validateAddress(addr: string): Promise<boolean> {
       const response = await this.execute(Query.validateAddress(addr));
@@ -369,7 +369,7 @@ export function EpicChainServerRpcMixin<TBase extends RpcDispatcherMixin>(
 }
 
 /**
- * RPC Client model to query a NEO node. Contains built-in methods to query using RPC calls.
+ * RPC Client model to query a EpicChain node. Contains built-in methods to query using RPC calls.
  */
 export class EpicChainServerRpcClient extends EpicChainServerRpcMixin(RpcDispatcher) {
   public get [Symbol.toStringTag](): string {

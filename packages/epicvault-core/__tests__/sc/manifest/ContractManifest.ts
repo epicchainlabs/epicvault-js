@@ -112,7 +112,7 @@ describe("fromJson", () => {
             safe: true,
           },
           {
-            name: "unclaimedGas",
+            name: "unclaimedEpicChain",
             parameters: [
               {
                 name: "account",

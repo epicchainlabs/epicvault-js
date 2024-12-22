@@ -170,8 +170,8 @@ export function generatePrivateKey(): string {
 }
 
 /**
- * Extracts the address version from a given correct NEO address.
- * @param address - A NEO address string.
+ * Extracts the address version from a given correct EpicChain address.
+ * @param address - A EpicChain address string.
  * @returns Address version
  */
 export function getAddressVersion(address: string): number {

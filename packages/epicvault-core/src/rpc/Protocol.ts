@@ -1,4 +1,4 @@
-import { NeonObject } from "../model";
+import { EpicVaultObject } from "../model";
 
 export interface ProtocolLike {
   magic: number;
@@ -32,7 +32,7 @@ function compareStrings(current: string[], other: string[]): boolean {
 /**
  * Model of the protocol configuration file used by the C# implementation.
  */
-export class Protocol implements NeonObject<ProtocolLike> {
+export class Protocol implements EpicVaultObject<ProtocolLike> {
   public magic: number;
   public addressVersion: number;
   public standbyValidators: string[];

@@ -1,10 +1,10 @@
 import { CONST, rpc, sc, tx, u, wallet } from "@epicchain/epicvault-core";
 import { CommonConfig } from "./types";
-import { EpicPulseContract } from "./nep17";
+import { EpicPulseContract } from "./xep17";
 import { smartCalculateNetworkFee } from "@epicchain/epicvault-api";
 
 /**
- * Calculate the GAS costs for validation and inclusion of the transaction in a block
+ * Calculate the EpicPulse costs for validation and inclusion of the transaction in a block
  * @param transaction - the transaction to calculate the network fee for
  * @param account -
  * @param config -
@@ -67,9 +67,9 @@ export async function calculateNetworkFee(
     if (witnessScript === undefined)
       // should get the contract script via RPC getcontractstate
       // then execute the script with a verification trigger (not yet supported)
-      // and collect the gas consumed
+      // and collect the EpicPulse consumed
       throw new Error(
-        "Using a smart contract as a witness is not yet supported in neon-js"
+        "Using a smart contract as a witness is not yet supported in epicvault-js"
       );
     else if (sc.isSignatureContract(witnessScript)) {
       networkFeeSize += 67 + u.getSerializedSize(witnessScript);
@@ -254,20 +254,20 @@ export async function addFees(
   }
 
   const GAS = new EpicPulseContract(config);
-  const gasBalance = await GAS.balanceOf(config.account.address);
-  const requiredGAS = parseFloat(
+  const epicpulseBalance = await GAS.balanceOf(config.account.address);
+  const requiredEpicPulse = parseFloat(
     transaction.systemFee.add(transaction.networkFee).toDecimal(8)
   );
-  if (gasBalance < requiredGAS) {
+  if (epicpulseBalance < requiredEpicPulse) {
     throw new Error(
-      `Insufficient GAS. Required: ${requiredGAS} Available: ${gasBalance}`
+      `Insufficient EpicPulse. Required:s ${requiredEpicPulse} Available: ${epicpulseBalance}`
     );
   }
 }
 
 /**
  * Deploy a smart contract
- * @param nef - A smart contract in Neo executable file format. Commonly created by a NEO compiler and stored as .NEF on disk
+ * @param nef - A smart contract in EpicChain executable file format. Commonly created by a EpicChain compiler and stored as .NEF on disk
  * @param manifest - the manifest corresponding to the smart contract
  * @param config -
  */
@@ -311,7 +311,7 @@ export async function deployContract(
 /**
  * Get the hash that identifies the contract on the chain matching the specified NEF
  * @param sender - The sender of the transaction
- * @param nefChecksum - The checksum of the Neo Executable File. A NEF file is a smart contract commonly created by a NEO compiler and stored as .NEF on disk
+ * @param nefChecksum - The checksum of the EpicChain Executable File. A XEF file is a smart contract commonly created by a EpicChain compiler and stored as .NEF on disk
  * @param contractName - The name as indicated in the manifest
  */
 export function getContractHash(

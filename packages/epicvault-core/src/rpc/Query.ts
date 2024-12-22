@@ -234,7 +234,7 @@ function isJsonRpcParamRecord(
 }
 
 /**
- * A Query object helps us to construct and record requests for the Neo node RPC. For each RPC endpoint, the equivalent static method is camelcased. Each Query object can only be used once.
+ * A Query object helps us to construct and record requests for the EpicChain node RPC. For each RPC endpoint, the equivalent static method is camelcased. Each Query object can only be used once.
  *
  * @example
  * const q1 = Query.getBestBlockHash();
@@ -691,8 +691,8 @@ export class Query<TParams extends JsonRpcParams, TResponse> {
   }
 
   /**
-   * This Query returns the available unclaimed bonus GAS for a NEO address
-   * @param addr - a NEO address
+   * This Query returns the available unclaimed bonus GAS for a EpicChain address
+   * @param addr - a EpicChain address
    */
   public static getUnclaimedEpicPulse(
     addr: string

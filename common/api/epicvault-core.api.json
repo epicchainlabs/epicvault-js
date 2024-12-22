@@ -3306,7 +3306,7 @@
             {
               "kind": "Class",
               "canonicalReference": "@epicchain/epicvault-core!rpc.EpicChainServerRpcClient:class",
-              "docComment": "/**\n * RPC Client model to query a NEO node. Contains built-in methods to query using RPC calls.\n */\n",
+              "docComment": "/**\n * RPC Client model to query a EpicChain node. Contains built-in methods to query using RPC calls.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4506,7 +4506,7 @@
             {
               "kind": "Class",
               "canonicalReference": "@epicchain/epicvault-core!rpc.Network:class",
-              "docComment": "/**\n * Network interface representing a NEO blockchain network. This inherits from the network.protocol file used in the C# implementation and adds in additional configurations.\n *\n * @param config - NetworkLike JS object\n */\n",
+              "docComment": "/**\n * Network interface representing a EpicChain blockchain network. This inherits from the network.protocol file used in the C# implementation and adds in additional configurations.\n *\n * @param config - NetworkLike JS object\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -4514,8 +4514,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonObject",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonObject:interface"
+                  "text": "EpicVaultObject",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -5263,8 +5263,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonObject",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonObject:interface"
+                  "text": "EpicVaultObject",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -5902,7 +5902,7 @@
             {
               "kind": "Class",
               "canonicalReference": "@epicchain/epicvault-core!rpc.Query:class",
-              "docComment": "/**\n * A Query object helps us to construct and record requests for the Neo node RPC. For each RPC endpoint, the equivalent static method is camelcased. Each Query object can only be used once.\n *\n * @example\n *\n * const q1 = Query.getBestBlockHash();\n */\n",
+              "docComment": "/**\n * A Query object helps us to construct and record requests for the EpicChain node RPC. For each RPC endpoint, the equivalent static method is camelcased. Each Query object can only be used once.\n *\n * @example\n *\n * const q1 = Query.getBestBlockHash();\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7735,7 +7735,7 @@
                 {
                   "kind": "Method",
                   "canonicalReference": "@epicchain/epicvault-core!rpc.Query.getUnclaimedEpicPulse:member(1)",
-                  "docComment": "/**\n * This Query returns the available unclaimed bonus GAS for a NEO address\n *\n * @param addr - a NEO address\n */\n",
+                  "docComment": "/**\n * This Query returns the available unclaimed bonus GAS for a EpicChain address\n *\n * @param addr - a EpicChain address\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -8786,7 +8786,7 @@
             {
               "kind": "Class",
               "canonicalReference": "@epicchain/epicvault-core!rpc.RPCClient:class",
-              "docComment": "/**\n * RPC Client model to query a NEO node. Contains built-in methods to query using RPC calls.\n */\n",
+              "docComment": "/**\n * RPC Client model to query a EpicChain node. Contains built-in methods to query using RPC calls.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8850,7 +8850,7 @@
                 {
                   "kind": "Constructor",
                   "canonicalReference": "@epicchain/epicvault-core!rpc.RPCClient:constructor(1)",
-                  "docComment": "/**\n * Constructs a new instance of the `RPCClient` class\n *\n * @param net - A url pointing to a NEO RPC node.\n *\n * @param version - version of NEO node. Used to check if RPC methods have been implemented. it will default to DEFAULT_RPC found in CONST\n */\n",
+                  "docComment": "/**\n * Constructs a new instance of the `RPCClient` class\n *\n * @param net - A url pointing to a EpicChain RPC node.\n *\n * @param version - version of EpicChain node. Used to check if RPC methods have been implemented. it will default to DEFAULT_RPC found in CONST\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -14255,8 +14255,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonObject",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonObject:interface"
+                  "text": "EpicVaultObject",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -14811,7 +14811,7 @@
                 {
                   "kind": "Method",
                   "canonicalReference": "@epicchain/epicvault-core!sc.ContractParam.integer:member(1)",
-                  "docComment": "/**\n * Creates an Integer ContractParam. This is converted into a BigInteger in NeoVM. Value field will be a string.\n *\n * @param value - A value that can be parsed to a BigInteger. Numbers or numeric strings are accepted.\n *\n * @example\n *\n * ContractParam.integer(128); ContractParam.integer(\"128\"); ContractParam.integer(BigInteger.fromNumber(128));\n */\n",
+                  "docComment": "/**\n * Creates an Integer ContractParam. This is converted into a BigInteger in EpicChainVM. Value field will be a string.\n *\n * @param value - A value that can be parsed to a BigInteger. Numbers or numeric strings are accepted.\n *\n * @example\n *\n * ContractParam.integer(128); ContractParam.integer(\"128\"); ContractParam.integer(BigInteger.fromNumber(128));\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -19237,12 +19237,12 @@
             },
             {
               "kind": "Class",
-              "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract:class",
+              "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract:class",
               "docComment": "",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export declare class NeoContract extends "
+                  "text": "export declare class EpicChainContract extends "
                 },
                 {
                   "kind": "Reference",
@@ -19254,16 +19254,16 @@
                   "text": " "
                 }
               ],
-              "fileUrlPath": "src/sc/contracts/NeoContract.ts",
+              "fileUrlPath": "src/sc/contracts/EpicChainContract.ts",
               "releaseTag": "Public",
               "isAbstract": false,
-              "name": "NeoContract",
+              "name": "EpicChainContract",
               "preserveMemberOrder": false,
               "members": [
                 {
                   "kind": "Constructor",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract:constructor(1)",
-                  "docComment": "/**\n * Constructs a new instance of the `NeoContract` class\n */\n",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract:constructor(1)",
+                  "docComment": "/**\n * Constructs a new instance of the `EpicChainContract` class\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -19277,7 +19277,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract#getCandidates:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract#getCandidates:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19309,8 +19309,8 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract.getMethods:member(1)",
-                  "docComment": "/**\n * The list of methods found on the NEO contract.\n */\n",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract.getMethods:member(1)",
+                  "docComment": "/**\n * The list of methods found on the EpicChain contract.\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -19345,7 +19345,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract#getRegisterPrice:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract#getRegisterPrice:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19377,7 +19377,7 @@
                 },
                 {
                   "kind": "Property",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract.INSTANCE:member",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract.INSTANCE:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19386,8 +19386,8 @@
                     },
                     {
                       "kind": "Reference",
-                      "text": "NeoContract",
-                      "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract:class"
+                      "text": "EpicChainContract",
+                      "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract:class"
                     },
                     {
                       "kind": "Content",
@@ -19408,7 +19408,7 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract#registerCandidate:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract#registerCandidate:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -19462,12 +19462,12 @@
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract#unclaimedGas:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract#unclaimedEpicChain:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
                       "kind": "Content",
-                      "text": "unclaimedGas(address: "
+                      "text": "unclaimedEpicChain(address: "
                     },
                     {
                       "kind": "Content",
@@ -19528,11 +19528,11 @@
                   ],
                   "isOptional": false,
                   "isAbstract": false,
-                  "name": "unclaimedGas"
+                  "name": "unclaimedEpicChain"
                 },
                 {
                   "kind": "Method",
-                  "canonicalReference": "@epicchain/epicvault-core!sc.NeoContract#vote:member(1)",
+                  "canonicalReference": "@epicchain/epicvault-core!sc.EpicChainContract#vote:member(1)",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -23985,7 +23985,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@epicchain/epicvault-core!sc.OpCodePrices:var",
-              "docComment": "/**\n * Prices of individual OpCodes in GAS. Tracks Neo.SmartContract.ApplicationEngine.OpCodePrices\n */\n",
+              "docComment": "/**\n * Prices of individual OpCodes in GAS. Tracks EpicChain.SmartContract.ApplicationEngine.OpCodePrices\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -32176,8 +32176,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonObject",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonObject:interface"
+                  "text": "EpicVaultObject",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -33192,7 +33192,7 @@
                 {
                   "kind": "Property",
                   "canonicalReference": "@epicchain/epicvault-core!tx.Transaction#systemFee:member",
-                  "docComment": "/**\n * systemFee is calculated by summarizing prices of all the opcodes and interopServices used while executing transaction script in vm.\n *\n * @remarks\n *\n * The most reliable way to calculate minimum systemFee is to use invokeScript method to test, as it's hard to know what the contract will do. If transaction only invokes native contracts, systemFee can be calculated offline. It is distributed to NEO holders.\n *\n * @example\n *\n * const systemFee = SUM(OpCodePrices + InteropServiceCodePrices)\n */\n",
+                  "docComment": "/**\n * systemFee is calculated by summarizing prices of all the opcodes and interopServices used while executing transaction script in vm.\n *\n * @remarks\n *\n * The most reliable way to calculate minimum systemFee is to use invokeScript method to test, as it's hard to know what the contract will do. If transaction only invokes native contracts, systemFee can be calculated offline. It is distributed to EpicChain holders.\n *\n * @example\n *\n * const systemFee = SUM(OpCodePrices + InteropServiceCodePrices)\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -33285,7 +33285,7 @@
                 {
                   "kind": "Property",
                   "canonicalReference": "@epicchain/epicvault-core!tx.Transaction#version:member",
-                  "docComment": "/**\n * Only version=0 is valid for NEO3\n */\n",
+                  "docComment": "/**\n * Only version=0 is valid for EpicChain \n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -33366,8 +33366,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonSerializable",
-                  "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable:interface"
+                  "text": "EpicVaultSerializable",
+                  "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable:interface"
                 },
                 {
                   "kind": "Content",
@@ -34488,8 +34488,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonObject",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonObject:interface"
+                  "text": "EpicVaultObject",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -35204,8 +35204,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonSerializable",
-                  "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable:interface"
+                  "text": "EpicVaultSerializable",
+                  "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable:interface"
                 },
                 {
                   "kind": "Content",
@@ -35910,8 +35910,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonSerializable",
-                  "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable:interface"
+                  "text": "EpicVaultSerializable",
+                  "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable:interface"
                 },
                 {
                   "kind": "Content",
@@ -36376,8 +36376,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonLike",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonLike:type"
+                  "text": "EpicVaultLike",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultLike:type"
                 },
                 {
                   "kind": "Content",
@@ -36432,7 +36432,7 @@
                 {
                   "kind": "EnumMember",
                   "canonicalReference": "@epicchain/epicvault-core!tx.WitnessScope.CalledByEntry:member",
-                  "docComment": "/**\n * CalledByEntry means that this condition must hold: EntryScriptHash == CallingScriptHash No params is needed, as the witness/permission/signature given on first invocation will automatically expire if entering deeper internal invokes This can be default safe choice for native NEO/GAS (previously used on Neo 2 as \"attach\" mode)\n */\n",
+                  "docComment": "/**\n * CalledByEntry means that this condition must hold: EntryScriptHash == CallingScriptHash No params is needed, as the witness/permission/signature given on first invocation will automatically expire if entering deeper internal invokes This can be default safe choice for native EpicChain/GAS (previously used on EpicChain 2 as \"attach\" mode)\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -36495,7 +36495,7 @@
                 {
                   "kind": "EnumMember",
                   "canonicalReference": "@epicchain/epicvault-core!tx.WitnessScope.Global:member",
-                  "docComment": "/**\n * Global allows this witness in all contexts (default Neo2 behavior) This cannot be combined with other flags\n */\n",
+                  "docComment": "/**\n * Global allows this witness in all contexts (default EpicChain  behavior) This cannot be combined with other flags\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",
@@ -36780,7 +36780,7 @@
             {
               "kind": "Class",
               "canonicalReference": "@epicchain/epicvault-core!u.BigInteger:class",
-              "docComment": "/**\n * This is a BigInteger representation, providing several helper methods to convert between different formats as well as basic math operations. Mainly used within the NEO VM for representing numbers.\n */\n",
+              "docComment": "/**\n * This is a BigInteger representation, providing several helper methods to convert between different formats as well as basic math operations. Mainly used within the EpicChain VM for representing numbers.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -38377,7 +38377,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@epicchain/epicvault-core!u.getSerializedSize:function(1)",
-              "docComment": "/**\n * Calculates the byte size of any supported input following NEO's variable int format.\n */\n",
+              "docComment": "/**\n * Calculates the byte size of any supported input following EpicChain's variable int format.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -39739,22 +39739,22 @@
             },
             {
               "kind": "Interface",
-              "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable:interface",
+              "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable:interface",
               "docComment": "",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "export interface NeonSerializable "
+                  "text": "export interface EpicVaultSerializable "
                 }
               ],
               "fileUrlPath": "src/u/serialize.ts",
               "releaseTag": "Public",
-              "name": "NeonSerializable",
+              "name": "EpicVaultSerializable",
               "preserveMemberOrder": false,
               "members": [
                 {
                   "kind": "PropertySignature",
-                  "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable#serialize:member",
+                  "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable#serialize:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -39781,7 +39781,7 @@
                 },
                 {
                   "kind": "PropertySignature",
-                  "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable#size:member",
+                  "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable#size:member",
                   "docComment": "",
                   "excerptTokens": [
                     {
@@ -40099,8 +40099,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonSerializable",
-                  "canonicalReference": "@epicchain/epicvault-core!u.NeonSerializable:interface"
+                  "text": "EpicVaultSerializable",
+                  "canonicalReference": "@epicchain/epicvault-core!u.EpicVaultSerializable:interface"
                 },
                 {
                   "kind": "Content",
@@ -40704,8 +40704,8 @@
                 },
                 {
                   "kind": "Reference",
-                  "text": "NeonObject",
-                  "canonicalReference": "@epicchain/epicvault-core!~NeonObject:interface"
+                  "text": "EpicVaultObject",
+                  "canonicalReference": "@epicchain/epicvault-core!~EpicVaultObject:interface"
                 },
                 {
                   "kind": "Content",
@@ -42288,7 +42288,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@epicchain/epicvault-core!wallet.getAddressVersion:function(1)",
-              "docComment": "/**\n * Extracts the address version from a given correct NEO address.\n *\n * @param address - A NEO address string.\n *\n * @returns Address version\n */\n",
+              "docComment": "/**\n * Extracts the address version from a given correct EpicChain address.\n *\n * @param address - A EpicChain address string.\n *\n * @returns Address version\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -43412,7 +43412,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@epicchain/epicvault-core!wallet.upgrade:function(1)",
-              "docComment": "/**\n * Upgrades a Neo2 account to a Neo3 account. If an encrypted account is provided, the returned account is also encrypted with the same passphrase.\n */\n",
+              "docComment": "/**\n * Upgrades a EpicChain  account to a EpicChain  account. If an encrypted account is provided, the returned account is also encrypted with the same passphrase.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

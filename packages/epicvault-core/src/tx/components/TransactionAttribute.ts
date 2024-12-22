@@ -1,7 +1,7 @@
 import {
   num2VarInt,
   StringStream,
-  NeonSerializable,
+  EpicVaultSerializable,
   reverseHex,
   base642hex,
 } from "../../u";
@@ -63,7 +63,7 @@ export interface OracleResponseAttributeLike extends TransactionAttributeLike {
   result: string;
 }
 
-export abstract class TransactionAttribute implements NeonSerializable {
+export abstract class TransactionAttribute implements EpicVaultSerializable {
   public abstract get type(): TransactionAttributeType;
   public abstract export(): TransactionAttributeLike;
   public abstract toJson(): TransactionAttributeJson;

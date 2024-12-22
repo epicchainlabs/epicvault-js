@@ -1,5 +1,5 @@
-import { NeonLike, parseEnum } from "../../internal";
-import { NeonSerializable, StringStream } from "../../u";
+import { EpicVaultLike, parseEnum } from "../../internal";
+import { EpicVaultSerializable, StringStream } from "../../u";
 import {
   CalledByEntryWitnessCondition,
   WitnessCondition,
@@ -17,8 +17,8 @@ export interface WitnessRuleJson {
   condition: WitnessConditionJson;
 }
 
-export type WitnessRuleLike = NeonLike<WitnessRule, WitnessRuleJson>;
-export class WitnessRule implements NeonSerializable {
+export type WitnessRuleLike = EpicVaultLike<WitnessRule, WitnessRuleJson>;
+export class WitnessRule implements EpicVaultSerializable {
   public action: WitnessRuleAction;
 
   public condition: WitnessCondition;

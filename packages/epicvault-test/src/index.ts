@@ -1,9 +1,9 @@
-import { api, rpc } from "@cityofzion/neon-js";
+import { api, rpc } from "@epicchain/epicvault-js";
 
-const RPC_URL = "https://testnet1.neo.coz.io:443";
+const RPC_URL = "https://testnet1-seed.epic-chain.org:20111";
 
 const rpcClient = new rpc.RPCClient(RPC_URL);
-console.log("Neo Weather Report");
+console.log("EpicChain Weather Report");
 
 rpcClient
   .getBlockCount()

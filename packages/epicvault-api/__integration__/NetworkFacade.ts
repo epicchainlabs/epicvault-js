@@ -41,12 +41,12 @@ describe("NetworkFacade", () => {
     await acct.decrypt("wallet");
 
     const currentHeight = await facade.getRpcNode().getBlockCount();
-    const unclaimedGasResult = await facade.invoke(
-      sc.EpicChainContract.INSTANCE.unclaimedGas(acct.address, currentHeight)
+    const unclaimedEpicChainResult = await facade.invoke(
+      sc.EpicChainContract.INSTANCE.unclaimedEpicChain(acct.address, currentHeight)
     );
 
     const expectedMinGasClaimed = parseInt(
-      unclaimedGasResult.stack[0].value as string
+      unclaimedEpicChainResult.stack[0].value as string
     );
     const txid = await facade.claimGas(acct, {
       signingCallback: signWithAccount(acct),

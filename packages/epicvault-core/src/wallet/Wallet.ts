@@ -1,7 +1,7 @@
 import { DEFAULT_SCRYPT, DEFAULT_WALLET } from "../consts";
 import logger from "../logging";
 import { Account, AccountJSON } from "./Account";
-import { ScryptParams } from "./nep2";
+import { ScryptParams } from "./xep2";
 
 const log = logger("wallet");
 

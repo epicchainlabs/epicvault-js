@@ -1,11 +1,11 @@
 import { num2VarInt } from "./convert";
 import { HexString } from "./HexString";
 import { StringStream } from "./StringStream";
-export interface NeonSerializable {
+export interface EpicVaultSerializable {
   size: number;
   serialize: () => string;
 }
-type Serializables = number | HexString | NeonSerializable[];
+type Serializables = number | HexString | EpicVaultSerializable[];
 /**
  * Calculates the byte size of any supported input following NEO's variable int format.
  */
@@ -53,7 +53,7 @@ export function deserializeArrayOf<T>(
   return output;
 }
 
-export function serializeArrayOf(prop: (NeonSerializable | string)[]): string {
+export function serializeArrayOf(prop: (EpicVaultSerializable | string)[]): string {
   return (
     num2VarInt(prop.length) +
     prop.map((p) => (typeof p === "string" ? p : p.serialize())).join("")

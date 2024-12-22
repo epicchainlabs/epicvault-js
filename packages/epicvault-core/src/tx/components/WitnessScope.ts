@@ -8,7 +8,7 @@ export enum WitnessScope {
   /**
    * CalledByEntry means that this condition must hold: EntryScriptHash == CallingScriptHash
    * No params is needed, as the witness/permission/signature given on first invocation will automatically expire if entering deeper internal invokes
-   * This can be default safe choice for native NEO/GAS (previously used on Neo 2 as "attach" mode)
+   * This can be default safe choice for native EpicChain/EpicPulse (previously used on EpicChain as "attach" mode)
    */
   CalledByEntry = 1 << 0,
 
@@ -28,7 +28,7 @@ export enum WitnessScope {
   WitnessRules = 1 << 6,
 
   /**
-   * Global allows this witness in all contexts (default Neo2 behavior)
+   * Global allows this witness in all contexts (default EpicChain behavior)
    * This cannot be combined with other flags
    */
   Global = 1 << 7,

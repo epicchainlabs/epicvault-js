@@ -4,7 +4,7 @@ import { HexString } from "./HexString";
 
 /**
  * This is a BigInteger representation, providing several helper methods to convert between different formats as well as basic math operations.
- * Mainly used within the NEO VM for representing numbers.
+ * Mainly used within the EpicChain VM for representing numbers.
  */
 export class BigInteger {
   /** Internal holding value. */
