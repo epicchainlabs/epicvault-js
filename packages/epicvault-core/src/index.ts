@@ -1,9 +1,22 @@
-import * as CONST from "./consts";
-import * as logging from "./logging";
-import * as rpc from "./rpc";
-import * as sc from "./sc";
-import * as tx from "./tx";
-import * as u from "./u";
-import * as wallet from "./wallet";
+/**
+ * EpicVault Core Library
+ * Main entry point for the EpicVault core functionality
+ */
 
-export { rpc, sc, tx, wallet, u, CONST, logging };
+// Core Types and Interfaces
+export * from './types';
+export * from './model';
+export * from './consts';
+
+// Core Functionality
+export * from './wallet';
+export * from './tx';
+export * from './sc';
+export * from './rpc';
+
+// Utilities
+export * from './u';
+export * from './logging';
+
+// Internal utilities (not recommended for direct use)
+export * from './internal';

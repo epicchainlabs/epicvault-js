@@ -1,29 +1,87 @@
-# Globally ignored folder names
-node_modules
-coverage
-.nyc_output
-build
-/lib/
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output/
+
+# Production
+dist/
+build/
+*.min.js
+*.min.css
+
+# Development
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Lerna
+lerna-debug.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+.tmp/
+
+# Cache
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Globally ignored folder names
+.nyc_output
+/lib/
 
 # IDE specific
-.vscode/*
 !.vscode/settings.json
 !.vscode/launch.json
-.idea
 
 # Package stuff
 packages/**/lib
 packages/**/dist
 packages/**/temp
-
-# Typescript
-*.tsbuildinfo
-
-# Eslint cache
-.eslintcache
 
 # Website
 website/.docusaurus

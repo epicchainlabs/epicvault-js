@@ -4,20 +4,25 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    browser: true,
+    jest: true
   },
-  plugins: [],
-  extends: ["plugin:prettier/recommended"],
+  plugins: ["@typescript-eslint", "eslint-plugin-tsdoc", "import"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
   overrides: [
     {
       files: ["**/*.ts"],
-      plugins: ["@typescript-eslint", "eslint-plugin-tsdoc"],
-      extends: [
-        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-        "plugin:prettier/recommended", // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
-      ],
       parserOptions: {
-        ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-        sourceType: "module", // Allows for the use of imports
+        ecmaVersion: 2021,
+        sourceType: "module",
+        project: "./tsconfig.json"
       },
       rules: {
         "tsdoc/syntax": "warn",
@@ -26,26 +31,66 @@ module.exports = {
           {
             allowExpressions: true,
             allowTypedFunctionExpressions: true,
-          },
+            allowHigherOrderFunctions: true
+          }
         ],
         "@typescript-eslint/no-non-null-assertion": ["warn"],
         "@typescript-eslint/no-unused-vars": [
           "error",
-          { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
+          { 
+            varsIgnorePattern: "^_", 
+            argsIgnorePattern: "^_",
+            ignoreRestSiblings: true
+          }
         ],
         "@typescript-eslint/naming-convention": [
           "error",
           {
             selector: "variable",
             format: ["camelCase", "UPPER_CASE"],
-            leadingUnderscore: "allow",
+            leadingUnderscore: "allow"
           },
+          {
+            selector: "typeLike",
+            format: ["PascalCase"]
+          }
         ],
-      },
+        "@typescript-eslint/explicit-module-boundary-types": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index"
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc"
+            }
+          }
+        ]
+      }
     },
     {
       files: ["**/*.js"],
       extends: ["eslint:recommended", "plugin:prettier/recommended"],
-    },
+      rules: {
+        "no-console": "warn",
+        "no-unused-vars": "warn"
+      }
+    }
   ],
+  settings: {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 };

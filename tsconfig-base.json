@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es2021",
     "lib": [
-      "es2021"
+      "es2021",
+      "dom"
     ],
     "moduleResolution": "node",
     "composite": true,
@@ -12,6 +13,21 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
 }

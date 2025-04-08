@@ -2,6 +2,7 @@
 import * as api from "@cityofzion/neon-api";
 import * as epicvaultCore from "@epicchain/epicvault-core";
 import * as experimental from "./experimental";
+import * as features from "./features";
 
 const { sc, rpc, wallet, CONST, u, tx, logging } = epicvaultCore;
 
@@ -94,6 +95,18 @@ export default {
   u,
   CONST,
   experimental,
+  features,
 };
 
-export { experimental, api, sc, rpc, wallet, CONST, u, tx, logging };
+export {
+  experimental,
+  api,
+  sc,
+  rpc,
+  wallet,
+  CONST,
+  u,
+  tx,
+  logging,
+  features,
+};
