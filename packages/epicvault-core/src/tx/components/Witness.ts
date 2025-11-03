@@ -22,9 +22,9 @@ export interface WitnessLike {
 
 export interface WitnessJson {
   // base64 encoded
-  invocation: string;
+  invocationScript: string;
   // base64 encoded
-  verification: string;
+  verificationScript: string;
 }
 
 /**
@@ -40,8 +40,8 @@ export class Witness implements EpicVaultObject<WitnessLike> {
 
   public static fromJson(input: WitnessJson): Witness {
     return new Witness({
-      invocationScript: HexString.fromBase64(input.invocation),
-      verificationScript: HexString.fromBase64(input.verification),
+      invocationScript: HexString.fromBase64(input.invocationScript),
+      verificationScript: HexString.fromBase64(input.verificationScript),
     });
   }
 
@@ -65,7 +65,7 @@ export class Witness implements EpicVaultObject<WitnessLike> {
    */
   public static buildMultiSig(
     tx: string,
-    sigs: (string | Witness)[],
+    sigs: (string | Witness) [],
     acctOrVerificationScript: Account | string
   ): Witness {
     const verificationScript =
@@ -180,10 +180,10 @@ export class Witness implements EpicVaultObject<WitnessLike> {
     };
   }
 
-  public toJson(): WitnessJson {
+  public toJSON(): WitnessLike {
     return {
-      invocation: this.invocationScript.toBase64(),
-      verification: this.verificationScript.toBase64(),
+      invocationScript: this.invocationScript.toBase64(),
+      verificationScript: this.verificationScript.toBase64(),
     };
   }
 
@@ -202,3 +202,4 @@ export class Witness implements EpicVaultObject<WitnessLike> {
 }
 
 export default Witness;
+

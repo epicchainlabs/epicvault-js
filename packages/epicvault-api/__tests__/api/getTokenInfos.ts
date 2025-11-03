@@ -50,14 +50,14 @@ describe("getTokenInfos", () => {
 
     expect(result).toStrictEqual([
       {
-        symbol: "GAS",
+        symbol: "XPP",
         decimals: 8,
         totalSupply: "30000063.84920100",
       },
       {
-        symbol: "NEO",
+        symbol: "XPR",
         decimals: 0,
-        totalSupply: "100000000",
+        totalSupply: "1000000000",
       },
     ]);
   });

@@ -7,7 +7,7 @@ export interface EpicVaultSerializable {
 }
 type Serializables = number | HexString | EpicVaultSerializable[];
 /**
- * Calculates the byte size of any supported input following NEO's variable int format.
+ * Calculates the byte size of any supported input following EpicChain's variable int format.
  */
 export function getSerializedSize(value: Serializables): number {
   switch (typeof value) {

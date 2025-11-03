@@ -8,7 +8,7 @@ import {
 import { TransactionAttribute, Witness, Signer } from "../components";
 import type { TransactionLike } from "./Transaction";
 import { getScriptHashFromAddress } from "../../wallet";
-import logger from "../../logging";
+import { logger } from "../../logging";
 
 const log = logger("tx");
 

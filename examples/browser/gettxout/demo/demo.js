@@ -4,19 +4,19 @@ const hash = "f4250dab094c38d8265acc15c366dc508d2e14bf5699e12d9df26577ed74d657";
 // Index of the unspent transaction output to get for the given tx
 const index = 0;
 
-// Get an instance of Neoscan so we can find a working node
-const provider = new Neon.api.neoscan.instance("TestNet");
+// Get an instance of EpicScan so we can find a working node
+const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-// Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-Neon.settings.httpsOnly = true;
+// Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+EpicVault.settings.httpsOnly = true;
 
 function InvokeOperation()
 {
   clearHtml();
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl);
+    const client = EpicVault.default.create.rpcClient(nodeUrl);
     client.getTxOut(hash, index).then(response => {
     	outputHtml('Result: ' + response);
     });

@@ -23985,7 +23985,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@epicchain/epicvault-core!sc.OpCodePrices:var",
-              "docComment": "/**\n * Prices of individual OpCodes in GAS. Tracks EpicChain.SmartContract.ApplicationEngine.OpCodePrices\n */\n",
+              "docComment": "/**\n * Prices of individual OpCodes in EpicPulse. Tracks EpicChain.SmartContract.ApplicationEngine.OpCodePrices\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -37010,7 +37010,7 @@
                 {
                   "kind": "Method",
                   "canonicalReference": "@epicchain/epicvault-core!u.BigInteger.fromDecimal:member(1)",
-                  "docComment": "/**\n * Creates a BigInteger instance from a decimal by parsing the decimals and shifting the decimal point by a provided number of places.\n *\n * This is mainly used with dealing with Nep17 tokens. While most tokens support some sort of decimal places, the data is actually stored as an integer. This helper method converts the decimal number to the integer representation to work with. To convert back, use toDecimal(decimals);\n *\n * @param input - Javascript number or string containing numbers. Accepts decimals.\n *\n * @param decimals - Number of decimal places to support.\n *\n * @example\n *\n * const transformedDecimal = BigInteger.fromDecimal(12.34,3); console.log(transformedDecimal.toString()); // 12340\n *\n * const oneGas = BigInteger.fromDecimal(1,8); console.log(oneGas); // 100000000\n */\n",
+                  "docComment": "/**\n * Creates a BigInteger instance from a decimal by parsing the decimals and shifting the decimal point by a provided number of places.\n *\n * This is mainly used with dealing with Nep17 tokens. While most tokens support some sort of decimal places, the data is actually stored as an integer. This helper method converts the decimal number to the integer representation to work with. To convert back, use toDecimal(decimals);\n *\n * @param input - Javascript number or string containing numbers. Accepts decimals.\n *\n * @param decimals - Number of decimal places to support.\n *\n * @example\n *\n * const transformedDecimal = BigInteger.fromDecimal(12.34,3); console.log(transformedDecimal.toString()); // 12340\n *\n * const oneEpicPulse = BigInteger.fromDecimal(1,8); console.log(oneEpicPulse); // 100000000\n */\n",
                   "excerptTokens": [
                     {
                       "kind": "Content",

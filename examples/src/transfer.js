@@ -4,14 +4,14 @@ id: transfer
 title: Performing a basic transaction
 ---
 
-In this tutorial, we will be performing a basic transfer of NEO from an address to another address.
+In this tutorial, we will be performing a basic transfer of EpicChain from an address to another address.
 
-In Neo2, NEO and GAS are considered native assets and operate using the UTXO
+In EpicChain and EpicPulse are considered native assets and operate using the UTXO
 system.
 
-In Neo3, the UTXO system is removed. In its place, NEO and GAS now implements
-the [NEP-17](https://github.com/neo-project/proposals/blob/master/nep-17.mediawiki) interface. They are still considered
-native assets but operate very similarly to how NEP-5 tokens work in Neo2.
+In EpicVault, the UTXO system is removed. In its place, EpicChain and EpicPulse now implements
+the [XEP-17](https://github.com/epicchain-project/proposals/blob/master/xep-17.mediawiki) interface. They are still considered
+native assets but operate very similarly to how NEP-5 tokens work in Xeo2.
 
 First, some setup:
  */
@@ -30,7 +30,7 @@ const inputs = {
   systemFee: 0,
   networkFee: 0,
   networkMagic: 1234567890, //CONST.MAGIC_NUMBER.TestNet,
-  nodeUrl: "http://localhost:20332", //"http://seed2t.neo.org:20332",
+  nodeUrl: "http://localhost:20111", //"http://testnet1-seed.epic-chain.org:20111",
 };
 
 const vars = {};
@@ -40,9 +40,9 @@ We will perform the following checks:
 
 1. The token exists. This can be done by performing a invokeFunction call.
 2. The amount of token exists on fromAccount.
-3. The amount of GAS for fees exists on fromAccount.
+3. The amount of EpicPulse for fees exists on fromAccount.
 
-All these checks can be performed through RPC calls to a NEO node.
+All these checks can be performed through RPC calls to a EpicChain node.
  */
 const rpcClient = new rpc.RPCClient(inputs.nodeUrl);
 
@@ -191,7 +191,7 @@ async function checkSystemFee() {
 /**
 We will also need to check that the inital address has sufficient funds for the transfer.
 We look for both funds of the token we intend to transfer and GAS required to pay for the transaction.
-For this, we rely on the [TokensTracker](https://github.com/neo-project/neo-modules/tree/master/src/TokensTracker)
+For this, we rely on the [TokensTracker](https://github.com/epicchain-project/epicchain-modules/tree/master/src/TokensTracker)
 plugin. Hopefully, the node we select has the plugin installed.
  */
 async function checkBalance() {

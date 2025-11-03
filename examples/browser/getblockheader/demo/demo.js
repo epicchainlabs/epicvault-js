@@ -1,17 +1,17 @@
 // Hash of the block to get
 const hash = "0x3d298e045e9b8d191e94239848a1ccee5b835afe01b9f7cfe07a1fa7af3d908c"
 
-// Get an instance of Neoscan so we can find a working node
-const provider = new Neon.api.neoscan.instance("TestNet");
+// Get an instance of EpicScan so we can find a working node
+const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-// Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-Neon.settings.httpsOnly = true;
+// Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+EpicVault.settings.httpsOnly = true;
 
 function InvokeOperation()
 {
   clearHtml();
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
 		rpcQuery(response => {
 			outputHtml('Block Data: ');
@@ -21,7 +21,7 @@ function InvokeOperation()
   });
 }
 
-// This is a reusable function that packages an unsupported RPC API call into a generic neon-js query object.
+// This is a reusable function that packages an unsupported RPC API call into a generic epicvault-js query object.
 function rpcQuery(callback, url, method, parms) {
   let args
 
@@ -31,7 +31,7 @@ function rpcQuery(callback, url, method, parms) {
     outputHtml('args: ' + args);
   }
 
-  const query = Neon.default.create.query({method: method, params: args});
+  const query = EpicVault.default.create.query({method: method, params: args});
 
   query.execute(url).then(response => {
     callback(response);

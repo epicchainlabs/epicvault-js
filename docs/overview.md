@@ -4,7 +4,7 @@ title: Overview
 slug: /
 ---
 
-`neon-js` is a Javascript library to interface with NEO blockchain, providing
+`epicvault-js` is a Javascript library to interface with EpicChain blockchain, providing
 quick and easy methods to send RPC calls, create transactions and simple
 contract invocations.
 
@@ -18,27 +18,27 @@ contract invocations.
 
 ## Usage
 
-Neon can be used in 2 ways:
+EpicVault can be used in 2 ways:
 
 ### Semantic
 
-The default import for Neon is a Javascript object where functions are arranged
+The default import for EpicVault is a Javascript object where functions are arranged
 in a semantic manner following the convention of Verb-Noun. If a method goes
 beyond 2 levels, the rest of the name is camelCased at the noun level.
 
 ```js
-import Neon from "@cityofzion/neon-js";
-Neon.create.privateKey();
-Neon.deserialize.tx(serializedTransaction);
-Neon.verify.message(message, signature, publicKey)
+import EpicVault from "@epicchain/epicvault-js";
+EpicVault.create.privateKey();
+EpicVault.deserialize.tx(serializedTransaction);
+EpicVault.verify.message(message, signature, publicKey)
 ```
 
-This style is recommended for beginners or anyone who just wishes to use Neon
+This style is recommended for beginners or anyone who just wishes to use EpicVault
 without hassle.
 
 ### Named
 
-Named imports are the conventional JS imports. The modules in Neon are:
+Named imports are the conventional JS imports. The modules in EpicVault are:
 
 - `api`
 - `CONST`
@@ -49,7 +49,7 @@ Named imports are the conventional JS imports. The modules in Neon are:
 - `wallet`
 
 ```js
-import { api } from "@cityofzion/neon-js";
+import { api } from "@epicchain/epicvault-js";
 ```
 
 This style offers more control and flexibility. Do refer to the source code for

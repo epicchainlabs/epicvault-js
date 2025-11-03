@@ -142,9 +142,9 @@ describe("validateSystemFee", () => {
       });
     });
 
-    test("script execution error in neoVM", async () => {
+    test("script execution error in epicchainVM", async () => {
       const addressInHash160 = sc.ContractParam.hash160(
-        "NPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i"
+        "XPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i"
       );
       const script = sc.createScript({
         scriptHash: CONST.NATIVE_CONTRACT_HASH.EpicChain,

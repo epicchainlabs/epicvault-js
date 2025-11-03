@@ -4,18 +4,17 @@ title: Using the NetworkFacade
 ---
 
 The NetworkFacade class is designed to be the quick and easy way to start using
-neon-js without much configuration. The primary aim of the facade is to provide
+epicvault-js without much configuration. The primary aim of the facade is to provide
 single "batteries included" methods that developers can rely on to quickly build
 out an interaction.
 
 For this tutorial, you will need:
 
-- A url which is a NEO node JSON RPC endpoint.
+- A url which is a EpicChain node JSON RPC endpoint.
 - A private key which contains funds.
 - An address to send some funds to.
 
 > While we highly recommend using a private network for development, if you wish to use the TestNet and are looking
-> for a public RPC node you can try one from https://dora.coz.io/monitor
 
 # Setup
 
@@ -25,13 +24,13 @@ call to the endpoint to grab some basic details that we will use later.
 
 
 ```js
-import Neon from "@cityofzion/neon-js";
+import EpicVault from "@epicchain/epicvault-js";
 
 const url = "http://localhost:20332";
 const privateKey = "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g";
 const address = "NMBfzaEq2c5zodiNbLPoohVENARMbJim1r";
 
-const facadePromise = Neon.api.NetworkFacade.fromConfig({
+const facadePromise = EpicVault.api.NetworkFacade.fromConfig({
   node: url,
 });
 ```
@@ -44,10 +43,10 @@ alternative would be filling up the `integerAmt` field with `1`.
 
 ```js
 const intent = {
-  from: new Neon.wallet.Account(privateKey),
+  from: new EpicVault.account.Account(privateKey),
   to: address,
   decimalAmt: 0.00000001,
-  contractHash: Neon.CONST.NATIVE_CONTRACT_HASH.EpicPulse,
+  contractHash: EpicVault.CONST.NATIVE_CONTRACT_HASH.EpicPulse,
 };
 ```
 
@@ -57,8 +56,8 @@ the transaction. In this example, we will use a private key.
 
 ```js
 const signingConfig = {
-  signingCallback: Neon.api.signWithAccount(
-    new Neon.wallet.Account(privateKey)
+  signingCallback: EpicVault.api.signWithAccount(
+    new EpicVault.account.Account(privateKey)
   ),
 };
 ```

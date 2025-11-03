@@ -6,7 +6,7 @@ title: Transactions
 The `tx` module is exposed as:
 
 ```ts
-import { tx, wallet } from "@cityofzion/neon-js";
+import { tx, wallet } from "@epicchain/epicvault-js";
 const acct = new wallet.Account();
 const transaction = new tx.Transaction();
 transaction.addSigner(new tx.Signer({ account: acct.scriptHash }));
@@ -42,8 +42,7 @@ generate the signature.
 3. Signers
 
 The signers control the validity of the signatures and can be checked in smart contracts using the `CheckWitness`
-functionality. A good article on how they work and can be used can be read here https://neospcc.medium.com/thou-shalt-check-their-witnesses-485d2bf8375d
-The first signer is also known as the `sender` and will pay for the transaction fees.
+functionality. 
 
 4. Attributes
 

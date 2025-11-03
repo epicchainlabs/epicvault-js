@@ -272,21 +272,21 @@ describe("JSON", () => {
 
   test.each(jsonTestCases)(
     "fromJson %s",
-    (_: string, json: WitnessJson, neonObj: Witness) => {
+    (_: string, json: WitnessJson, epicvaultObj: Witness) => {
       const result = Witness.fromJson(json);
       expect(result.invocationScript.toBigEndian()).toBe(
-        neonObj.invocationScript.toBigEndian()
+        epicvaultObj.invocationScript.toBigEndian()
       );
       expect(result.verificationScript.toBigEndian()).toBe(
-        neonObj.verificationScript.toBigEndian()
+        epicvaultObj.verificationScript.toBigEndian()
       );
     }
   );
 
   test.each(jsonTestCases)(
     "toJson %s",
-    (_: string, json: WitnessJson, neonObj: Witness) => {
-      const result = neonObj.toJson();
+    (_: string, json: WitnessJson, epicvaultObj: Witness) => {
+      const result = epicvaultObj.toJson();
       expect(result).toEqual(json);
     }
   );

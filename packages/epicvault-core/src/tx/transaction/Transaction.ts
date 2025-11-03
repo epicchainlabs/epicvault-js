@@ -1,5 +1,5 @@
 import { TX_VERSION, MAGIC_NUMBER } from "../../consts";
-import logger from "../../logging";
+import { logger } from "../../logging";
 import {
   sha256,
   num2hexstring,
@@ -358,7 +358,7 @@ export class Transaction implements EpicVaultObject<TransactionLike> {
     return this.hash() === new Transaction(other).hash();
   }
 
-  public export(): TransactionLike {
+  public toJSON(): TransactionLike {
     return {
       version: this.version,
       nonce: this.nonce,
@@ -372,7 +372,7 @@ export class Transaction implements EpicVaultObject<TransactionLike> {
     };
   }
 
-  public toJson(): TransactionJson {
+  public export(): TransactionJson {
     return {
       size: this.size,
       version: this.version,
@@ -390,7 +390,7 @@ export class Transaction implements EpicVaultObject<TransactionLike> {
       attributes: this.attributes.map((a) => a.toJson()),
       signers: this.signers.map((c) => c.toJson()),
       script: this.script.toBase64(),
-      witnesses: this.witnesses.map((w) => w.toJson()),
+      witnesses: this.witnesses.map((w) => w.toJSON()),
     };
   }
 

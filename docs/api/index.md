@@ -4,23 +4,23 @@ title: API
 sidebar_position: 1
 ---
 
-`neon-js` is laid out in a modules style, with each folder in the source code
+`epicvault-js` is laid out in a modules style, with each folder in the source code
 representing a module with a particular functionality.
 
 ## default
 
-The default import for Neon is a Javascript object where functions are arranged
+The default import for EpicVault is a Javascript object where functions are arranged
 in a semantic manner following the convention of Verb-Noun. If a method goes
 beyond 2 levels, the rest of the name is camelCased at the noun level.
 
 ```js
-import Neon from "@cityofzion/neon-js";
-Neon.create.privateKey();
-Neon.serialize.tx(transactionObj);
-Neon.get.publicKeyFromPrivateKey(privateKey);
+import EpicVault from "@epicchain/epicvault-js";
+EpicVault.create.privateKey();
+EpicVault.serialize.tx(transactionObj);
+EpicVault.get.publicKeyFromPrivateKey(privateKey);
 ```
 
-This style is recommended for beginners or anyone who just wishes to use Neon
+This style is recommended for beginners or anyone who just wishes to use EpicVault
 without hassle.
 
 ## api
@@ -45,12 +45,12 @@ primarily to construct scripts that can be carried by InvocationTransaction.
 
 ## rpc
 
-The `rpc` module deals with the RPC interface exposed by the NEO node.
+The `rpc` module deals with the RPC interface exposed by the EpicChain node.
 
 ## u
 
 The `u` module is the utilities module containing methods handling the various
-data transformation aspects within NEO.
+data transformation aspects within EpicChain.
 
 ## CONST
 

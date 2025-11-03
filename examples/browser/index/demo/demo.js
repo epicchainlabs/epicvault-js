@@ -33,15 +33,15 @@ function getAccountState()
 
   // Wallet address to query
   const accountAddress = "APJnYRic9fYo1bLAdrqDbwrsnqoUD92dWo"
-  // Get an instance of Neoscan so we can find a working node
-  const provider = new Neon.api.neoscan.instance("TestNet");
+  // Get an instance of EpicScan so we can find a working node
+  const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-  // Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-	Neon.settings.httpsOnly = true;
+  // Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+	EpicVault.settings.httpsOnly = true;
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl)
+    const client = EpicVault.default.create.rpcClient(nodeUrl)
     client.getAccountState(accountAddress).then(response => {
       outputHtml('Wallet Address: ' + accountAddress);
       outputHtml('Account State:');
@@ -55,20 +55,20 @@ function getAssetState()
 {
 	clearHtml();
 
-  // Hashes of the Neo and Gas assets
-  const neoHash = "0xc56f33fc6ecfcd0c225c4ab356fee59390af8560be0e930faebe74a6daff7c9b"
-  const gasHash = "0x602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7"
-  const hash = neoHash
+  // Hashes of the EpicChain and EpicPulse assets
+  const epicchainHash = "0xc56f33fc6ecfcd0c225c4ab356fee59390af8560be0e930faebe74a6daff7c9b"
+  const epicpulseHash = "0x602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7"
+  const hash = epicchainHash
 
-  // Get an instance of Neoscan so we can find a working node
-  const provider = new Neon.api.neoscan.instance("TestNet");
+  // Get an instance of EpicScan so we can find a working node
+  const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-  // Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-	Neon.settings.httpsOnly = true;
+  // Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+	EpicVault.settings.httpsOnly = true;
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl)
+    const client = EpicVault.default.create.rpcClient(nodeUrl)
     client.getAssetState(hash).then(response => {
       outputHtml('Hash: ' + hash);
       outputHtml('Asset:');
@@ -81,15 +81,15 @@ function getBestBlockHash()
 {
 	clearHtml();
 
-  // Get an instance of Neoscan so we can find a working node
-  const provider = new Neon.api.neoscan.instance("TestNet");
+  // Get an instance of EpicScan so we can find a working node
+  const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-  // Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-	Neon.settings.httpsOnly = true;
+  // Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+	EpicVault.settings.httpsOnly = true;
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl)
+    const client = EpicVault.default.create.rpcClient(nodeUrl)
     client.getBestBlockHash().then(response => {
       outputHtml('Result: ' + response);
     });

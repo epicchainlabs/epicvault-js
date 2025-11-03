@@ -1,15 +1,15 @@
-var Neon = require("../lib/index");
+var EpicVault = require("../lib/index");
 
 const contractHash = "ae36e5a84ee861200676627df409b0f6eec44bd7";
 
 const config = {
   net: "TestNet",
-  account: new Neon.wallet.Account(
+  account: new EpicVault.account.Account(
     "L2QTooFoDFyRFTxmtiVHt5CfsXfVnexdbENGDkkrrgTTryiLsPMG"
   ),
-  intents: Neon.api.makeIntent(
-    { GAS: 1 },
-    Neon.wallet.getAddressFromScriptHash(contractHash)
+  intents: EpicVault.api.makeIntent(
+    { EpicPulse: 1 },
+    EpicVault.account.getAddressFromScriptHash(contractHash)
   ),
   script: {
     scriptHash: contractHash,
@@ -19,7 +19,7 @@ const config = {
   gas: 0,
 };
 
-Neon.api
+EpicVault.api
   .doInvoke(config)
   .then((res) => {
     console.log(res);

@@ -594,7 +594,7 @@ export class Query<TParams extends JsonRpcParams, TResponse> {
       method: "invokecontractverify",
       params: [
         scriptHash,
-        args.map((a) => (a instanceof ContractParam ? a.toJson() : a)),
+        args.map((a) => (a instanceof ContractParam ? a.toJSON() : a)),
         signers.map((s) => (s instanceof Signer ? s.toJson() : s)),
       ],
     });
@@ -618,7 +618,7 @@ export class Query<TParams extends JsonRpcParams, TResponse> {
       params: [
         scriptHash,
         operation,
-        params.map((p) => (p instanceof ContractParam ? p.toJson() : p)),
+        params.map((p) => (p instanceof ContractParam ? p.toJSON() : p)),
         signers.map((s) => (s instanceof Signer ? s.toJson() : s)),
       ],
     });

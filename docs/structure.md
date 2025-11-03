@@ -3,12 +3,12 @@ id: structure
 title: Structure
 ---
 
-The package `neon-js` is actually composed of several packages, each offering a
+The package `epicvault-js` is actually composed of several packages, each offering a
 different functionality.
 
 ## Core
 
-The core package is `neon-core`, comprised of the following folders:
+The core package is `epicvault-core`, comprised of the following folders:
 
 - `rpc`
 - `sc`
@@ -35,34 +35,34 @@ Provides high level functionality for crafting transactions.
 
 ### ledger
 
-Provides an easy wrapper for communicating with the NEO N3 app on a Ledger.
+Provides an easy wrapper for communicating with the EpicChain app on a Ledger.
 
-### neon-js
+### epicvault-js
 
 Constructed package using:
 
-- `neon-core`
-- `neon-api`
+- `epicvault-core`
+- `epicvault-api`
 
 In addition, this package exposes a high level semantic API binding for beginner usage. The semantic API can be found in the default export of the package.
 
 ```js
-const Neon = require("@cityofzion/neon-js");
+const EpicVault = require("@epicchain/epicvault-js");
 
-console.log(Neon); // {wallet, tx, api, nep5, etc...}
+console.log(EpicVault); // {wallet, tx, api, nep5, etc...}
 
-const NeonJs = Neon.default;
+const EpicVaultJs = EpicVault.default;
 
-console.log(NeonJs); // {create, get, sign, verify,...}
+console.log(EpicVaultJs); // {create, get, sign, verify,...}
 ```
 
 The semantic API follows a convention of Verb-Noun. Any extra words beyond the first 2 is collapsed into the Noun and camelcased.
 
 ```js
-NeonJs.create.stringStream("1234");
-NeonJs.encrypt.privateKey("key");
+EpicVaultJs.create.stringStream("1234");
+EpicVaultJs.encrypt.privateKey("key");
 ```
 
 ### uri
 
-Provides the ability to parse a NEO URI schema string into a consumable intent object.
+Provides the ability to parse a EpicChain URI schema string into a consumable intent object.

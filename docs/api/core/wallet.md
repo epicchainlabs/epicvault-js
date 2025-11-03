@@ -6,11 +6,11 @@ title: Wallet
 The `wallet` module is exposed as:
 
 ```js
-import Neon, { wallet, CONST } from "@cityofzion/neon-js";
-const account = Neon.create.account(privateKey);
+import EpicVault, { wallet, CONST } from "@epicchain/epicvault-js";
+const account = EpicVault.create.account(privateKey);
 const alternative = new wallet.Account(privateKey);
 
-Neon.is.address(string, CONST.DEFAULT_ADDRESS_VERSION);
+EpicVault.is.address(string, CONST.DEFAULT_ADDRESS_VERSION);
 wallet.isAddress(string, CONST.DEFAULT_ADDRESS_VERSION);
 ```
 
@@ -45,7 +45,7 @@ It can be instantiated with any key format and is smart enough to recognise the
 format and store it appropriately.
 
 ```js
-const a = Neon.create.Account("NNtxeX9UhKfHySqPQ29hQnZe22k8LwcFk1");
+const a = EpicVault.create.Account("NNtxeX9UhKfHySqPQ29hQnZe22k8LwcFk1");
 console.log(a.address); // NNtxeX9UhKfHySqPQ29hQnZe22k8LwcFk1
 
 const b = new wallet.Account(
@@ -108,14 +108,14 @@ any old XEP2 key.
 ### Wallet
 
 The `Wallet` class implements the NEP-6 convention which is a standard way set
-by NEO council on how to export keys in a JSON file. By doing this, we can move
+by EpicChain council on how to export keys in a JSON file. By doing this, we can move
 keys across different software providers without worry.
 
 The `Wallet` class is essentially a collection of encrypted keys as well as the
 parameters used to encrypt them.
 
 ```js
-import Neon, { wallet } from "cityofzion/neon-js";
+import EpicVault, { wallet } from "epicchain/epicvault-js";
 
 const a = new wallet.Account(
   "6PYLHmDf6AjF4AsVtosmxHuPYeuyJL3SLuw7J1U8i7HxKAnYNsp61HYRfF"
@@ -125,7 +125,7 @@ const b = new wallet.Account(
 );
 
 // We create a wallet with name 'myWallet'. This is optional. The constructor is fine with no arguments.
-const w1 = Neon.create.wallet({ name: "myWallet" });
+const w1 = EpicVault.create.wallet({ name: "myWallet" });
 
 // We generate a new Account and add it to the wallet
 w1.addAccount();
@@ -183,10 +183,10 @@ key. For example, `getPublicKeyFromPrivateKey` exists but not
 across all formats, you are encouraged to use the `Account` class.
 
 ```js
-const privateKey = Neon.create.privateKey();
-const publicKey = Neon.get.publicKeyFromPrivateKey(publicKey);
-const scriptHash = Neon.get.scriptHashFromPublicKey(publicKey);
-const address = Neon.get.addressFromScriptHash(scriptHash);
+const privateKey = EpicVault.create.privateKey();
+const publicKey = EpicVault.get.publicKeyFromPrivateKey(publicKey);
+const scriptHash = EpicVault.get.scriptHashFromPublicKey(publicKey);
+const address = EpicVault.get.addressFromScriptHash(scriptHash);
 
 const privateKey = wallet.generatePrivateKey();
 const publicKey = wallet.getPublicKeyFromPrivateKey(privateKey);
@@ -199,7 +199,7 @@ proper. Errors may be thrown when conversion fails for certain methods.
 
 ### Components
 
-These are methods used to convert JS objects into their respective `neon-js`
+These are methods used to convert JS objects into their respective `epicvault-js`
 implementation.
 
 These methods are exposed for completeness but you are encouraged to use the
@@ -216,10 +216,10 @@ Do note that the encryption/decryption takes a long time and might not work very
 nicely in browsers.
 
 ```js
-const privateKey = Neon.create.privateKey();
-const WIF = Neon.get.WIFFromPrivateKey(privateKey);
-const XEP2Key = await Neon.encrypt(privateKey, "myPassword");
-const decryptedKey = await Neon.decrypt(nep2Key, "myPassword");
+const privateKey = EpicVault.create.privateKey();
+const WIF = EpicVault.get.WIFFromPrivateKey(privateKey);
+const XEP2Key = await EpicVault.encrypt(privateKey, "myPassword");
+const decryptedKey = await EpicVault.decrypt(nep2Key, "myPassword");
 WIF === decryptedKey; // true
 
 const privateKey = wallet.generatePrivateKey();
@@ -234,12 +234,12 @@ WIF === decryptedKey; // true
 Verification methods for the various key formats are available::
 
 ```js
-Neon.is.address(addrStr);
-Neon.is.privateKey(keyStr);
-Neon.is.encryptedKey(encryptedStr);
-Neon.is.publicKey(publicKeyStr);
-Neon.is.wif(wifStr);
-Neon.is.scriptHash(scriptHashStr);
+EpicVault.is.address(addrStr);
+EpicVault.is.privateKey(keyStr);
+EpicVault.is.encryptedKey(encryptedStr);
+EpicVault.is.publicKey(publicKeyStr);
+EpicVault.is.wif(wifStr);
+EpicVault.is.scriptHash(scriptHashStr);
 
 wallet.isAddress(addrStr);
 wallet.isPrivateKey(keyStr);

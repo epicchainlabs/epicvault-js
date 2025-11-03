@@ -121,10 +121,10 @@ describe("add methods", () => {
 describe.each(data)(
   "transform %s",
   (_: string, serialized: string, json: SignerJson) => {
-    const neonObj = Signer.fromJson(json);
+    const epicvaultObj = Signer.fromJson(json);
     const deserialized = Signer.deserialize(new StringStream(serialized));
     test("deserialize", () => {
-      expect(deserialized).toEqual(neonObj);
+      expect(deserialized).toEqual(epicvaultObj);
     });
 
     test("toJson", () => {

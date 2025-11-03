@@ -1,6 +1,6 @@
 import { rpc, CONST, wallet } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../../testHelpers";
-import testWalletJson from "../../../neon-core/__tests__/testWallet.json";
+import testWalletJson from "../../../epicvault-core/__tests__/testWallet.json";
 
 import { getTokenBalances } from "../../src/api/getTokenBalances";
 
@@ -14,11 +14,11 @@ beforeAll(async () => {
 
 describe("getTokenBalances", () => {
   test("EpicChain & EpicPulse (some balance)", async () => {
-    const neoScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicChain;
+    const epicchainScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicChain;
     const gasScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicPulse;
     const result = await getTokenBalances(
       address,
-      [neoScriptHash, gasScriptHash],
+      [epicchainScriptHash, gasScriptHash],
       client
     );
     expect(result).toStrictEqual([expect.any(String), expect.any(String)]);
@@ -27,11 +27,11 @@ describe("getTokenBalances", () => {
   });
 
   test("EpicChain & EpicPulse (empty)", async () => {
-    const neoScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicChain;
+    const epicchainScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicChain;
     const gasScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicPulse;
     const result = await getTokenBalances(
       new wallet.Account().address,
-      [neoScriptHash, gasScriptHash],
+      [epicchainScriptHash, gasScriptHash],
       client
     );
     expect(result).toStrictEqual(["0", "0.00000000"]);

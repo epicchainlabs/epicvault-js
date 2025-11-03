@@ -1,17 +1,17 @@
 // Wallet address to query
 const accountAddress = "APJnYRic9fYo1bLAdrqDbwrsnqoUD92dWo"
-// Get an instance of Neoscan so we can find a working node
-const provider = new Neon.api.neoscan.instance("TestNet");
-// Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-Neon.settings.httpsOnly = true;
+// Get an instance of EpicScan so we can find a working node
+const provider = new EpicVault.api.epicscan.instance("TestNet");
+// Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+EpicVault.settings.httpsOnly = true;
 
 function InvokeOperation()
 {
   clearHtml();
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl);
+    const client = EpicVault.default.create.rpcClient(nodeUrl);
     client.getAccountState(accountAddress).then(response => {
       outputHtml('Wallet Address: ' + accountAddress);
       outputHtml('Account State:');

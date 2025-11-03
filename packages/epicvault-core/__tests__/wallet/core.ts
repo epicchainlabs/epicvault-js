@@ -10,9 +10,9 @@ interface TestAccount {
 
 describe.each([
   [
-    "NPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
+    "XPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
     {
-      address: "NPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
+      address: "XPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
       privateKey:
         "7d128a6d096f0c14c3a25a2b0c41cf79661bfcb4a8cc95aaaea28bde4d732344",
       publicKey:
@@ -22,9 +22,9 @@ describe.each([
     },
   ],
   [
-    "NMBfzaEq2c5zodiNbLPoohVENARMbJim1r",
+    "XMBfzaEq2c5zodiNbLPoohVENARMbJim1r",
     {
-      address: "NMBfzaEq2c5zodiNbLPoohVENARMbJim1r",
+      address: "XMBfzaEq2c5zodiNbLPoohVENARMbJim1r",
       privateKey:
         "9ab7e154840daca3a2efadaf0df93cd3a5b51768c632f5433f86909d9b994a69",
       publicKey:
@@ -34,9 +34,9 @@ describe.each([
     },
   ],
   [
-    "NfVdwyaJbijrWkRagrvs4eSRQUpP7WpukT",
+    "XfVdwyaJbijrWkRagrvs4eSRQUpP7WpukT",
     {
-      address: "NfVdwyaJbijrWkRagrvs4eSRQUpP7WpukT",
+      address: "XfVdwyaJbijrWkRagrvs4eSRQUpP7WpukT",
       privateKey:
         "3edee7036b8fd9cef91de47386b191dd76db2888a553e7736bb02808932a915b",
       publicKey:
@@ -116,13 +116,13 @@ describe("getAddressFromScriptHash", () => {
   });
 });
 describe("getAddressVersion", () => {
-  test("Neo3", () => {
-    const result = C.getAddressVersion("NPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i");
+  test("EpicChain", () => {
+    const result = C.getAddressVersion("XPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i");
 
     expect(result).toBe(0x4C);
   });
 
-  test("Neo2", () => {
+  test("EpicChain", () => {
     const result = C.getAddressVersion("ALq7AWrhAueN6mJNqk6FHJjnsEoPRytLdW");
 
     expect(result).toBe(0x17);

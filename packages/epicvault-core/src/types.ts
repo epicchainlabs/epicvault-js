@@ -2,6 +2,8 @@
  * Core Type Definitions for EpicVault
  */
 
+import { Transaction } from "./tx/transaction";
+
 // Basic Types
 export type Address = string;
 export type Hash = string;
@@ -40,7 +42,7 @@ export interface TokenBalance {
 }
 
 // Transaction Types
-export interface Transaction {
+export interface TransactionJSON {
   hash: Hash;
   from: Address;
   to: Address;
@@ -249,3 +251,5 @@ export interface Validator {
   votes: string;
   active: boolean;
 }
+
+export { Transaction };

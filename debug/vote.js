@@ -1,9 +1,9 @@
-var Neon = require("../lib/index");
+var EpicVault = require("../lib/index");
 
 const config = {
   net: "TestNet",
   // ALq7AWrhAueN6mJNqk6FHJjnsEoPRytLdW
-  account: new Neon.wallet.Account(
+  account: new EpicVault.account.Account(
     "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g"
   ),
   candidateKeys: [
@@ -12,7 +12,7 @@ const config = {
   ],
 };
 
-Neon.api
+EpicVault.api
   .setupVote(config)
   .then((res) => {
     console.log(res);

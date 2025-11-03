@@ -63,10 +63,10 @@ export class Network implements EpicVaultObject<NetworkLike> {
   /**
    * Exports the class as a JSON format.
    */
-  public export(): NetworkLike {
+  public toJSON(): NetworkLike {
     return {
       name: this.name,
-      protocol: this.protocol.export(),
+      protocol: this.protocol.toJSON(),
       extra: this.extra,
       nodes: this.nodes,
     };

@@ -3,7 +3,7 @@
     "start": "yarn build:guides &&docusaurus start",
     "build": "yarn build:guides && docusaurus build",
     "build:guides": "yarn --cwd ../examples run generate",
-    "publish": "aws s3 sync ./build  s3://docs-coz/neo3/neon-js --acl public-read",
+    "publish": "aws s3 sync ./build  s3://docs-epicchainlabs/epicchain/epicvault-js --acl public-read",
     "release": "yarn build && yarn run publish",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

@@ -4,22 +4,22 @@ const props = {
   // name of operation to perform.
   operation: 'balanceOf',
   // any optional arguments to pass in. If null, use empty array.
-  args: [Neon.u.reverseHex('cef0c0fdcfe7838eff6ff104f9cdec2922297537')]
+  args: [EpicVault.u.reverseHex('cef0c0fdcfe7838eff6ff104f9cdec2922297537')]
 }
 
-const script = Neon.sc.createScript(props);
+const script = EpicVault.sc.createScript(props);
 
-// Get an instance of Neoscan so we can find a working node
-const provider = new Neon.api.neoscan.instance("TestNet");
+// Get an instance of EpicScan so we can find a working node
+const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-// Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-Neon.settings.httpsOnly = true;
+// Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+EpicVault.settings.httpsOnly = true;
 
 function InvokeOperation()
 {
   clearHtml();
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
 		invokeScipt(response => {
 			outputHtml('Results: ');
@@ -28,9 +28,9 @@ function InvokeOperation()
   });
 }
 
-// We're wrapping the neon-js call to make our code a little clearer.
+// We're wrapping the epicvault-js call to make our code a little clearer.
 function invokeScipt(callback, url) {
-  Neon.rpc.Query.invokeScript(script)
+  EpicVault.rpc.Query.invokeScript(script)
     .execute(url)
     .then(res => {
       callback(res); // You should get a result with state: "HALT, BREAK"

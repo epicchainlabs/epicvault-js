@@ -22,7 +22,7 @@ module.exports = function () {
       path: path.resolve(__dirname, "dist"),
       filename: "browser.js",
       libraryTarget: "umd",
-      library: "Neon", // This is the var name in browser
+      library: "EpicVault", // This is the var name in browser
     },
     plugins: [
       new webpack.ProvidePlugin({

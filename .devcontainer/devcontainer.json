@@ -1,5 +1,5 @@
 {
-    "name": "neo N3 neon-js dev environment",
+    "name": "epicchain epicvault-js dev environment",
     "dockerComposeFile": "docker-compose.yml",
     "service": "main",
     "workspaceFolder": "/workspace",

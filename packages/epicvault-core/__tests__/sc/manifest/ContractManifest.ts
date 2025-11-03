@@ -96,11 +96,11 @@ describe("constructor & export", () => {
 });
 
 describe("fromJson", () => {
-  test("neo", () => {
-    const neoManifestJson = {
+  test("epicchain", () => {
+    const epicchainManifestJson = {
       groups: [],
       features: {},
-      supportedstandards: ["NEP-5"],
+      supportedstandards: ["XEP-5"],
       name: "EpicChain",
       abi: {
         methods: [
@@ -265,8 +265,8 @@ describe("fromJson", () => {
       extra: null,
     };
 
-    const manifest = ContractManifest.fromJson(neoManifestJson);
-    expect(manifest.toJson()).toStrictEqual(neoManifestJson);
+    const manifest = ContractManifest.fromJson(epicchainManifestJson);
+    expect(manifest.toJson()).toStrictEqual(epicchainManifestJson);
   });
 
   test("custom permissions", () => {

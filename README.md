@@ -26,7 +26,7 @@ EpicVault JS can be easily installed and integrated into your projects. Below ar
 To install EpicVault JS for use in a Node.js environment, execute the following command:
 
 ```bash
-npm i @epicchain/epicvault-js
+pnpm i @epicchain/epicvault-js
 ```
 
 This command installs the latest version of EpicVault JS and its dependencies, allowing you to utilize the SDK in your server-side applications or build tools.
@@ -99,14 +99,14 @@ EpicVault JS is maintained as a TypeScript monorepo using Lerna. To set up your 
 2. Install dependencies:
 
    ```sh
-   yarn
+   pnpm install
    ```
 
 3. Bootstrap the project and build:
 
    ```sh
-   npm run bootstrap
-   npm run build
+   pnpm run bootstrap
+   pnpm run build
    ```
 
 The setup process ensures that all dependencies are installed and the project is prepared for development and testing.
@@ -116,11 +116,11 @@ The setup process ensures that all dependencies are installed and the project is
 To ensure the quality and functionality of EpicVault JS, we run a comprehensive suite of tests. Execute the following commands to perform linting, build the project, and run tests:
 
 ```sh
-npm run lint
-npm run build
-npm run dist
-npm run test:unit
-npm run test:integration
+pnpm run lint
+pnpm run build
+pnpm run dist
+pnpm run test:unit
+pnpm run test:integration
 ```
 
 These commands cover code linting, project building, distribution, and both unit and integration testing.
@@ -131,8 +131,8 @@ Our documentation is powered by Docusaurus, a modern documentation site generato
 
 ```sh
 cd website
-yarn
-npm run start
+pnpm install
+pnpm run start
 ```
 
 This will start a local development server, allowing you to preview changes and ensure that the documentation is up-to-date and accurate.

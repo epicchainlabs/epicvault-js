@@ -2,7 +2,7 @@ module.exports = {
   title: "epicvault-js",
   tagline: "The JS SDK for EpicChain Blockchain is a comprehensive JavaScript library designed to facilitate seamless interaction with the EpicChain blockchain.",
   url: "https://epic-chain.org",
-  baseUrl: "/neo3/neon-js/",
+  baseUrl: "/epicchain/epicvault-js/",
   organizationName: "epicchainlabs",
   projectName: "epicvault-js",
   scripts: [
@@ -51,7 +51,7 @@ module.exports = {
   ],
   themeConfig: {
     navbar: {
-      title: "neon-js",
+      title: "epicvault-js",
       logo: {
         src: "img/logo.svg",
       },

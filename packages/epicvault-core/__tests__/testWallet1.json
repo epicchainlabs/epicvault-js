@@ -4,7 +4,7 @@
   "scrypt": { "n": 16384, "r": 8, "p": 8 },
   "accounts": [
     {
-      "address": "NMPAXGtMfZ8s8rcfP9JhrYrNeZHG4xSVmd",
+      "address": "XMPAXGtMfZ8s8rcfP9JhrYrNeZHG4xSVmd",
       "label": null,
       "isDefault": false,
       "lock": false,

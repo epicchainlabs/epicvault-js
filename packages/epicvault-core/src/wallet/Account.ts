@@ -3,7 +3,7 @@ import {
   DEFAULT_ACCOUNT_CONTRACT,
   DEFAULT_SCRYPT,
 } from "../consts";
-import logger from "../logging";
+import { logger } from "../logging";
 import { hash160, HexString, remove0xPrefix, reverseHex } from "../u";
 import { isMultisigContract } from "../sc";
 import * as core from "./core";
@@ -356,7 +356,7 @@ export class Account implements EpicVaultObject<AccountJSON> {
   /**
    * Export Account as a WalletAccount object.
    */
-  public export(): AccountJSON {
+  public toJSON(): AccountJSON {
     if (this._privateKey && !this._encrypted) {
       throw new Error("Encrypt private key first!");
     }

@@ -1,5 +1,5 @@
 import { DEFAULT_SCRYPT, DEFAULT_WALLET } from "../consts";
-import logger from "../logging";
+import { logger } from "../logging";
 import { Account, AccountJSON } from "./Account";
 import { ScryptParams } from "./xep2";
 
@@ -159,7 +159,7 @@ export class Wallet {
       name: this.name,
       version: this.version,
       scrypt: this.scrypt,
-      accounts: this.accounts.map((acct) => acct.export()),
+      accounts: this.accounts.map((acct) => acct.toJSON()),
     };
   }
 

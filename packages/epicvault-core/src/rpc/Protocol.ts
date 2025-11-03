@@ -50,7 +50,7 @@ export class Protocol implements EpicVaultObject<ProtocolLike> {
     return "Protocol";
   }
 
-  public export(): ProtocolLike {
+  public toJSON(): ProtocolLike {
     return {
       magic: this.magic,
       addressVersion: this.addressVersion,

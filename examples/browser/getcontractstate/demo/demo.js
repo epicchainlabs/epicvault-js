@@ -1,19 +1,19 @@
 // Hash of the contract to get
 const hash = "b3a14d99a3fb6646c78bf2f4e2f25a7964d2956a"
 
-// Get an instance of Neoscan so we can find a working node
-const provider = new Neon.api.neoscan.instance("TestNet");
+// Get an instance of EpicScan so we can find a working node
+const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-// Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-Neon.settings.httpsOnly = true;
+// Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+EpicVault.settings.httpsOnly = true;
 
 function InvokeOperation()
 {
   clearHtml();
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl);
+    const client = EpicVault.default.create.rpcClient(nodeUrl);
     client.getContractState(hash).then(response => {
     	outputHtml('Result: ');
       iterate(response, '');

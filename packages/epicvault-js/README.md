@@ -29,18 +29,18 @@ Once installed, you can import the package and use the semantic API to perform v
 ### Example:
 
 ```javascript
-const Neon = require("epicchainlabs/epicvault-js");
+const EpicVault = require("epicchainlabs/epicvault-js");
 
-console.log(Neon);
+console.log(EpicVault);
 // Output: {wallet, tx, api, nep5, etc...}
 
-const EpicVaultJs = Neon.default;
+const EpicVaultJs = EpicVault.default;
 
 console.log(EpicVaultJs);
 // Output: {create, get, sign, verify, ...}
 ```
 
-The `Neon` object exposes various modules such as `wallet`, `tx`, `api`, `nep5`, and more, providing all the tools needed for developers to interact with the EpicVault ecosystem.
+The `EpicVault` object exposes various modules such as `wallet`, `tx`, `api`, `nep5`, and more, providing all the tools needed for developers to interact with the EpicVault ecosystem.
 
 ### Available API Methods
 
@@ -72,9 +72,9 @@ Here is an example of how you can use `epicvault-js` to create a wallet and sign
 ### Creating a Wallet and Signing a Transaction
 
 ```javascript
-const Neon = require("epicchainlabs/epicvault-js");
+const EpicVault = require("epicchainlabs/epicvault-js");
 
-const EpicVaultJs = Neon.default;
+const EpicVaultJs = EpicVault.default;
 
 // Create a new wallet
 const wallet = EpicVaultJs.create.wallet();
@@ -105,7 +105,7 @@ EpicVaultJs.tx.broadcast(signedTx).then((txHash) => {
 You can also use the `encrypt` module to securely manage private keys or any sensitive information:
 
 ```javascript
-const EpicVaultJs = Neon.default;
+const EpicVaultJs = EpicVault.default;
 
 // Encrypt a private key
 const encryptedKey = EpicVaultJs.encrypt.privateKey("yourPrivateKeyHere");

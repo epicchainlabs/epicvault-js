@@ -1,5 +1,5 @@
 import { Query, RPCResponse, RPCErrorResponse, JsonRpcParams } from "../Query";
-import logger from "../../logging";
+import { logger } from "../../logging";
 import { fetch } from "cross-fetch";
 import { BatchQuery } from "../BatchQuery";
 

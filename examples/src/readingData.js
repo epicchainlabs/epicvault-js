@@ -11,7 +11,7 @@ We use this method to retrieve data for various purposes:
 - Calculating fees
 - Finding out who to vote for.
 
-This is done through the `invokefunction` or `invokescript` RPC call to a NEO node.
+This is done through the `invokefunction` or `invokescript` RPC call to a EpicChain node.
 We will be performing a couple of invokes to show you how to retrieve contract data from the blockchain.
 
 NOTE: This tutorial is written in Typescript. There
@@ -66,34 +66,34 @@ function getGasTotalSupply() {
 We know that the GAS supply is ever increasing with each block produced.
 We can verify this by running the same exact script again after at least a block has passed.
 For now, we want to check out the candidates available for voting on this chain.
-This information is held in the NEO contract.
+This information is held in the EpicChain contract.
 This time, we will try out the invokefunction RPC call.
  */
 
-function getNeoCandidates() {
+function getEpicChainCandidates() {
   console.log("--- Candidates and their votes ---");
-  const neoCandidateContractCall = sc.EpicChainContract.INSTANCE.getCandidates();
+  const epicchainCandidateContractCall = sc.EpicChainContract.INSTANCE.getCandidates();
   return rpcClient
     .invokeFunction(
-      neoCandidateContractCall.scriptHash,
-      neoCandidateContractCall.operation
+      epicchainCandidateContractCall.scriptHash,
+      epicchainCandidateContractCall.operation
     )
-    .then((neoCandidateResult) => {
-      const neoCandidatesStackItems = neoCandidateResult.stack[0].value;
+    .then((epicchainCandidateResult) => {
+      const epicchainCandidatesStackItems = epicchainCandidateResult.stack[0].value;
 
-      const neoCandidateStrings = neoCandidatesStackItems.map((i) => {
+      const epicchainCandidateStrings = epicchainCandidatesStackItems.map((i) => {
         const struct = i.value;
         const publicKey = u.HexString.fromBase64(struct[0].value).toBigEndian();
         const votes = parseInt(struct[1].value);
         return `${publicKey} has ${votes} votes\n`;
       });
 
-      neoCandidateStrings.forEach((i) => console.log(i));
+      epicshainCandidateStrings.forEach((i) => console.log(i));
 
       console.log(
         `This action took: ${transformGasDecimal(
-          neoCandidateResult.epicpulseconsumed
-        )} GAS to run.`
+          epicchainCandidateResult.epicpulseconsumed
+        )} EpicPulse to run.`
       );
       console.log("\n\n");
     });
@@ -102,7 +102,7 @@ function getNeoCandidates() {
 /**
        One other important function that invokefunction/invokescript serves is to help us estimate the GAS required to execute the script.
        As the node is actually executing the script within the blockchain context, the epicpulseconsumed field is pretty accurate assuming that the signers field is populated correctly.
-       This is also how neon-js is able to assemble transactions with a good GAS fee estimate.
+       This is also how epicvault-js is able to assemble transactions with a good GAS fee estimate.
        */
 
-getGasTotalSupply().then(getNeoCandidates);
+getGasTotalSupply().then(getEpicChainCandidates);

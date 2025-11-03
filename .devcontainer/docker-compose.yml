@@ -30,4 +30,4 @@ services:
     image: snowypowers/n3-csharp-solonet:3.5.0
     restart: unless-stopped
     volumes:
-      - ../tmp/:/opt/neo-cli:consistent
+      - ../tmp/:/opt/epicchain-cli:consistent

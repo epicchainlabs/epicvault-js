@@ -18,7 +18,7 @@ export class TokenManager {
   public async addToken(address: TokenAddress, info: TokenInfo): Promise<void> {
     try {
       this.tokens.set(address, info);
-      logger.info(`Added token ${info.symbol} at ${address}`);
+      logger("token").info(`Added token ${info.symbol} at ${address}`);
     } catch (error) {
       throw new EpicVaultError('Failed to add token', 'TOKEN_ADD_ERROR', error);
     }
@@ -44,7 +44,7 @@ export class TokenManager {
   public async setMetadata(address: TokenAddress, metadata: TokenMetadata): Promise<void> {
     try {
       this.metadata.set(address, metadata);
-      logger.info(`Set metadata for token at ${address}`);
+      logger("token").info(`Set metadata for token at ${address}`);
     } catch (error) {
       throw new EpicVaultError('Failed to set token metadata', 'METADATA_SET_ERROR', error);
     }

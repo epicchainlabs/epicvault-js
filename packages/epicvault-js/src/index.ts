@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as api from "@cityofzion/neon-api";
+import * as api from "@epicchain/epicvault-api";
 import * as epicvaultCore from "@epicchain/epicvault-core";
 import * as experimental from "./experimental";
 import * as features from "./features";

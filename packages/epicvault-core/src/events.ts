@@ -70,7 +70,7 @@ export class EventManager implements EventEmitter {
         try {
           listener(log);
         } catch (error) {
-          logger.error(`Error in event listener for ${event}`, error);
+          logger("events").error(`Error in event listener for ${event}`, error instanceof Error ? error : new Error(String(error)));
         }
       });
       return true;

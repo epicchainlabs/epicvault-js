@@ -11,12 +11,12 @@ const simpleScrypt = {
 const simpleKeys = {
   a: {
     wif: "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g",
-    passphrase: "city of zion",
+    passphrase: "EpicChain Labs",
     encryptedWif: "6PYUUUFeiUvQQQXGhiZJg1wrK6hoDrEgRjmjUQqqVyZGW53ussdyDgiZ5E",
   },
   b: {
     wif: "L2QTooFoDFyRFTxmtiVHt5CfsXfVnexdbENGDkkrrgTTryiLsPMG",
-    passphrase: "password", //TODO: Test with chinese characters (我的密码)
+    passphrase: "password", //TODO: Test with chinese characters
     encryptedWif: "6PYUmBuLbKMzKYsyoHieMZzexGt8CnbgYyN8zym9ctpCnyXWbZD7A8qJ48",
   },
   c: {
@@ -26,10 +26,10 @@ const simpleKeys = {
   },
 };
 
-const neo2Keys = {
+const epicchainKeys = {
   a: {
     wif: "L1QqQJnpBwbsPGAuutuzPTac8piqvbR1HRjrY5qHup48TBCBFe4g",
-    passphrase: "city of zion",
+    passphrase: "EpicChain Labs",
     encryptedWif: "6PYLHmDf7R4im6NUF34MwcbViPpjwfdkrPMdFjuCXnEFmmK2A7AAzVAvTa",
   },
   b: {
@@ -47,7 +47,7 @@ const neo2Keys = {
 // This uses default scrypt params
 const testKey = testKeys.a;
 
-describe("NEP2", () => {
+describe("XEP2", () => {
   describe("Default", () => {
     test("encrypt", async () => {
       const result = await XEP2.encrypt(testKey.wif, testKey.passphrase);
@@ -118,16 +118,16 @@ describe("NEP2", () => {
 });
 
 describe.each([
-  ["Basic", neo2Keys.a],
-  ["Chinese", neo2Keys.b],
-  ["Symbols", neo2Keys.c],
+  ["Basic", epicchainKeys.a],
+  ["Chinese", epicchainKeys.b],
+  ["Symbols", epicchainKeys.c],
 ])(
   "%s",
   (
     msg: string,
     data: { wif: string; encryptedWif: string; passphrase: string }
   ) => {
-    test("decrypt neo2 key", async () => {
+    test("decrypt epicchain key", async () => {
       const result = await XEP2.decryptEpicChain(
         data.encryptedWif,
         data.passphrase,

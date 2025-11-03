@@ -1,15 +1,15 @@
 const nodeLedger = require("@ledgerhq/hw-transport-node-hid").default;
-const ledger = require("@cityofzion/neon-ledger").default;
-const neon = require("@cityofzion/neon-js");
+const ledger = require("@epicchain/epicvault-ledger").default;
+const epicvault = require("@epicchain/epicvault-js");
 
-const neonJs = { ...neon, ledger };
+const epicvaultJs = { ...epicvault, ledger };
 const addressNumber = 0;
 
-const neoscan = new neonJs.api.neoscan.instance("TestNet");
+const epicscan = new epicvaultJs.api.epicscan.instance("TestNet");
 
 let ledgerInstance = null;
 
-neonJs.ledger
+epicvaultJs.ledger
   .getDevicePaths(nodeLedger)
   .then((paths) => {
     console.log("\n\n ---Ledger devices---");
@@ -19,10 +19,10 @@ neonJs.ledger
   })
   .then((ledger) => {
     ledgerInstance = ledger;
-    const bip = neonJs.ledger.BIP44(addressNumber);
+    const bip = epicvaultJs.ledger.BIP44(addressNumber);
     console.log("\n\n ---BIP44 String---");
     console.log(bip);
-    return neonJs.ledger.getPublicKey(ledger, bip);
+    return epicvaultJs.ledger.getPublicKey(ledger, bip);
   })
   .then((key) => {
     console.log("\n\n ---Public Key---");
@@ -30,20 +30,20 @@ neonJs.ledger
     return key;
   })
   .then((publicKey) => {
-    return neonJs.api.sendAsset({
-      api: neoscan,
-      account: new neonJs.wallet.Account(publicKey),
-      intents: neonJs.api.makeIntent(
-        { NEO: 1 },
-        "ALq7AWrhAueN6mJNqk6FHJjnsEoPRytLdW"
+    return epicvaultJs.api.sendAsset({
+      api: epicscan,
+      account: new epicvaultJs.wallet.Account(publicKey),
+      intents: epicvaultJs.api.makeIntent(
+        { EpicChain: 1 },
+        "XLq7AWrhAueN6mJNqk6FHJjnsEoPRytLdW"
       ),
       signingFunction: async (tx, pubKey) => {
-        const sig = await neonJs.ledger.getSignature(
+        const sig = await epicvaultJs.ledger.getSignature(
           ledgerInstance,
           tx,
-          neonJs.ledger.BIP44(addressNumber)
+          epicvaultJs.ledger.BIP44(addressNumber)
         );
-        const witness = await neonJs.tx.Witness.fromSignature(sig, pubKey);
+        const witness = await epicvaultJs.tx.Witness.fromSignature(sig, pubKey);
         return witness.serialize();
       },
     });

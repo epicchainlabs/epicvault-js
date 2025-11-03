@@ -18,7 +18,7 @@ import {
   XEP2_FLAG,
   XEP2_HEADER,
 } from "../consts";
-import logging from "../logging";
+import { logger } from "../logging";
 import { ab2hexstring, hexXor, hash160, hash256, hexstring2ab } from "../u";
 import { isWIF } from "./verify";
 import {
@@ -31,7 +31,7 @@ import {
 import base58 from "bs58";
 import { Buffer } from "buffer";
 
-const NEO2_ADDRESS_VERSION = "17";
+const EPICCHAIN_ADDRESS_VERSION = "17";
 const enc = {
   Latin1: latin1Encoding,
   Hex: hexEncoding,
@@ -45,7 +45,7 @@ export interface ScryptParams {
 
 const AES_OPTIONS = { mode: ECBMode, padding: NoPadding };
 
-const log = logging("wallet");
+const log = logger("wallet");
 
 async function createNep2Key(
   prefix: string,
@@ -100,13 +100,13 @@ function getAddressFromPrivateKey(
   );
 }
 
-function getNeo2AddressFromPrivateKey(privateKey: string): string {
+function getEpicChainAddressFromPrivateKey(privateKey: string): string {
   const publicKey = getPublicKeyFromPrivateKey(privateKey, true);
   const verificationScript = "21" + publicKey + "ac";
   const scriptHash = hash160(verificationScript);
-  const shaChecksum = hash256(NEO2_ADDRESS_VERSION + scriptHash).substr(0, 8);
+  const shaChecksum = hash256(EPICCHAIN_ADDRESS_VERSION + scriptHash).substr(0, 8);
   return base58.encode(
-    Buffer.from(NEO2_ADDRESS_VERSION + scriptHash + shaChecksum, "hex")
+    Buffer.from(EPICCHAIN_ADDRESS_VERSION + scriptHash + shaChecksum, "hex")
   );
 }
 
@@ -216,7 +216,7 @@ export async function decryptEpicChain(
   const privateKey = await decipherNep2Key(
     encryptedKey,
     keyphrase,
-    getNeo2AddressFromPrivateKey,
+    getEpicChainAddressFromPrivateKey,
     scryptParams
   );
   return getWIFFromPrivateKey(privateKey);

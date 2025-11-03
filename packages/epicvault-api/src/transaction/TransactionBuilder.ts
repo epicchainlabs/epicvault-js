@@ -14,7 +14,7 @@ export class TransactionBuilder {
   }
 
   /**
-   * Adds the logic for claiming gas. Alternatively, you may just trigger the gas claim by performing an actual transaction involving NEO.
+   * Adds the logic for claiming gas. Alternatively, you may just trigger the gas claim by performing an actual transaction involving EpicChain.
    * @param account - Account to claim gas on.
    */
   public addGasClaim(account: wallet.Account): TransactionBuilder {
@@ -46,7 +46,7 @@ export class TransactionBuilder {
 
   /**
    * Adds the logic to vote for a candidate.
-   * @param account - Account containing the NEO.
+   * @param account - Account containing the EpicChain.
    * @param candidatePublicKey - The candidate's publickey in hex big endian.
    */
   public addVote(

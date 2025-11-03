@@ -156,7 +156,7 @@ export class ContractParam implements EpicVaultObject<ContractParamLike> {
   }
 
   /**
-   * Creates an Integer ContractParam. This is converted into a BigInteger in NeoVM. Value field will be a string.
+   * Creates an Integer ContractParam. This is converted into a BigInteger in EpicChainVM. Value field will be a string.
    * @param value - A value that can be parsed to a BigInteger. Numbers or numeric strings are accepted.
 
    * @example
@@ -464,13 +464,13 @@ export class ContractParam implements EpicVaultObject<ContractParamLike> {
   }
 
   public export(): ContractParamJson {
-    return this.toJson();
+    return this.toJSON();
   }
 
   /**
    * Converts the object to JSON format.
    */
-  public toJson(): ContractParamJson {
+  public toJSON(): ContractParamJson {
     switch (this.type) {
       case ContractParamType.Any:
         return {
@@ -499,7 +499,7 @@ export class ContractParam implements EpicVaultObject<ContractParamLike> {
       case ContractParamType.Array:
         return {
           type: ContractParamType[this.type],
-          value: (this.value as ContractParam[]).map((cp) => cp.toJson()),
+          value: (this.value as ContractParam[]).map((cp) => cp.toJSON()),
         };
       case ContractParamType.Boolean:
         return {
@@ -516,8 +516,8 @@ export class ContractParam implements EpicVaultObject<ContractParamLike> {
         return {
           type: ContractParamType[this.type],
           value: (this.value as ContractParamMap).map((cp) => ({
-            key: cp.key.toJson(),
-            value: cp.value.toJson(),
+            key: cp.key.toJSON(),
+            value: cp.value.toJSON(),
           })),
         };
 

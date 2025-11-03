@@ -54,17 +54,17 @@ describe("JSON", () => {
 
   test.each(jsonTestCases)(
     "fromJson %s",
-    (_: string, json: WitnessRuleJson, neonObj: WitnessRule) => {
+    (_: string, json: WitnessRuleJson, epicvaultObj: WitnessRule) => {
       const result = WitnessRule.fromJson(json);
-      expect(result.action).toEqual(neonObj.action);
-      expect(result.condition).toEqual(neonObj.condition);
+      expect(result.action).toEqual(epicvaultObj.action);
+      expect(result.condition).toEqual(epicvaultObj.condition);
     }
   );
 
   test.each(jsonTestCases)(
     "toJson %s",
-    (_: string, json: WitnessRuleJson, neonObj: WitnessRule) => {
-      const result = neonObj.toJson();
+    (_: string, json: WitnessRuleJson, epicvaultObj: WitnessRule) => {
+      const result = epicvaultObj.toJson();
       expect(result).toEqual(json);
     }
   );

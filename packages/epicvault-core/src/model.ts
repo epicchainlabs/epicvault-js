@@ -4,6 +4,10 @@
 
 import { Address, Hash, Amount, Network } from './types';
 
+export interface EpicVaultObject<T> {
+  toJSON(): T;
+}
+
 /**
  * Base model for all blockchain entities
  */
@@ -30,7 +34,7 @@ export abstract class BlockchainEntity {
 /**
  * Wallet model representing a blockchain wallet
  */
-export class Wallet extends BlockchainEntity {
+export class WalletModel extends BlockchainEntity {
   private _balance: Amount;
   private _nonce: number;
 
@@ -61,7 +65,7 @@ export class Wallet extends BlockchainEntity {
 /**
  * Transaction model representing a blockchain transaction
  */
-export class Transaction extends BlockchainEntity {
+export class TransactionModel extends BlockchainEntity {
   private _hash: Hash;
   private _from: Address;
   private _to: Address;

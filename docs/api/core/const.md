@@ -6,10 +6,10 @@ title: Constants
 Constants are defined and exposed as:
 
 ```ts
-import Neon from "@cityofzion/neon-js";
-const nativeContractHashes = Neon.CONST.NATIVE_CONTRACT_HASH;
+import EpicVault from "@epicchain/epicvault-js";
+const nativeContractHashes = EpicVault.CONST.NATIVE_CONTRACT_HASH;
 
-import { CONST } from "@cityofzion/neon-js";
+import { CONST } from "@epicchain/epicvault-js";
 const addrVersion = CONST.DEFAULT_ADDRESS_VERSION;
 ```
 

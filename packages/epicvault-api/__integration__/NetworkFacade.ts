@@ -1,6 +1,6 @@
 import { CONST, rpc, sc, u, wallet } from "@epicchain/epicvault-core";
 import * as TestHelpers from "../../../testHelpers";
-import testWallet from "../../neon-core/__tests__/testWallet.json";
+import testWallet from "../../epicvault-core/__tests__/testWallet.json";
 import { NetworkFacade } from "../src/NetworkFacade";
 import { signWithAccount } from "../src/transaction";
 
@@ -60,7 +60,7 @@ describe("NetworkFacade", () => {
 
     expect(logs.executions.length).toBe(1);
     expect(logs.executions[0].vmstate).toBe("HALT");
-    // 2 notifications, 1 GAS & 1 NEO
+    // 2 notifications, 1 EpicPulse & 1 EpicChain
     expect(logs.executions[0].notifications.length).toBe(2);
 
     const gasNotification = logs.executions[0].notifications.find((n) =>

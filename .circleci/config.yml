@@ -36,7 +36,7 @@ commands:
           environment:
             JEST_JUNIT_OUTPUT_DIR: reports/unit
             JEST_JUNIT_OUTPUT_NAME: results.xml
-          command: npm run test:unit -- --ci --maxWorkers=4 --detectOpenHandles --reporters="jest-junit" --reporters="default"
+          command: pnpm run test:unit -- --ci --maxWorkers=4 --detectOpenHandles --reporters="jest-junit" --reporters="default"
       - store_test_results:
           path: reports
       - store_artifacts:
@@ -58,7 +58,7 @@ commands:
           environment:
             JEST_JUNIT_OUTPUT_DIR: reports/integration
             JEST_JUNIT_OUTPUT_NAME: results.xml
-          command: npm run test:integration -- --ci --maxWorkers=4 --detectOpenHandles --reporters="jest-junit" --reporters="default"
+          command: pnpm run test:integration -- --ci --maxWorkers=4 --detectOpenHandles --reporters="jest-junit" --reporters="default"
       - store_test_results:
           path: reports
       - store_artifacts:
@@ -72,27 +72,27 @@ jobs:
           name: "Versions"
           command: |
             node --version
-            npm --version
+            pnpm --version
             git --version
       - checkout
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - neon-npm-{{ checksum "package-lock.json" }}
+            - epicvault-pnpm-{{ checksum "pnpm-lock.yaml" }}
       - run:
           name: node hid compilation requirements
           command: sudo apt-get update && sudo apt-get -y install libusb-1.0-0-dev libusb-1.0-0 libudev-dev
-      - run: npm ci
+      - run: pnpm install
       - save_cache:
-          key: neon-npm-{{ checksum "package-lock.json" }}
+          key: epicvault-pnpm-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - node_modules
       - run:
           name: Bootstrap
-          command: npm run bootstrap
+          command: pnpm run bootstrap
       - run:
           name: Build
-          command: npm run build && npm run dist
+          command: pnpm run build && pnpm run dist
       - persist_to_workspace:
           root: .
           paths:
@@ -118,10 +118,10 @@ jobs:
             [ -z "$FILES" ] && echo "No files found" && exit 0
             echo "Found:"
             echo $FILES
-            npx eslint --max-warnings 0 --format junit -o reports/lint/lint.xml $FILES
+            pnpm eslint --max-warnings 0 --format junit -o reports/lint/lint.xml $FILES
       - run:
           name: Format docs
-          command: npm run lint:docs
+          command: pnpm run lint:docs
       - store_test_results:
           path: reports
       - store_artifacts:
@@ -153,10 +153,10 @@ jobs:
           at: .
       - run:
           name: Login to npm
-          command: npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          command: pnpm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
       - run:
           name: Publish to npm
-          command: npm run release:latest -- --yes
+          command: pnpm run release:latest -- --yes
 
   publish-next:
     executor: env_node
@@ -166,10 +166,10 @@ jobs:
           at: .
       - run:
           name: Login to npm
-          command: npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          command: pnpm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
       - run:
           name: Publish to npm
-          command: npm run release:next -- --yes
+          command: pnpm run release:next -- --yes
 
   publish-docs:
     executor: env_node
@@ -185,8 +185,8 @@ jobs:
           name: Build and release docs
           command: |
             cd website
-            npm i
-            npm run release
+            pnpm i
+            pnpm run release
 
 # Branch based workflows
 workflows:

@@ -10,28 +10,20 @@ export enum LogLevel {
 }
 
 export interface LoggerConfig {
-  level: LogLevel;
+  level?: LogLevel;
   prefix?: string;
   timestamp?: boolean;
 }
 
 export class Logger {
-  private static instance: Logger;
   private config: LoggerConfig;
 
-  private constructor(config: LoggerConfig = { level: LogLevel.INFO }) {
+  public constructor(config: LoggerConfig = { level: LogLevel.INFO }) {
     this.config = {
-      level: config.level,
+      level: config.level || LogLevel.INFO,
       prefix: config.prefix || 'EpicVault',
       timestamp: config.timestamp !== false
     };
-  }
-
-  public static getInstance(config?: LoggerConfig): Logger {
-    if (!Logger.instance) {
-      Logger.instance = new Logger(config);
-    }
-    return Logger.instance;
   }
 
   private formatMessage(level: LogLevel, message: string): string {
@@ -50,7 +42,7 @@ export class Logger {
 
   private shouldLog(level: LogLevel): boolean {
     const levels = Object.values(LogLevel);
-    const currentLevelIndex = levels.indexOf(this.config.level);
+    const currentLevelIndex = levels.indexOf(this.config.level || LogLevel.INFO);
     const messageLevelIndex = levels.indexOf(level);
     return messageLevelIndex >= currentLevelIndex;
   }
@@ -87,5 +79,11 @@ export class Logger {
   }
 }
 
-// Export a default logger instance
-export const logger = Logger.getInstance();
+const loggers: { [key: string]: Logger } = {};
+
+export const logger = (prefix: string): Logger => {
+  if (!loggers[prefix]) {
+    loggers[prefix] = new Logger({ prefix });
+  }
+  return loggers[prefix];
+};

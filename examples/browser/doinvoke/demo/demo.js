@@ -6,20 +6,20 @@ const additionalIntents = [];
 function InvokeOperation()
 {
 
-const provider = new Neon.api.neoscan.instance("TestNet");
+const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-Neon.settings.httpsOnly = true;
+EpicVault.settings.httpsOnly = true;
 
-const account = new Neon.wallet.Account(sendingKey);
+const account = new EpicVault.account.Account(sendingKey);
 
 const props = {
   scriptHash: '9488220e8654d798f9b9cb9e74bd611ecc83fd0f',
   operation: 'getBalance',
-  args: [Neon.u.reverseHex('def0c0fdcfe7838eff6ff104f9cdec2922297525'),
-         Neon.u.reverseHex('def0c0fdcfe7838eff6ff104f9cdec2922297524')]
+  args: [EpicVault.u.reverseHex('def0c0fdcfe7838eff6ff104f9cdec2922297525'),
+         EpicVault.u.reverseHex('def0c0fdcfe7838eff6ff104f9cdec2922297524')]
 }
 
-const script = Neon.sc.createScript(props);
+const script = EpicVault.sc.createScript(props);
 const gas = additionalInvocationGas;
 const intent = additionalIntents;
 const config = {
@@ -29,7 +29,7 @@ const config = {
   script: script,
   gas: gas
 };
-Neon.api.doInvoke(config)
+EpicVault.api.doInvoke(config)
   .then(config => {
     document.getElementById("result").innerHTML = "Relayed TX: " + config.response.txid;
     console.log("\n\n--- Response ---");

@@ -20,7 +20,7 @@ describe("constructor", () => {
       },
       nodes: ["a", "b"],
       extra: {
-        neoscan: "neoscanUrl",
+        epicscan: "epicscanUrl",
       },
     };
 
@@ -36,7 +36,7 @@ describe("constructor", () => {
       },
       nodes: ["a", "b"],
       extra: {
-        neoscan: "neoscanUrl",
+        epicscan: "epicscanUrl",
       },
     };
 
@@ -58,7 +58,7 @@ describe("export", () => {
       }).export(),
       nodes: ["a", "b"],
       extra: {
-        neoscan: "neoscanUrl",
+        epicscan: "epicscanUrl",
       },
     };
 
@@ -75,7 +75,7 @@ describe("export", () => {
       }).toConfiguration(),
       Nodes: ["a", "b"],
       ExtraConfiguration: {
-        neoscan: "neoscanUrl",
+        epicscan: "epicscanUrl",
       },
     };
 
@@ -95,7 +95,7 @@ describe("equals", () => {
     },
     nodes: ["a", "b"],
     extra: {
-      neoscan: "neoscanUrl",
+      epicscan: "epicscanUrl",
     },
   };
   const obj2 = {
@@ -105,7 +105,7 @@ describe("equals", () => {
     },
     nodes: ["a", "b"],
     extra: {
-      neoscan: "neoscanUrl",
+      epicscan: "epicscanUrl",
     },
   };
   const network1 = new Network(obj1);

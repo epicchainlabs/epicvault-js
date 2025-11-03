@@ -56,7 +56,7 @@ describe("Initiator", () => {
     test("default", () => {
       const hex = HexString.fromBase64("bmVv");
       expect(hex.toBigEndian()).toBe("6e656f");
-      expect(hex.toAscii()).toBe("neo");
+      expect(hex.toAscii()).toBe("epicchain");
     });
 
     test("little endian", () => {
@@ -113,7 +113,7 @@ describe("Export methods", () => {
 
   describe("toBase64", () => {
     test("default", () => {
-      const hex = HexString.fromAscii("neo");
+      const hex = HexString.fromAscii("epicchain");
       const b64 = hex.toBase64();
       expect(b64).toBe("bmVv");
     });

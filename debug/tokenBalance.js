@@ -1,10 +1,10 @@
-const Neon = require("../packages/neon-js/dist/index");
-const testKeys = require("../packages/neon-core/__tests__/testKeys.json");
+const EpicVault = require("../packages/epicvault-js/dist/index");
+const testKeys = require("../packages/epicvault-core/__tests__/testKeys.json");
 
 const url = "http://test1.cityofzion.io:8880";
-console.log(Neon.nep5);
+console.log(EpicVault.nep5);
 const printTokenBalances = function (scriptHash) {
-  return Neon.nep5
+  return EpicVault.nep5
     .getToken(url, scriptHash)
     .then(({ symbol }) => {
       console.log(`=== ${symbol} ===`);
@@ -12,7 +12,7 @@ const printTokenBalances = function (scriptHash) {
     .then(() => {
       const balances = Object.keys(testKeys).map((key) => {
         const addr = testKeys[key].address;
-        return Neon.nep5
+        return EpicVault.nep5
           .getToken(url, scriptHash, addr)
           .then((res) => console.log(`${key}: ${res.balance}`));
       });
@@ -20,6 +20,6 @@ const printTokenBalances = function (scriptHash) {
     });
 };
 
-printTokenBalances(Neon.CONST.CONTRACTS.TEST_LWTF)
-  .then(() => printTokenBalances(Neon.CONST.CONTRACTS.TEST_RPX))
+printTokenBalances(EpicVault.CONST.CONTRACTS.TEST_LWTF)
+  .then(() => printTokenBalances(EpicVault.CONST.CONTRACTS.TEST_RPX))
   .then(() => printTokenBalances("ae36e5a84ee861200676627df409b0f6eec44bd7"));

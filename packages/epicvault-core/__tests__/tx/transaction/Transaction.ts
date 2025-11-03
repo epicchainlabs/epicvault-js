@@ -307,10 +307,10 @@ const dataSet: [string, string, TransactionJson][] = Object.keys(samples).map(
 describe.each(dataSet)(
   "transform %s",
   (txid: string, serialized: string, json: TransactionJson) => {
-    const neonObj = Transaction.fromJson(json);
+    const epicvaultObj = Transaction.fromJson(json);
     const deserialized = Transaction.deserialize(serialized);
     test("deserialize", () => {
-      expect(deserialized).toEqual(neonObj);
+      expect(deserialized).toEqual(epicvaultObj);
     });
 
     test("toJson", () => {
@@ -324,7 +324,7 @@ describe.each(dataSet)(
     });
 
     test("hash", () => {
-      const result = neonObj.hash();
+      const result = epicvaultObj.hash();
       expect(result).toEqual(txid);
     });
   }

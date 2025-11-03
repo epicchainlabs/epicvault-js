@@ -10,6 +10,6 @@
     "test": "node lib/index.js"
   },
   "dependencies": {
-    "@epicchain/epicvault": "^1.0.0"
+    "@epicchain/epicvault-js": "^1.0.0"
   }
 }

@@ -8,7 +8,7 @@
   },
   "accounts": [
     {
-      "address": "NPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
+      "address": "XPTmAHDxo6Pkyic8Nvu3kwyXoYJCvcCB6i",
       "label": "A",
       "isDefault": false,
       "lock": false,
@@ -30,7 +30,7 @@
       }
     },
     {
-      "address": "NMBfzaEq2c5zodiNbLPoohVENARMbJim1r",
+      "address": "XMBfzaEq2c5zodiNbLPoohVENARMbJim1r",
       "label": "B",
       "isDefault": false,
       "lock": false,
@@ -52,7 +52,7 @@
       }
     },
     {
-      "address": "NfVdwyaJbijrWkRagrvs4eSRQUpP7WpukT",
+      "address": "XfVdwyaJbijrWkRagrvs4eSRQUpP7WpukT",
       "label": "C",
       "isDefault": false,
       "lock": false,
@@ -73,7 +73,7 @@
       }
     },
     {
-      "address": "NfScrtKDZFefNjVotBfrhEQR6GWhe8SXkH",
+      "address": "XfScrtKDZFefNjVotBfrhEQR6GWhe8SXkH",
       "label": "ABC multisig",
       "isDefault": false,
       "lock": false,
@@ -97,7 +97,7 @@
       }
     },
     {
-      "address": "NR4SHeS9kfgN5EXVcAuFwfu6Y56xaSPxg9",
+      "address": "XR4SHeS9kfgN5EXVcAuFwfu6Y56xaSPxg9",
       "label": "origin multisig",
       "isDefault": false,
       "lock": false,
@@ -117,7 +117,7 @@
       }
     },
     {
-      "address": "Nf586VLNQE3mnriHyNR7k2pTCHm9jenLtc",
+      "address": "Xf586VLNQE3mnriHyNR7k2pTCHm9jenLtc",
       "label": "origin base",
       "isDefault": false,
       "lock": false,
@@ -141,7 +141,7 @@
   "extra": {
     "password": "wallet",
     "description": "seed wallet for solonet 3.0.0-rc2",
-    "NEO": "6dc3bff7b2e6061f3cad5744edf307c14823328e",
-    "GAS": "d2a4cff31913016155e38e474a2c06d08be276cf"
+    "XPR": "6dc3bff7b2e6061f3cad5744edf307c14823328e",
+    "XPP": "d2a4cff31913016155e38e474a2c06d08be276cf"
   }
 }

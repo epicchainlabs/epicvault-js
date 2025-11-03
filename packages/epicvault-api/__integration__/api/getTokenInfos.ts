@@ -12,17 +12,17 @@ beforeAll(async () => {
 
 describe("getTokenInfos", () => {
   test("EpicChain & EpicPulse", async () => {
-    const neoScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicChain;
+    const epicchainScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicChain;
     const gasScriptHash = CONST.NATIVE_CONTRACT_HASH.EpicPulse;
-    const result = await getTokenInfos([neoScriptHash, gasScriptHash], client);
+    const result = await getTokenInfos([epicchainScriptHash, gasScriptHash], client);
     expect(result).toStrictEqual([
       {
-        symbol: "NEO",
+        symbol: "XPR",
         decimals: 0,
-        totalSupply: "100000000",
+        totalSupply: "1000000000",
       } as TokenInfo,
       {
-        symbol: "GAS",
+        symbol: "XPP",
         decimals: 8,
         totalSupply: expect.any(String),
       } as TokenInfo,

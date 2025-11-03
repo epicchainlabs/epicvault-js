@@ -6,7 +6,7 @@ export default () => {
   const {siteConfig} = useDocusaurusContext();
   const {baseUrl} = siteConfig;
   return (
-    <Layout title="NeonJS">
+    <Layout title="EpicVaultJS">
       <div class="hero hero--primary">
         <div class="container">
           <h1 class="hero__title">epicvault-js</h1>

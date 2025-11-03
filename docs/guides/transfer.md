@@ -3,14 +3,14 @@ id: transfer
 title: Performing a basic transaction
 ---
 
-In this tutorial, we will be performing a basic transfer of NEO from an address to another address.
+In this tutorial, we will be performing a basic transfer of EpicChain from an address to another address.
 
-In Neo2, NEO and GAS are considered native assets and operate using the UTXO
+In EpicChain and EpicPulse are considered native assets and operate using the UTXO
 system.
 
-In Neo3, the UTXO system is removed. In its place, NEO and GAS now implements
-the [NEP-17](https://github.com/neo-project/proposals/blob/master/nep-17.mediawiki) interface. They are still considered
-native assets but operate very similarly to how NEP-5 tokens work in Neo2.
+In EpicChain, the UTXO system is removed. In its place, EpicChain and EpicPulse now implements
+the XEP-17 interface. They are still considered
+native assets but operate very similarly to how NEP-5 tokens work.
 
 First, some setup:
 
@@ -30,7 +30,7 @@ const inputs = {
   systemFee: 0,
   networkFee: 0,
   networkMagic: 1234567890, //CONST.MAGIC_NUMBER.TestNet,
-  nodeUrl: "http://localhost:20332", //"http://seed2t.neo.org:20332",
+  nodeUrl: "http://localhost:20111", //"http://testnet1-seed.epic-chain.org:20111",
 };
 
 const vars = {};
@@ -40,9 +40,9 @@ We will perform the following checks:
 
 1. The token exists. This can be done by performing a invokeFunction call.
 2. The amount of token exists on fromAccount.
-3. The amount of GAS for fees exists on fromAccount.
+3. The amount of EpicPulse for fees exists on fromAccount.
 
-All these checks can be performed through RPC calls to a NEO node.
+All these checks can be performed through RPC calls to a EpicChain node.
 
 
 ```js
@@ -198,8 +198,8 @@ async function checkSystemFee() {
 ```
 
 We will also need to check that the inital address has sufficient funds for the transfer.
-We look for both funds of the token we intend to transfer and GAS required to pay for the transaction.
-For this, we rely on the [TokensTracker](https://github.com/neo-project/neo-modules/tree/master/src/TokensTracker)
+We look for both funds of the token we intend to transfer and EpicPulse required to pay for the transaction.
+For this, we rely on the TokensTracker
 plugin. Hopefully, the node we select has the plugin installed.
 
 
@@ -232,23 +232,23 @@ async function checkBalance() {
     console.log("\u001b[32m  ✓ Token funds found \u001b[0m");
   }
 
-  // Check for gas funds for fees
-  const gasRequirements = vars.tx.networkFee.add(vars.tx.systemFee);
-  const gasBalance = balanceResponse.balance.filter((bal) =>
+  // Check for epicpulse funds for fees
+  const epicpulseRequirements = vars.tx.networkFee.add(vars.tx.systemFee);
+  const epicpulseBalance = balanceResponse.balance.filter((bal) =>
     bal.assethash.includes(CONST.NATIVE_CONTRACT_HASH.EpicPulse)
   );
-  const gasAmount =
-    gasBalance.length === 0
+  const epicpulseAmount =
+    epicpulseBalance.length === 0
       ? u.BigInteger.fromNumber(0)
-      : u.BigInteger.fromNumber(gasBalance[0].amount);
+      : u.BigInteger.fromNumber(epicpulseBalance[0].amount);
 
-  if (gasAmount.compare(gasRequirements) === -1) {
+  if (epicpulseAmount.compare(epicpulseRequirements) === -1) {
     throw new Error(
-      `Insufficient gas to pay for fees! Required ${gasRequirements.toString()} but only had ${gasAmount.toString()}`
+      `Insufficient epicpulse to pay for fees! Required ${epicpulseRequirements.toString()} but only had ${epicpulseAmount.toString()}`
     );
   } else {
     console.log(
-      `\u001b[32m  ✓ Sufficient GAS for fees found (${gasRequirements.toString()}) \u001b[0m`
+      `\u001b[32m  ✓ Sufficient EpicPulse for fees found (${epicpulseRequirements.toString()}) \u001b[0m`
     );
   }
 }

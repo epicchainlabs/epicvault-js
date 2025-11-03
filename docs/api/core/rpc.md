@@ -6,13 +6,13 @@ title: RPC
 The `rpc` module is exposed as:
 
 ```js
-import Neon, { rpc } from "@cityofzion/neon-js";
-const client = Neon.create.rpcClient(URL);
+import EpicVault, { rpc } from "@epicchain/epicvault-js";
+const client = EpicVault.create.rpcClient(URL);
 const alternative = new rpc.RPCClient(URL);
 ```
 
 This module contains the classes and interfaces to interact with the RPC
-endpoints supplied by the current C# neo implementation. It also contains the
+endpoints supplied by the current C# epicchain implementation. It also contains the
 classes for `Network` and `Protocol` which are configurations that provide us
 details about a network.
 
@@ -22,23 +22,23 @@ details about a network.
 
 ### RPCClient
 
-The RPC Client acts as a model for a specific NEO Node. RPC Calls are methods
-which external applications can interact with the NEO network easily without
+The RPC Client acts as a model for a specific EpicChain Node. RPC Calls are methods
+which external applications can interact with the EpicChain network easily without
 sending a transaction.
 
 It provides built-in RPC methods for easy calling. Previous queries can be
 retrieved from the `history` property.
 
-RPC methods mirror the API reference found in the official NEO documentation.
+RPC methods mirror the API reference found in the official EpicChain documentation.
 All RPC methods return a Promise.
 
 Do note that method names follow the JS convention of camelCase instead of all
 lowercase.
 
 ```js
-// Creates a RPCClient that will talk to http://seed1.neo.org:10332
-const client = Neon.create.rpcClient("http://seed1.neo.org:10332");
-const alternative = new rpc.RPCClient("http://seed1.neo.org:10332");
+// Creates a RPCClient that will talk to http://mainnet1-seed.epic-chain.org:10111
+const client = EpicVault.create.rpcClient("http://mainnet1-seed.epic-chain.org:10111");
+const alternative = new rpc.RPCClient("http://mainnet1-seed.epic-chain.org:10111");
 
 // Returns block number
 client.getBlockCount();
@@ -48,7 +48,7 @@ client.getRawTransaction(
 );
 
 // Custom query (used for methods not supported by implementation)
-let query = Neon.create.query({ method: "custommethod" });
+let query = EpicVault.create.query({ method: "custommethod" });
 client.execute(query);
 ```
 
@@ -63,25 +63,25 @@ There are also static methods to support generating supported RPC methods.
 
 ```js
 // Custom query
-const query = Neon.create.query({ method: "newmethod", params: [arg1, arg2] });
-const response = query.execute("http://mycustomneonode.com:10332");
+const query = EpicVault.create.query({ method: "newmethod", params: [arg1, arg2] });
+const response = query.execute("http://mycustomepicchainnode.com:10111");
 
 // Simple query creation and execution
-const response = rpc.Query.getBlock(1).execute("http://seed1.neo.org:10332");
+const response = rpc.Query.getBlock(1).execute("http://mainnet1-seed.epic-chain.org:10111");
 ```
 
 ### Network
 
 The Network class is a configuration object that contains the information
-required to connect to a blockchain. The default networks avaialble in `neon-js`
+required to connect to a blockchain. The default networks avaialble in `epicvault-js`
 can be found in the global settings object. This class can be used to add
-support for a private network to `neon-js`.
+support for a private network to `epicvault-js`.
 
 ```js
 const newNet = new rpc.Network({ name: "NewNet" });
-Neon.add.network(newNet);
+EpicVault.add.network(newNet);
 
-console.log(Neon.settings.networks["NewNet"]);
+console.log(EpicVault.settings.networks["NewNet"]);
 ```
 
 Access the fields in conventional javascript notation (camelCase):

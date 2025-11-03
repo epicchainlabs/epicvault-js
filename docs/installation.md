@@ -8,20 +8,20 @@ title: Installation
 To install
 
 ```sh
-npm install @cityofzion/neon-js
+npm install @epicchain/epicvault-js
 ```
 
 or
 
 ```sh
-npm install @cityofzion/neon-core
+npm install @epicchain/epicvault-core
 ```
 
-This will give you the release that is compatible for the neo3 mainnet and testnet.
+This will give you the release that is compatible for the EpicChain mainnet and testnet.
 
 > **Note**
-> For most use-cases, we recommend `neon-js`.
-> Do not use `neon-js` and `neon-core`  in the same project.  The classes are not cross-package compatible. See https://github.com/CityOfZion/neon-js/issues/850.
+> For most use-cases, we recommend `epicvault-js`.
+> Do not use `epicvault-js` and `epicvault-core`  in the same project.  The classes are not cross-package compatible. See https://github.com/epicchain/epicvault-js/.
 
 ## Node
 
@@ -34,10 +34,10 @@ time of writing, this is:
 
 ## Web
 
-Both `neon-core` and `neon-js` are packaged for the web. Use script tags:
+Both `epicvault-core` and `epicvault-js` are packaged for the web. Use script tags:
 
 ```html
-<script src="https://unpkg.com/@cityofzion/neon-js@next"></script>
+<script src="https://unpkg.com/@epicchain/epicvault-js@next"></script>
 ```
 
-The library will be loaded under the variable `Neon`.
+The library will be loaded under the variable `EpicVault`.

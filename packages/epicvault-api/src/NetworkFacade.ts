@@ -72,7 +72,7 @@ export class NetworkFacade {
     try {
       const response = await this.client.getVersion();
       this.magicNumber = response.protocol.network;
-      logger.info(`Initialized NetworkFacade with network ${this.magicNumber}`);
+      logger("api").info(`Initialized NetworkFacade with network ${this.magicNumber}`);
     } catch (error) {
       throw new EpicVaultError(
         'Failed to initialize NetworkFacade',

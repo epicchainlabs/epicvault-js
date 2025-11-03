@@ -125,10 +125,10 @@
       }
     ]
   },
-  "neo": {
+  "epicchain": {
     "script": "",
     "scriptIntent": {
-      "scriptHash": "NEO",
+      "scriptHash": "XPR",
       "operation": "balanceOf",
       "args": [
         {

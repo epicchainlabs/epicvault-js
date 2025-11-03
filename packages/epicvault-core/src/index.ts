@@ -5,7 +5,7 @@
 
 // Core Types and Interfaces
 export * from './types';
-export * from './model';
+export { WalletModel, TransactionModel } from './model';
 export * from './consts';
 
 // Core Functionality

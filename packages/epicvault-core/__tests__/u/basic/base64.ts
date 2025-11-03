@@ -6,8 +6,8 @@ import {
 } from "../../../src/u/basic/base64";
 
 const hexBase64testCases = [
-  ["4e454f", "TkVP"], // NEO
-  ["6e656f", "bmVv"], // neo
+  ["4e454f", "TkVP"], // XPR
+  ["6e656f", "bmVv"], // epicchain
   ["11", "EQ=="],
   ["41123e7fe8", "QRI+f+g="],
 ];
@@ -30,9 +30,9 @@ describe("hex and base64", () => {
 });
 
 const utf8Base64testCases = [
-  ["NEO", "TkVP"],
-  ["neo", "bmVv"],
-  ["neon-core", "bmVvbi1jb3Jl"],
+  ["EpicChain", "TkVP"],
+  ["epicchain", "bmVv"],
+  ["epicvault-core", "bmVvbi1jb3Jl"],
   [
     "αβγδεζηθικλμνξοπρστυφχψω",
     "zrHOss6zzrTOtc62zrfOuM65zrrOu868zr3Ovs6/z4DPgc+Dz4TPhc+Gz4fPiM+J",

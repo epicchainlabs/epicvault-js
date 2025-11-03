@@ -1,19 +1,19 @@
 // Hash of the transaction we want
 const hash = "0x2e5793b7c9766aba7c9f9812243827dbd722a6a47b7e002204f1407f844332a8"
 
-// Get an instance of Neoscan so we can find a working node
-const provider = new Neon.api.neoscan.instance("TestNet");
+// Get an instance of EpicScan so we can find a working node
+const provider = new EpicVault.api.epicscan.instance("TestNet");
 
-// Ensure neon-js only talks to RPC endpoint (Neo node) using HTTPS
-Neon.settings.httpsOnly = true;
+// Ensure epicvault-js only talks to RPC endpoint (EpicChain node) using HTTPS
+EpicVault.settings.httpsOnly = true;
 
 function InvokeOperation()
 {
   clearHtml();
 
-  // Get an RPC Endpoint (Neo Node)
+  // Get an RPC Endpoint (EpicChain Node)
   provider.getRPCEndpoint().then(nodeUrl => {
-    const client = Neon.default.create.rpcClient(nodeUrl);
+    const client = EpicVault.default.create.rpcClient(nodeUrl);
     client.getRawTransaction(hash).then(response => {
       outputHtml('TxID: ' + hash);
       outputHtml('Transaction:');

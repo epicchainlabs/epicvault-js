@@ -7,7 +7,7 @@ export interface OpCodeAnnotation {
   operandSizePrefix?: number;
 }
 
-/** Annotation details for OpCode. Tracks neo-vm/OpCode.cs */
+/** Annotation details for OpCode. Tracks epicchain-vm/OpCode.cs */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const OpCodeAnnotations: Record<OpCode, OpCodeAnnotation> = {
   [OpCode.PUSHINT8]: { operandSize: 1 },

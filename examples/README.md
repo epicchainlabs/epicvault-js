@@ -1,4 +1,4 @@
-# Neon examples
+# EpicVault examples
 
 This is the source folder for guides generated to /docs/guides. The folder structure is the same. To start:
 

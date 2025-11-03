@@ -13,7 +13,7 @@ const wallet = new Wallet(testWallet);
 let client: rpc.RPCClient;
 const address = wallet.accounts[0].address;
 
-// NEO contract hash. Should be same across TestNet or LocalNet.
+// EpicChain contract hash. Should be same across TestNet or LocalNet.
 const contractHash = NATIVE_CONTRACT_HASH.EpicChain;
 let txid: string;
 let blockhash: string;
@@ -213,7 +213,7 @@ describe("RPC Methods", () => {
   test("getStorage", async () => {
     const result = await client.getStorage(contractHash, "0b");
 
-    // This storage is totalSupply of NEO. Should be safe and static for usage.
+    // This storage is totalSupply of EpicChain. Should be safe and static for usage.
     expect(result).toBe("AOH1BQ==");
   });
 
@@ -333,7 +333,7 @@ describe("RPC Methods", () => {
       expect(result.state).toContain("HALT");
       expect(result.stack.length).toEqual(1);
       expect(result.stack[0].value).toEqual(
-        HexString.fromAscii("NEO").toBase64()
+        HexString.fromAscii("XPR").toBase64()
       );
     });
 

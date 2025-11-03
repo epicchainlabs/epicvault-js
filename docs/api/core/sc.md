@@ -6,8 +6,8 @@ title: Smart Contract
 The `sc` module is exposed as:
 
 ```js
-import Neon, { sc } from "@cityofzion/neon-js";
-const sb = Neon.create.scriptBuilder();
+import EpicVault, { sc } from "@epicchain/epicvault-js";
+const sb = EpicVault.create.scriptBuilder();
 const alternative = new sc.scriptBuilder();
 ```
 
@@ -42,7 +42,7 @@ The `ScriptBuilder` is an object that converts a smart contract method call into
 a hexstring that can be sent to the network with a Transaction.
 
 ```js
-const sb = Neon.create.scriptBuilder();
+const sb = EpicVault.create.scriptBuilder();
 // Build script to call 'symbol()' from contract at 6dc3bff7b2e6061f3cad5744edf307c14823328e
 sb.emitAppCall("6dc3bff7b2e6061f3cad5744edf307c14823328e", "symbol");
 
@@ -54,12 +54,12 @@ You may chain multiple calls together in a single VM script. The results will be
 returned in order.
 
 ```js
-const sb = Neon.create.scriptBuilder();
+const sb = EpicVault.create.scriptBuilder();
 sb.emitAppCall(scriptHash, "decimals").emitAppCall(scriptHash, "symbol");
 
 // Returns decimals, symbol
 rpc.Query.invokeScript(sb.str)
-  .execute("http://seed1.neo.org:10332")
+  .execute("mainnet1-seed.epic-chain.org:10111")
   .then((res) => {
     console.log(res);
   });
@@ -69,12 +69,12 @@ A simple wrapper method is provided for convenience.
 
 ```js
 const props = {
-  scriptHash: Neon.CONST.NATIVE_CONTRACT_HASH.EpicChain,
+  scriptHash: EpicVault.CONST.NATIVE_CONTRACT_HASH.EpicChain,
   operation: "symbol",
   args: [],
 };
 // Returns a hexstring
-const vmScript = Neon.create.script(props);
+const vmScript = EpicVault.create.script(props);
 ```
 
 ### ContractParam
@@ -94,7 +94,7 @@ ContractParam currently supports creating string, boolean, integer, bytearray
 and array.
 
 ```js
-const param1 = Neon.create.contractParam("String", "balanceOf");
+const param1 = EpicVault.create.contractParam("String", "balanceOf");
 // This will automatically convert an address to a scriptHash that smart contracts use.
 const param2 = sc.ContractParam.hash160("NNtxeX9UhKfHySqPQ29hQnZe22k8LwcFk1");
 

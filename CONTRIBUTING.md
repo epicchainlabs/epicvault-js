@@ -43,9 +43,9 @@ To keep things organized, **work from the `dev` branch** for all development wor
    - Once your work is done, submit a **Pull Request (PR)** from this branch to either `dev` (for new features) or `master` (for bug fixes).
 
 During the development process, make sure to follow these guidelines:
-- **Format your code** using the linter: `npm run lint`.
-- **Ensure unit tests pass** by running `npm run test:unit`. This will check that individual components function as expected.
-- **Before submitting your PR**, run `npm run test` to ensure all integration tests pass as well. This helps to verify that the system works as a whole. Avoid running integration tests in "watch mode" since they interact with the blockchain and perform real transactions, which should only be done in the final test step.
+- **Format your code** using the linter: `pnpm run lint`.
+- **Ensure unit tests pass** by running `pnpm run test:unit`. This will check that individual components function as expected.
+- **Before submitting your PR**, run `pnpm run test` to ensure all integration tests pass as well. This helps to verify that the system works as a whole. Avoid running integration tests in "watch mode" since they interact with the blockchain and perform real transactions, which should only be done in the final test step.
 
 ### Submit Your Pull Request (PR)
 
